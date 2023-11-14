@@ -1,0 +1,16 @@
+{
+  "hostname": "f4de-laptop",
+  "output": "17:24:03.275070634: Warning oepnat /etc/shadow : (command=sudo systemctl restart falco connection=/etc/shadow user=root user_loginuid=1000)",
+  "priority": "Warning",
+  "rule": "openat",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-02-02T16:24:03.275070634Z",
+  "output_fields": {
+    "evt.time": 1675355043275070700,
+    "fd.name": "/etc/shadow",
+    "proc.cmdline": "sudo systemctl restart falco",
+    "user.loginuid": 1000,
+    "user.name": "root"
+  }
+}

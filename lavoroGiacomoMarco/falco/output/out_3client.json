@@ -1,0 +1,3466 @@
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.203245092: Warning READ - (command=node aedes.js user=f4de evt=read buffer=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAGAxAAAAAAAAAAAAAEAAOAALAEAAHAAbAAEAAAAEAAAAAAAAAAAAAAA= arf=res=832 data=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAGAxAAAAAAAAAAAAAEAAOAALAEAAHAAbAAEAAAAEAAAAAAAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.203245092Z",
+  "output_fields": {
+    "evt.args": "res=832 data=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAGAxAAAAAAAAAAAAAEAAOAALAEAAHAAbAAEAAAAEAAAAAAAAAAAAAAA= ",
+    "evt.buffer": "\u007fELF\u0002\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000>\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000`1\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u00008\u0000\u000b\u0000@\u0000\u001c\u0000\u001b\u0000\u0001\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091627203245000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.203341613: Warning READ - (command=node aedes.js user=f4de evt=read buffer=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAMBUIgAAAAAAAAAAAEAAOAAMAEAAIgAhAAEAAAAEAAAAAAAAAAAAAAA= arf=res=832 data=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAMBUIgAAAAAAAAAAAEAAOAAMAEAAIgAhAAEAAAAEAAAAAAAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.203341613Z",
+  "output_fields": {
+    "evt.args": "res=832 data=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAMBUIgAAAAAAAAAAAEAAOAAMAEAAIgAhAAEAAAAEAAAAAAAAAAAAAAA= ",
+    "evt.buffer": "\u007fELF\u0002\u0001\u0001\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000>\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000�T\"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u00008\u0000\f\u0000@\u0000\"\u0000!\u0000\u0001\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091627203341600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.203454903: Warning READ - (command=node aedes.js user=f4de evt=read buffer=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAFBSDgAAAAAAAAAAAEAAOAALAEAAHwAeAAEAAAAEAAAAAAAAAAAAAAA= arf=res=832 data=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAFBSDgAAAAAAAAAAAEAAOAALAEAAHwAeAAEAAAAEAAAAAAAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.203454903Z",
+  "output_fields": {
+    "evt.args": "res=832 data=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAFBSDgAAAAAAAAAAAEAAOAALAEAAHwAeAAEAAAAEAAAAAAAAAAAAAAA= ",
+    "evt.buffer": "\u007fELF\u0002\u0001\u0001\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000>\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000PR\u000e\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u00008\u0000\u000b\u0000@\u0000\u001f\u0000\u001e\u0000\u0001\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091627203455000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.203556301: Warning READ - (command=node aedes.js user=f4de evt=read buffer=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAPDiAQAAAAAAAAAAAEAAOAALAEAAHQAcAAEAAAAEAAAAAAAAAAAAAAA= arf=res=832 data=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAPDiAQAAAAAAAAAAAEAAOAALAEAAHQAcAAEAAAAEAAAAAAAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.203556301Z",
+  "output_fields": {
+    "evt.args": "res=832 data=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAPDiAQAAAAAAAAAAAEAAOAALAEAAHQAcAAEAAAAEAAAAAAAAAAAAAAA= ",
+    "evt.buffer": "\u007fELF\u0002\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000>\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000��\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u00008\u0000\u000b\u0000@\u0000\u001d\u0000\u001c\u0000\u0001\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091627203556400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.203642435: Warning READ - (command=node aedes.js user=f4de evt=read buffer=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAIhKAAAAAAAAAAAAAEAAOAALAEAAJQAkAAEAAAAEAAAAAAAAAAAAAAA= arf=res=832 data=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAIhKAAAAAAAAAAAAAEAAOAALAEAAJQAkAAEAAAAEAAAAAAAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.203642435Z",
+  "output_fields": {
+    "evt.args": "res=832 data=f0VMRgIBAQAAAAAAAAAAAAMAPgABAAAAAAAAAAAAAABAAAAAAAAAAIhKAAAAAAAAAAAAAEAAOAALAEAAJQAkAAEAAAAEAAAAAAAAAAAAAAA= ",
+    "evt.buffer": "\u007fELF\u0002\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000>\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000�J\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u00008\u0000\u000b\u0000@\u0000%\u0000$\u0000\u0001\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091627203642400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.203723993: Warning READ - (command=node aedes.js user=f4de evt=read buffer=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAUJ8CAAAAAABAAAAAAAAAAPDAIQAAAAAAAAAAAEAAOAAOAEAAQgBBAAYAAAAEAAAAQAAAAAAAAAA= arf=res=832 data=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAUJ8CAAAAAABAAAAAAAAAAPDAIQAAAAAAAAAAAEAAOAAOAEAAQgBBAAYAAAAEAAAAQAAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.203723993Z",
+  "output_fields": {
+    "evt.args": "res=832 data=f0VMRgIBAQMAAAAAAAAAAAMAPgABAAAAUJ8CAAAAAABAAAAAAAAAAPDAIQAAAAAAAAAAAEAAOAAOAEAAQgBBAAYAAAAEAAAAQAAAAAAAAAA= ",
+    "evt.buffer": "\u007fELF\u0002\u0001\u0001\u0003\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000>\u0000\u0001\u0000\u0000\u0000P�\u0002\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000��!\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u00008\u0000\u000e\u0000@\u0000B\u0000A\u0000\u0006\u0000\u0000\u0000\u0004\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091627203724000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.209183042: Warning READ - (command=node aedes.js user=f4de evt=read buffer=IwojIE9wZW5TU0wgZXhhbXBsZSBjb25maWd1cmF0aW9uIGZpbGUuCiMgU2VlIGRvYy9tYW41L2NvbmZpZy5wb2QgZm9yIG1vcmUgaW5mby4= arf=res=4096 data=IwojIE9wZW5TU0wgZXhhbXBsZSBjb25maWd1cmF0aW9uIGZpbGUuCiMgU2VlIGRvYy9tYW41L2NvbmZpZy5wb2QgZm9yIG1vcmUgaW5mby4= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.209183042Z",
+  "output_fields": {
+    "evt.args": "res=4096 data=IwojIE9wZW5TU0wgZXhhbXBsZSBjb25maWd1cmF0aW9uIGZpbGUuCiMgU2VlIGRvYy9tYW41L2NvbmZpZy5wb2QgZm9yIG1vcmUgaW5mby4= ",
+    "evt.buffer": "#\n# OpenSSL example configuration file.\n# See doc/man5/config.pod for more info.",
+    "evt.time": 1678091627209183000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.209266628: Warning READ - (command=node aedes.js user=f4de evt=read buffer=ciB0eXBlIENBLCB0aGUgbGlzdGVkIGF0dHJpYnV0ZXMgbXVzdCBiZSB0aGUgc2FtZSwgYW5kIHRoZSBvcHRpb25hbAojIGFuZCBzdXBwbGk= arf=res=4096 data=ciB0eXBlIENBLCB0aGUgbGlzdGVkIGF0dHJpYnV0ZXMgbXVzdCBiZSB0aGUgc2FtZSwgYW5kIHRoZSBvcHRpb25hbAojIGFuZCBzdXBwbGk= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.209266628Z",
+  "output_fields": {
+    "evt.args": "res=4096 data=ciB0eXBlIENBLCB0aGUgbGlzdGVkIGF0dHJpYnV0ZXMgbXVzdCBiZSB0aGUgc2FtZSwgYW5kIHRoZSBvcHRpb25hbAojIGFuZCBzdXBwbGk= ",
+    "evt.buffer": "r type CA, the listed attributes must be the same, and the optional\n# and suppli",
+    "evt.time": 1678091627209266700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.209368889: Warning READ - (command=node aedes.js user=f4de evt=read buffer=cjpjb3B5CgojIERFUiBoZXggZW5jb2Rpbmcgb2YgYW4gZXh0ZW5zaW9uOiBiZXdhcmUgZXhwZXJ0cyBvbmx5IQojIG9iaj1ERVI6MDI6MDM= arf=res=4096 data=cjpjb3B5CgojIERFUiBoZXggZW5jb2Rpbmcgb2YgYW4gZXh0ZW5zaW9uOiBiZXdhcmUgZXhwZXJ0cyBvbmx5IQojIG9iaj1ERVI6MDI6MDM= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.209368889Z",
+  "output_fields": {
+    "evt.args": "res=4096 data=cjpjb3B5CgojIERFUiBoZXggZW5jb2Rpbmcgb2YgYW4gZXh0ZW5zaW9uOiBiZXdhcmUgZXhwZXJ0cyBvbmx5IQojIG9iaj1ERVI6MDI6MDM= ",
+    "evt.buffer": "r:copy\n\n# DER hex encoding of an extension: beware experts only!\n# obj=DER:02:03",
+    "evt.time": 1678091627209368800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.209471431: Warning READ - (command=node aedes.js user=f4de evt=read buffer=ZXJ0b3V0ICMgaW5zdGEuY2VydC5wZW0KCltzc2xfc2VjdF0Kc3lzdGVtX2RlZmF1bHQgPSBzeXN0ZW1fZGVmYXVsdF9zZWN0Cgpbc3lzdGU= arf=res=131 data=ZXJ0b3V0ICMgaW5zdGEuY2VydC5wZW0KCltzc2xfc2VjdF0Kc3lzdGVtX2RlZmF1bHQgPSBzeXN0ZW1fZGVmYXVsdF9zZWN0Cgpbc3lzdGU= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.209471431Z",
+  "output_fields": {
+    "evt.args": "res=131 data=ZXJ0b3V0ICMgaW5zdGEuY2VydC5wZW0KCltzc2xfc2VjdF0Kc3lzdGVtX2RlZmF1bHQgPSBzeXN0ZW1fZGVmYXVsdF9zZWN0Cgpbc3lzdGU= ",
+    "evt.buffer": "ertout # insta.cert.pem\n\n[ssl_sect]\nsystem_default = system_default_sect\n\n[syste",
+    "evt.time": 1678091627209471500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.209483092: Warning READ - (command=node aedes.js user=f4de evt=read buffer=NULL arf=res=0 data=NULL )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.209483092Z",
+  "output_fields": {
+    "evt.args": "res=0 data=NULL ",
+    "evt.buffer": "5B�",
+    "evt.time": 1678091627209483000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.211092867: Warning READ - (command=node aedes.js user=f4de evt=read buffer=TWVtVG90YWw6ICAgICAgICA2MDA5NTYwIGtCCk1lbUZyZWU6ICAgICAgICAgIDMwMTI1NiBrQgpNZW1BdmFpbGFibGU6ICAgIDE5Nzc4NjQ= arf=res=1419 data=TWVtVG90YWw6ICAgICAgICA2MDA5NTYwIGtCCk1lbUZyZWU6ICAgICAgICAgIDMwMTI1NiBrQgpNZW1BdmFpbGFibGU6ICAgIDE5Nzc4NjQ= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.211092867Z",
+  "output_fields": {
+    "evt.args": "res=1419 data=TWVtVG90YWw6ICAgICAgICA2MDA5NTYwIGtCCk1lbUZyZWU6ICAgICAgICAgIDMwMTI1NiBrQgpNZW1BdmFpbGFibGU6ICAgIDE5Nzc4NjQ= ",
+    "evt.buffer": "MemTotal:        6009560 kB\nMemFree:          301256 kB\nMemAvailable:    1977864",
+    "evt.time": 1678091627211093000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.268074450: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnOwoKY29uc3QgYWVkZXMgPSByZXF1aXJlKCdhZWRlcycpKCk7CmNvbnN0IHNlcnZlciA9IHJlcXVpcmUoJ25ldCcpLmM= arf=res=227 data=J3VzZSBzdHJpY3QnOwoKY29uc3QgYWVkZXMgPSByZXF1aXJlKCdhZWRlcycpKCk7CmNvbnN0IHNlcnZlciA9IHJlcXVpcmUoJ25ldCcpLmM= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.268074450Z",
+  "output_fields": {
+    "evt.args": "res=227 data=J3VzZSBzdHJpY3QnOwoKY29uc3QgYWVkZXMgPSByZXF1aXJlKCdhZWRlcycpKCk7CmNvbnN0IHNlcnZlciA9IHJlcXVpcmUoJ25ldCcpLmM= ",
+    "evt.buffer": "'use strict';\n\nconst aedes = require('aedes')();\nconst server = require('net').c",
+    "evt.time": 1678091627268074500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.270427762: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBFdmVudEVtaXR0ZXIgPSByZXF1aXJlKCdldmVudHMnKQpjb25zdCB1dGlsID0gcmVxdWlyZSgndXRpbCc= arf=res=9544 data=J3VzZSBzdHJpY3QnCgpjb25zdCBFdmVudEVtaXR0ZXIgPSByZXF1aXJlKCdldmVudHMnKQpjb25zdCB1dGlsID0gcmVxdWlyZSgndXRpbCc= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.270427762Z",
+  "output_fields": {
+    "evt.args": "res=9544 data=J3VzZSBzdHJpY3QnCgpjb25zdCBFdmVudEVtaXR0ZXIgPSByZXF1aXJlKCdldmVudHMnKQpjb25zdCB1dGlsID0gcmVxdWlyZSgndXRpbCc= ",
+    "evt.buffer": "'use strict'\n\nconst EventEmitter = require('events')\nconst util = require('util'",
+    "evt.time": 1678091627270427600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.273301068: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgp2YXIgeHRlbmQgPSByZXF1aXJlKCd4dGVuZCcpCnZhciByZXVzaWZ5ID0gcmVxdWlyZSgncmV1c2lmeScpCnZhciA= arf=res=4623 data=J3VzZSBzdHJpY3QnCgp2YXIgeHRlbmQgPSByZXF1aXJlKCd4dGVuZCcpCnZhciByZXVzaWZ5ID0gcmVxdWlyZSgncmV1c2lmeScpCnZhciA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.273301068Z",
+  "output_fields": {
+    "evt.args": "res=4623 data=J3VzZSBzdHJpY3QnCgp2YXIgeHRlbmQgPSByZXF1aXJlKCd4dGVuZCcpCnZhciByZXVzaWZ5ID0gcmVxdWlyZSgncmV1c2lmeScpCnZhciA= ",
+    "evt.buffer": "'use strict'\n\nvar xtend = require('xtend')\nvar reusify = require('reusify')\nvar ",
+    "evt.time": 1678091627273301000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.274410598: Warning READ - (command=node aedes.js user=f4de evt=read buffer=bW9kdWxlLmV4cG9ydHMgPSBleHRlbmQKCnZhciBoYXNPd25Qcm9wZXJ0eSA9IE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHk7Cgo= arf=res=384 data=bW9kdWxlLmV4cG9ydHMgPSBleHRlbmQKCnZhciBoYXNPd25Qcm9wZXJ0eSA9IE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHk7Cgo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.274410598Z",
+  "output_fields": {
+    "evt.args": "res=384 data=bW9kdWxlLmV4cG9ydHMgPSBleHRlbmQKCnZhciBoYXNPd25Qcm9wZXJ0eSA9IE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHk7Cgo= ",
+    "evt.buffer": "module.exports = extend\n\nvar hasOwnProperty = Object.prototype.hasOwnProperty;\n\n",
+    "evt.time": 1678091627274410500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.275122150: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiByZXVzaWZ5IChDb25zdHJ1Y3RvcikgewogIHZhciBoZWFkID0gbmV3IENvbnN0cnVjdG9yKCkKICA= arf=res=454 data=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiByZXVzaWZ5IChDb25zdHJ1Y3RvcikgewogIHZhciBoZWFkID0gbmV3IENvbnN0cnVjdG9yKCkKICA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.275122150Z",
+  "output_fields": {
+    "evt.args": "res=454 data=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiByZXVzaWZ5IChDb25zdHJ1Y3RvcikgewogIHZhciBoZWFkID0gbmV3IENvbnN0cnVjdG9yKCkKICA= ",
+    "evt.buffer": "'use strict'\n\nfunction reusify (Constructor) {\n  var head = new Constructor()\n  ",
+    "evt.time": 1678091627275122200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.275831544: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgp2YXIgZGVmYXVsdHMgPSB7CiAgcmVzdWx0czogdHJ1ZQp9CgpmdW5jdGlvbiBmYXN0c2VyaWVzIChvcHRpb25zKSA= arf=res=2525 data=J3VzZSBzdHJpY3QnCgp2YXIgZGVmYXVsdHMgPSB7CiAgcmVzdWx0czogdHJ1ZQp9CgpmdW5jdGlvbiBmYXN0c2VyaWVzIChvcHRpb25zKSA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.275831544Z",
+  "output_fields": {
+    "evt.args": "res=2525 data=J3VzZSBzdHJpY3QnCgp2YXIgZGVmYXVsdHMgPSB7CiAgcmVzdWx0czogdHJ1ZQp9CgpmdW5jdGlvbiBmYXN0c2VyaWVzIChvcHRpb25zKSA= ",
+    "evt.buffer": "'use strict'\n\nvar defaults = {\n  results: true\n}\n\nfunction fastseries (options) ",
+    "evt.time": 1678091627275831600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.281162349: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=1765 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.281162349Z",
+  "output_fields": {
+    "evt.args": "res=1765 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627281162200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.281881386: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=3602 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.281881386Z",
+  "output_fields": {
+    "evt.args": "res=3602 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627281881300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.282476513: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=549 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.282476513Z",
+  "output_fields": {
+    "evt.args": "res=549 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627282476500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.291061306: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=1795 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.291061306Z",
+  "output_fields": {
+    "evt.args": "res=1795 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627291061200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.291924551: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=410 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.291924551Z",
+  "output_fields": {
+    "evt.args": "res=410 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627291924500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.292552971: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=267 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.292552971Z",
+  "output_fields": {
+    "evt.args": "res=267 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627292553000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.293619324: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=414 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.293619324Z",
+  "output_fields": {
+    "evt.args": "res=414 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627293619200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.294428868: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=2076 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.294428868Z",
+  "output_fields": {
+    "evt.args": "res=2076 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627294429000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.295534053: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=1380 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.295534053Z",
+  "output_fields": {
+    "evt.args": "res=1380 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627295534000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.296932753: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=550 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.296932753Z",
+  "output_fields": {
+    "evt.args": "res=550 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627296932900,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.298453948: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=1009 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.298453948Z",
+  "output_fields": {
+    "evt.args": "res=1009 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627298454000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.299490411: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=350 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.299490411Z",
+  "output_fields": {
+    "evt.args": "res=350 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627299490300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.300834907: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=417 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.300834907Z",
+  "output_fields": {
+    "evt.args": "res=417 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627300834800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.301411511: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=553 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.301411511Z",
+  "output_fields": {
+    "evt.args": "res=553 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627301411600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.302113129: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=188 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.302113129Z",
+  "output_fields": {
+    "evt.args": "res=188 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627302113000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.302466366: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=474 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.302466366Z",
+  "output_fields": {
+    "evt.args": "res=474 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627302466300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.303441129: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiBQYWNrZXQgKG9yaWdpbmFsLCBicm9rZXIpIHsKICBpZiAoT2JqZWN0LnByb3RvdHlwZS5oYXNPd24= arf=res=919 data=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiBQYWNrZXQgKG9yaWdpbmFsLCBicm9rZXIpIHsKICBpZiAoT2JqZWN0LnByb3RvdHlwZS5oYXNPd24= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.303441129Z",
+  "output_fields": {
+    "evt.args": "res=919 data=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiBQYWNrZXQgKG9yaWdpbmFsLCBicm9rZXIpIHsKICBpZiAoT2JqZWN0LnByb3RvdHlwZS5oYXNPd24= ",
+    "evt.buffer": "'use strict'\n\nfunction Packet (original, broker) {\n  if (Object.prototype.hasOwn",
+    "evt.time": 1678091627303441200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.304280022: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Y29uc3QgeyBSZWFkYWJsZSB9ID0gcmVxdWlyZSgnc3RyZWFtJykKY29uc3QgUWxvYmJlclN1YiA9IHJlcXVpcmUoJ3Fsb2JiZXIvYWVkZXM= arf=res=8407 data=Y29uc3QgeyBSZWFkYWJsZSB9ID0gcmVxdWlyZSgnc3RyZWFtJykKY29uc3QgUWxvYmJlclN1YiA9IHJlcXVpcmUoJ3Fsb2JiZXIvYWVkZXM= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.304280022Z",
+  "output_fields": {
+    "evt.args": "res=8407 data=Y29uc3QgeyBSZWFkYWJsZSB9ID0gcmVxdWlyZSgnc3RyZWFtJykKY29uc3QgUWxvYmJlclN1YiA9IHJlcXVpcmUoJ3Fsb2JiZXIvYWVkZXM= ",
+    "evt.buffer": "const { Readable } = require('stream')\nconst QlobberSub = require('qlobber/aedes",
+    "evt.time": 1678091627304280000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.305438960: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Lypqc2xpbnQgbm9kZTogdHJ1ZSAqLwoidXNlIHN0cmljdCI7Cgp2YXIgdXRpbCA9IHJlcXVpcmUoJ3V0aWwnKSwKICAgIHFsb2JiZXIgPSA= arf=res=2822 data=Lypqc2xpbnQgbm9kZTogdHJ1ZSAqLwoidXNlIHN0cmljdCI7Cgp2YXIgdXRpbCA9IHJlcXVpcmUoJ3V0aWwnKSwKICAgIHFsb2JiZXIgPSA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.305438960Z",
+  "output_fields": {
+    "evt.args": "res=2822 data=Lypqc2xpbnQgbm9kZTogdHJ1ZSAqLwoidXNlIHN0cmljdCI7Cgp2YXIgdXRpbCA9IHJlcXVpcmUoJ3V0aWwnKSwKICAgIHFsb2JiZXIgPSA= ",
+    "evt.buffer": "/*jslint node: true */\n\"use strict\";\n\nvar util = require('util'),\n    qlobber = ",
+    "evt.time": 1678091627305439000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.305938794: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Lypqc2xpbnQgbm9kZTogdHJ1ZSovCiJ1c2Ugc3RyaWN0IjsKbW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKCcuL2xpYi9xbG9iYmVyJyk7Cg== arf=res=79 data=Lypqc2xpbnQgbm9kZTogdHJ1ZSovCiJ1c2Ugc3RyaWN0IjsKbW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKCcuL2xpYi9xbG9iYmVyJyk7Cg== )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.305938794Z",
+  "output_fields": {
+    "evt.args": "res=79 data=Lypqc2xpbnQgbm9kZTogdHJ1ZSovCiJ1c2Ugc3RyaWN0IjsKbW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKCcuL2xpYi9xbG9iYmVyJyk7Cg== ",
+    "evt.buffer": "/*jslint node: true*/\n\"use strict\";\nmodule.exports = require('./lib/qlobber');\n",
+    "evt.time": 1678091627305938700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.306264608: Warning READ - (command=node aedes.js user=f4de evt=read buffer=LyoqCiMgcWxvYmJlciZuYnNwOyZuYnNwOyZuYnNwO1shW2NpXShodHRwczovL2dpdGh1Yi5jb20vZGF2ZWRvZXNkZXYvcWxvYmJlci9hY3Q= arf=res=30329 data=LyoqCiMgcWxvYmJlciZuYnNwOyZuYnNwOyZuYnNwO1shW2NpXShodHRwczovL2dpdGh1Yi5jb20vZGF2ZWRvZXNkZXYvcWxvYmJlci9hY3Q= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.306264608Z",
+  "output_fields": {
+    "evt.args": "res=30329 data=LyoqCiMgcWxvYmJlciZuYnNwOyZuYnNwOyZuYnNwO1shW2NpXShodHRwczovL2dpdGh1Yi5jb20vZGF2ZWRvZXNkZXYvcWxvYmJlci9hY3Q= ",
+    "evt.buffer": "/**\n# qlobber&nbsp;&nbsp;&nbsp;[![ci](https://github.com/davedoesdev/qlobber/act",
+    "evt.time": 1678091627306264600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.307918091: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB7IFFsb2JiZXIgfSA9IHJlcXVpcmUoJ3Fsb2JiZXInKQpjb25zdCBhc3NlcnQgPSByZXF1aXJlKCdhc3M= arf=res=2919 data=J3VzZSBzdHJpY3QnCgpjb25zdCB7IFFsb2JiZXIgfSA9IHJlcXVpcmUoJ3Fsb2JiZXInKQpjb25zdCBhc3NlcnQgPSByZXF1aXJlKCdhc3M= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.307918091Z",
+  "output_fields": {
+    "evt.args": "res=2919 data=J3VzZSBzdHJpY3QnCgpjb25zdCB7IFFsb2JiZXIgfSA9IHJlcXVpcmUoJ3Fsb2JiZXInKQpjb25zdCBhc3NlcnQgPSByZXF1aXJlKCdhc3M= ",
+    "evt.buffer": "'use strict'\n\nconst { Qlobber } = require('qlobber')\nconst assert = require('ass",
+    "evt.time": 1678091627307918000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.309340812: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBtcXR0ID0gcmVxdWlyZSgnbXF0dC1wYWNrZXQnKQpjb25zdCBFdmVudEVtaXR0ZXIgPSByZXF1aXJlKCc= arf=res=9621 data=J3VzZSBzdHJpY3QnCgpjb25zdCBtcXR0ID0gcmVxdWlyZSgnbXF0dC1wYWNrZXQnKQpjb25zdCBFdmVudEVtaXR0ZXIgPSByZXF1aXJlKCc= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.309340812Z",
+  "output_fields": {
+    "evt.args": "res=9621 data=J3VzZSBzdHJpY3QnCgpjb25zdCBtcXR0ID0gcmVxdWlyZSgnbXF0dC1wYWNrZXQnKQpjb25zdCBFdmVudEVtaXR0ZXIgPSByZXF1aXJlKCc= ",
+    "evt.buffer": "'use strict'\n\nconst mqtt = require('mqtt-packet')\nconst EventEmitter = require('",
+    "evt.time": 1678091627309341000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.310167203: Warning READ - (command=node aedes.js user=f4de evt=read buffer=ZXhwb3J0cy5wYXJzZXIgPSByZXF1aXJlKCcuL3BhcnNlcicpLnBhcnNlcgpleHBvcnRzLmdlbmVyYXRlID0gcmVxdWlyZSgnLi9nZW5lcmE= arf=res=136 data=ZXhwb3J0cy5wYXJzZXIgPSByZXF1aXJlKCcuL3BhcnNlcicpLnBhcnNlcgpleHBvcnRzLmdlbmVyYXRlID0gcmVxdWlyZSgnLi9nZW5lcmE= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.310167203Z",
+  "output_fields": {
+    "evt.args": "res=136 data=ZXhwb3J0cy5wYXJzZXIgPSByZXF1aXJlKCcuL3BhcnNlcicpLnBhcnNlcgpleHBvcnRzLmdlbmVyYXRlID0gcmVxdWlyZSgnLi9nZW5lcmE= ",
+    "evt.buffer": "exports.parser = require('./parser').parser\nexports.generate = require('./genera",
+    "evt.time": 1678091627310167300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.310450343: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Y29uc3QgYmwgPSByZXF1aXJlKCdibCcpCmNvbnN0IEV2ZW50RW1pdHRlciA9IHJlcXVpcmUoJ2V2ZW50cycpCmNvbnN0IFBhY2tldCA9IHI= arf=res=24468 data=Y29uc3QgYmwgPSByZXF1aXJlKCdibCcpCmNvbnN0IEV2ZW50RW1pdHRlciA9IHJlcXVpcmUoJ2V2ZW50cycpCmNvbnN0IFBhY2tldCA9IHI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.310450343Z",
+  "output_fields": {
+    "evt.args": "res=24468 data=Y29uc3QgYmwgPSByZXF1aXJlKCdibCcpCmNvbnN0IEV2ZW50RW1pdHRlciA9IHJlcXVpcmUoJ2V2ZW50cycpCmNvbnN0IFBhY2tldCA9IHI= ",
+    "evt.buffer": "const bl = require('bl')\nconst EventEmitter = require('events')\nconst Packet = r",
+    "evt.time": 1678091627310450400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.313467688: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBEdXBsZXhTdHJlYW0gPSByZXF1aXJlKCdyZWFkYWJsZS1zdHJlYW0nKS5EdXBsZXgKY29uc3QgaW5oZXI= arf=res=2043 data=J3VzZSBzdHJpY3QnCgpjb25zdCBEdXBsZXhTdHJlYW0gPSByZXF1aXJlKCdyZWFkYWJsZS1zdHJlYW0nKS5EdXBsZXgKY29uc3QgaW5oZXI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.313467688Z",
+  "output_fields": {
+    "evt.args": "res=2043 data=J3VzZSBzdHJpY3QnCgpjb25zdCBEdXBsZXhTdHJlYW0gPSByZXF1aXJlKCdyZWFkYWJsZS1zdHJlYW0nKS5EdXBsZXgKY29uc3QgaW5oZXI= ",
+    "evt.buffer": "'use strict'\n\nconst DuplexStream = require('readable-stream').Duplex\nconst inher",
+    "evt.time": 1678091627313467600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.314293467: Warning READ - (command=node aedes.js user=f4de evt=read buffer=dmFyIFN0cmVhbSA9IHJlcXVpcmUoJ3N0cmVhbScpOwppZiAocHJvY2Vzcy5lbnYuUkVBREFCTEVfU1RSRUFNID09PSAnZGlzYWJsZScgJiY= arf=res=729 data=dmFyIFN0cmVhbSA9IHJlcXVpcmUoJ3N0cmVhbScpOwppZiAocHJvY2Vzcy5lbnYuUkVBREFCTEVfU1RSRUFNID09PSAnZGlzYWJsZScgJiY= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.314293467Z",
+  "output_fields": {
+    "evt.args": "res=729 data=dmFyIFN0cmVhbSA9IHJlcXVpcmUoJ3N0cmVhbScpOwppZiAocHJvY2Vzcy5lbnYuUkVBREFCTEVfU1RSRUFNID09PSAnZGlzYWJsZScgJiY= ",
+    "evt.buffer": "var Stream = require('stream');\nif (process.env.READABLE_STREAM === 'disable' &&",
+    "evt.time": 1678091627314293500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.314756536: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= arf=res=35972 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.314756536Z",
+  "output_fields": {
+    "evt.args": "res=35972 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= ",
+    "evt.buffer": "// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission is hereb",
+    "evt.time": 1678091627314756600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.316381553: Warning READ - (command=node aedes.js user=f4de evt=read buffer=bW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKCdzdHJlYW0nKTsK arf=res=36 data=bW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKCdzdHJlYW0nKTsK )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.316381553Z",
+  "output_fields": {
+    "evt.args": "res=36 data=bW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKCdzdHJlYW0nKTsK ",
+    "evt.buffer": "module.exports = require('stream');\n",
+    "evt.time": 1678091627316381400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.317398088: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnOwoKZnVuY3Rpb24gb3duS2V5cyhvYmplY3QsIGVudW1lcmFibGVPbmx5KSB7IHZhciBrZXlzID0gT2JqZWN0LmtleXM= arf=res=6335 data=J3VzZSBzdHJpY3QnOwoKZnVuY3Rpb24gb3duS2V5cyhvYmplY3QsIGVudW1lcmFibGVPbmx5KSB7IHZhciBrZXlzID0gT2JqZWN0LmtleXM= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.317398088Z",
+  "output_fields": {
+    "evt.args": "res=6335 data=J3VzZSBzdHJpY3QnOwoKZnVuY3Rpb24gb3duS2V5cyhvYmplY3QsIGVudW1lcmFibGVPbmx5KSB7IHZhciBrZXlzID0gT2JqZWN0LmtleXM= ",
+    "evt.buffer": "'use strict';\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys",
+    "evt.time": 1678091627317398000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.319093313: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnOyAvLyB1bmRvY3VtZW50ZWQgY2IoKSBBUEksIG5lZWRlZCBmb3IgY29yZSwgbm90IGZvciBwdWJsaWMgQVBJCgpmdW4= arf=res=3117 data=J3VzZSBzdHJpY3QnOyAvLyB1bmRvY3VtZW50ZWQgY2IoKSBBUEksIG5lZWRlZCBmb3IgY29yZSwgbm90IGZvciBwdWJsaWMgQVBJCgpmdW4= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.319093313Z",
+  "output_fields": {
+    "evt.args": "res=3117 data=J3VzZSBzdHJpY3QnOyAvLyB1bmRvY3VtZW50ZWQgY2IoKSBBUEksIG5lZWRlZCBmb3IgY29yZSwgbm90IGZvciBwdWJsaWMgQVBJCgpmdW4= ",
+    "evt.buffer": "'use strict'; // undocumented cb() API, needed for core, not for public API\n\nfun",
+    "evt.time": 1678091627319093200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.320174226: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnOwoKdmFyIEVSUl9JTlZBTElEX09QVF9WQUxVRSA9IHJlcXVpcmUoJy4uLy4uLy4uL2Vycm9ycycpLmNvZGVzLkVSUl8= arf=res=749 data=J3VzZSBzdHJpY3QnOwoKdmFyIEVSUl9JTlZBTElEX09QVF9WQUxVRSA9IHJlcXVpcmUoJy4uLy4uLy4uL2Vycm9ycycpLmNvZGVzLkVSUl8= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.320174226Z",
+  "output_fields": {
+    "evt.args": "res=749 data=J3VzZSBzdHJpY3QnOwoKdmFyIEVSUl9JTlZBTElEX09QVF9WQUxVRSA9IHJlcXVpcmUoJy4uLy4uLy4uL2Vycm9ycycpLmNvZGVzLkVSUl8= ",
+    "evt.buffer": "'use strict';\n\nvar ERR_INVALID_OPT_VALUE = require('../../../errors').codes.ERR_",
+    "evt.time": 1678091627320174300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.321174425: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnOwoKY29uc3QgY29kZXMgPSB7fTsKCmZ1bmN0aW9uIGNyZWF0ZUVycm9yVHlwZShjb2RlLCBtZXNzYWdlLCBCYXNlKSA= arf=res=3715 data=J3VzZSBzdHJpY3QnOwoKY29uc3QgY29kZXMgPSB7fTsKCmZ1bmN0aW9uIGNyZWF0ZUVycm9yVHlwZShjb2RlLCBtZXNzYWdlLCBCYXNlKSA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.321174425Z",
+  "output_fields": {
+    "evt.args": "res=3715 data=J3VzZSBzdHJpY3QnOwoKY29uc3QgY29kZXMgPSB7fTsKCmZ1bmN0aW9uIGNyZWF0ZUVycm9yVHlwZShjb2RlLCBtZXNzYWdlLCBCYXNlKSA= ",
+    "evt.buffer": "'use strict';\n\nconst codes = {};\n\nfunction createErrorType(code, message, Base) ",
+    "evt.time": 1678091627321174500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.323181517: Warning READ - (command=node aedes.js user=f4de evt=read buffer=dHJ5IHsKICB2YXIgdXRpbCA9IHJlcXVpcmUoJ3V0aWwnKTsKICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqLwogIGlmICh0eXBlb2YgdXQ= arf=res=250 data=dHJ5IHsKICB2YXIgdXRpbCA9IHJlcXVpcmUoJ3V0aWwnKTsKICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqLwogIGlmICh0eXBlb2YgdXQ= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.323181517Z",
+  "output_fields": {
+    "evt.args": "res=250 data=dHJ5IHsKICB2YXIgdXRpbCA9IHJlcXVpcmUoJ3V0aWwnKTsKICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqLwogIGlmICh0eXBlb2YgdXQ= ",
+    "evt.buffer": "try {\n  var util = require('util');\n  /* istanbul ignore next */\n  if (typeof ut",
+    "evt.time": 1678091627323181600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.324126981: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= arf=res=21821 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.324126981Z",
+  "output_fields": {
+    "evt.args": "res=21821 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= ",
+    "evt.buffer": "// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission is hereb",
+    "evt.time": 1678091627324127000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.325993396: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ci8qKgogKiBGb3IgTm9kZS5qcywgc2ltcGx5IHJlLWV4cG9ydCB0aGUgY29yZSBgdXRpbC5kZXByZWNhdGVgIGZ1bmN0aW9uLgogKi8KCm0= arf=res=123 data=Ci8qKgogKiBGb3IgTm9kZS5qcywgc2ltcGx5IHJlLWV4cG9ydCB0aGUgY29yZSBgdXRpbC5kZXByZWNhdGVgIGZ1bmN0aW9uLgogKi8KCm0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.325993396Z",
+  "output_fields": {
+    "evt.args": "res=123 data=Ci8qKgogKiBGb3IgTm9kZS5qcywgc2ltcGx5IHJlLWV4cG9ydCB0aGUgY29yZSBgdXRpbC5kZXByZWNhdGVgIGZ1bmN0aW9uLgogKi8KCm0= ",
+    "evt.buffer": "\n/**\n * For Node.js, simply re-export the core `util.deprecate` function.\n */\n\nm",
+    "evt.time": 1678091627325993500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.326940947: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= arf=res=4399 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.326940947Z",
+  "output_fields": {
+    "evt.args": "res=4399 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= ",
+    "evt.buffer": "// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission is hereb",
+    "evt.time": 1678091627326941000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.327935548: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= arf=res=7947 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.327935548Z",
+  "output_fields": {
+    "evt.args": "res=7947 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= ",
+    "evt.buffer": "// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission is hereb",
+    "evt.time": 1678091627327935500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.329213308: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= arf=res=1630 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.329213308Z",
+  "output_fields": {
+    "evt.args": "res=1630 data=Ly8gQ29weXJpZ2h0IEpveWVudCwgSW5jLiBhbmQgb3RoZXIgTm9kZSBjb250cmlidXRvcnMuCi8vCi8vIFBlcm1pc3Npb24gaXMgaGVyZWI= ",
+    "evt.buffer": "// Copyright Joyent, Inc. and other Node contributors.\n//\n// Permission is hereb",
+    "evt.time": 1678091627329213200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.330485961: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gUG9ydGVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL21hZmludG9zaC9lbmQtb2Ytc3RyZWFtIHdpdGgKLy8gcGVybWlzc2lvbiBmcm8= arf=res=3102 data=Ly8gUG9ydGVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL21hZmludG9zaC9lbmQtb2Ytc3RyZWFtIHdpdGgKLy8gcGVybWlzc2lvbiBmcm8= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.330485961Z",
+  "output_fields": {
+    "evt.args": "res=3102 data=Ly8gUG9ydGVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL21hZmludG9zaC9lbmQtb2Ytc3RyZWFtIHdpdGgKLy8gcGVybWlzc2lvbiBmcm8= ",
+    "evt.buffer": "// Ported from https://github.com/mafintosh/end-of-stream with\n// permission fro",
+    "evt.time": 1678091627330486000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.331306873: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gUG9ydGVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL21hZmludG9zaC9wdW1wIHdpdGgKLy8gcGVybWlzc2lvbiBmcm9tIHRoZSBhdXQ= arf=res=2428 data=Ly8gUG9ydGVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL21hZmludG9zaC9wdW1wIHdpdGgKLy8gcGVybWlzc2lvbiBmcm9tIHRoZSBhdXQ= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.331306873Z",
+  "output_fields": {
+    "evt.args": "res=2428 data=Ly8gUG9ydGVkIGZyb20gaHR0cHM6Ly9naXRodWIuY29tL21hZmludG9zaC9wdW1wIHdpdGgKLy8gcGVybWlzc2lvbiBmcm9tIHRoZSBhdXQ= ",
+    "evt.buffer": "// Ported from https://github.com/mafintosh/pump with\n// permission from the aut",
+    "evt.time": 1678091627331306800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.331914141: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB7IEJ1ZmZlciB9ID0gcmVxdWlyZSgnYnVmZmVyJykKY29uc3Qgc3ltYm9sID0gU3ltYm9sLmZvcignQnU= arf=res=9524 data=J3VzZSBzdHJpY3QnCgpjb25zdCB7IEJ1ZmZlciB9ID0gcmVxdWlyZSgnYnVmZmVyJykKY29uc3Qgc3ltYm9sID0gU3ltYm9sLmZvcignQnU= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.331914141Z",
+  "output_fields": {
+    "evt.args": "res=9524 data=J3VzZSBzdHJpY3QnCgpjb25zdCB7IEJ1ZmZlciB9ID0gcmVxdWlyZSgnYnVmZmVyJykKY29uc3Qgc3ltYm9sID0gU3ltYm9sLmZvcignQnU= ",
+    "evt.buffer": "'use strict'\n\nconst { Buffer } = require('buffer')\nconst symbol = Symbol.for('Bu",
+    "evt.time": 1678091627331914200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.333552312: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Y2xhc3MgUGFja2V0IHsKICBjb25zdHJ1Y3RvciAoKSB7CiAgICB0aGlzLmNtZCA9IG51bGwKICAgIHRoaXMucmV0YWluID0gZmFsc2UKICA= arf=res=214 data=Y2xhc3MgUGFja2V0IHsKICBjb25zdHJ1Y3RvciAoKSB7CiAgICB0aGlzLmNtZCA9IG51bGwKICAgIHRoaXMucmV0YWluID0gZmFsc2UKICA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.333552312Z",
+  "output_fields": {
+    "evt.args": "res=214 data=Y2xhc3MgUGFja2V0IHsKICBjb25zdHJ1Y3RvciAoKSB7CiAgICB0aGlzLmNtZCA9IG51bGwKICAgIHRoaXMucmV0YWluID0gZmFsc2UKICA= ",
+    "evt.buffer": "class Packet {\n  constructor () {\n    this.cmd = null\n    this.retain = false\n  ",
+    "evt.time": 1678091627333552400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.334182187: Warning READ - (command=node aedes.js user=f4de evt=read buffer=LyogUHJvdG9jb2wgLSBwcm90b2NvbCBjb25zdGFudHMgKi8KY29uc3QgcHJvdG9jb2wgPSBtb2R1bGUuZXhwb3J0cwpjb25zdCB7IEJ1ZmY= arf=res=7853 data=LyogUHJvdG9jb2wgLSBwcm90b2NvbCBjb25zdGFudHMgKi8KY29uc3QgcHJvdG9jb2wgPSBtb2R1bGUuZXhwb3J0cwpjb25zdCB7IEJ1ZmY= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.334182187Z",
+  "output_fields": {
+    "evt.args": "res=7853 data=LyogUHJvdG9jb2wgLSBwcm90b2NvbCBjb25zdGFudHMgKi8KY29uc3QgcHJvdG9jb2wgPSBtb2R1bGUuZXhwb3J0cwpjb25zdCB7IEJ1ZmY= ",
+    "evt.buffer": "/* Protocol - protocol constants */\nconst protocol = module.exports\nconst { Buff",
+    "evt.time": 1678091627334182100,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.337200847: Warning READ - (command=node aedes.js user=f4de evt=read buffer=LyoqCiAqIERldGVjdCBFbGVjdHJvbiByZW5kZXJlciAvIG53anMgcHJvY2Vzcywgd2hpY2ggaXMgbm9kZSwgYnV0IHdlIHNob3VsZAogKiA= arf=res=314 data=LyoqCiAqIERldGVjdCBFbGVjdHJvbiByZW5kZXJlciAvIG53anMgcHJvY2Vzcywgd2hpY2ggaXMgbm9kZSwgYnV0IHdlIHNob3VsZAogKiA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.337200847Z",
+  "output_fields": {
+    "evt.args": "res=314 data=LyoqCiAqIERldGVjdCBFbGVjdHJvbiByZW5kZXJlciAvIG53anMgcHJvY2Vzcywgd2hpY2ggaXMgbm9kZSwgYnV0IHdlIHNob3VsZAogKiA= ",
+    "evt.buffer": "/**\n * Detect Electron renderer / nwjs process, which is node, but we should\n * ",
+    "evt.time": 1678091627337201000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.337901351: Warning READ - (command=node aedes.js user=f4de evt=read buffer=LyoqCiAqIE1vZHVsZSBkZXBlbmRlbmNpZXMuCiAqLwoKY29uc3QgdHR5ID0gcmVxdWlyZSgndHR5Jyk7CmNvbnN0IHV0aWwgPSByZXF1aXI= arf=res=4685 data=LyoqCiAqIE1vZHVsZSBkZXBlbmRlbmNpZXMuCiAqLwoKY29uc3QgdHR5ID0gcmVxdWlyZSgndHR5Jyk7CmNvbnN0IHV0aWwgPSByZXF1aXI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.337901351Z",
+  "output_fields": {
+    "evt.args": "res=4685 data=LyoqCiAqIE1vZHVsZSBkZXBlbmRlbmNpZXMuCiAqLwoKY29uc3QgdHR5ID0gcmVxdWlyZSgndHR5Jyk7CmNvbnN0IHV0aWwgPSByZXF1aXI= ",
+    "evt.buffer": "/**\n * Module dependencies.\n */\n\nconst tty = require('tty');\nconst util = requir",
+    "evt.time": 1678091627337901300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.342466231: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ci8qKgogKiBUaGlzIGlzIHRoZSBjb21tb24gbG9naWMgZm9yIGJvdGggdGhlIE5vZGUuanMgYW5kIHdlYiBicm93c2VyCiAqIGltcGxlbWU= arf=res=6289 data=Ci8qKgogKiBUaGlzIGlzIHRoZSBjb21tb24gbG9naWMgZm9yIGJvdGggdGhlIE5vZGUuanMgYW5kIHdlYiBicm93c2VyCiAqIGltcGxlbWU= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.342466231Z",
+  "output_fields": {
+    "evt.args": "res=6289 data=Ci8qKgogKiBUaGlzIGlzIHRoZSBjb21tb24gbG9naWMgZm9yIGJvdGggdGhlIE5vZGUuanMgYW5kIHdlYiBicm93c2VyCiAqIGltcGxlbWU= ",
+    "evt.buffer": "\n/**\n * This is the common logic for both the Node.js and web browser\n * impleme",
+    "evt.time": 1678091627342466300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.343694323: Warning READ - (command=node aedes.js user=f4de evt=read buffer=LyoqCiAqIEhlbHBlcnMuCiAqLwoKdmFyIHMgPSAxMDAwOwp2YXIgbSA9IHMgKiA2MDsKdmFyIGggPSBtICogNjA7CnZhciBkID0gaCAqIDI= arf=res=3023 data=LyoqCiAqIEhlbHBlcnMuCiAqLwoKdmFyIHMgPSAxMDAwOwp2YXIgbSA9IHMgKiA2MDsKdmFyIGggPSBtICogNjA7CnZhciBkID0gaCAqIDI= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.343694323Z",
+  "output_fields": {
+    "evt.args": "res=3023 data=LyoqCiAqIEhlbHBlcnMuCiAqLwoKdmFyIHMgPSAxMDAwOwp2YXIgbSA9IHMgKiA2MDsKdmFyIGggPSBtICogNjA7CnZhciBkID0gaCAqIDI= ",
+    "evt.buffer": "/**\n * Helpers.\n */\n\nvar s = 1000;\nvar m = s * 60;\nvar h = m * 60;\nvar d = h * 2",
+    "evt.time": 1678091627343694300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.347233998: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Kg== arf=res=1 data=Kg== )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.347233998Z",
+  "output_fields": {
+    "evt.args": "res=1 data=Kg== ",
+    "evt.buffer": "*",
+    "evt.time": 1678091627347234000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.347993743: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Y29uc3Qgd3JpdGVUb1N0cmVhbSA9IHJlcXVpcmUoJy4vd3JpdGVUb1N0cmVhbScpCmNvbnN0IEV2ZW50RW1pdHRlciA9IHJlcXVpcmUoJ2U= arf=res=1233 data=Y29uc3Qgd3JpdGVUb1N0cmVhbSA9IHJlcXVpcmUoJy4vd3JpdGVUb1N0cmVhbScpCmNvbnN0IEV2ZW50RW1pdHRlciA9IHJlcXVpcmUoJ2U= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.347993743Z",
+  "output_fields": {
+    "evt.args": "res=1233 data=Y29uc3Qgd3JpdGVUb1N0cmVhbSA9IHJlcXVpcmUoJy4vd3JpdGVUb1N0cmVhbScpCmNvbnN0IEV2ZW50RW1pdHRlciA9IHJlcXVpcmUoJ2U= ",
+    "evt.buffer": "const writeToStream = require('./writeToStream')\nconst EventEmitter = require('e",
+    "evt.time": 1678091627347993900,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.348788556: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Y29uc3QgcHJvdG9jb2wgPSByZXF1aXJlKCcuL2NvbnN0YW50cycpCmNvbnN0IHsgQnVmZmVyIH0gPSByZXF1aXJlKCdidWZmZXInKQpjb24= arf=res=30709 data=Y29uc3QgcHJvdG9jb2wgPSByZXF1aXJlKCcuL2NvbnN0YW50cycpCmNvbnN0IHsgQnVmZmVyIH0gPSByZXF1aXJlKCdidWZmZXInKQpjb24= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.348788556Z",
+  "output_fields": {
+    "evt.args": "res=30709 data=Y29uc3QgcHJvdG9jb2wgPSByZXF1aXJlKCcuL2NvbnN0YW50cycpCmNvbnN0IHsgQnVmZmVyIH0gPSByZXF1aXJlKCdidWZmZXInKQpjb24= ",
+    "evt.buffer": "const protocol = require('./constants')\nconst { Buffer } = require('buffer')\ncon",
+    "evt.time": 1678091627348788500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.350500478: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Y29uc3QgeyBCdWZmZXIgfSA9IHJlcXVpcmUoJ2J1ZmZlcicpCmNvbnN0IG1heCA9IDY1NTM2CmNvbnN0IGNhY2hlID0ge30KCi8vIGluIG4= arf=res=1317 data=Y29uc3QgeyBCdWZmZXIgfSA9IHJlcXVpcmUoJ2J1ZmZlcicpCmNvbnN0IG1heCA9IDY1NTM2CmNvbnN0IGNhY2hlID0ge30KCi8vIGluIG4= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.350500478Z",
+  "output_fields": {
+    "evt.args": "res=1317 data=Y29uc3QgeyBCdWZmZXIgfSA9IHJlcXVpcmUoJ2J1ZmZlcicpCmNvbnN0IG1heCA9IDY1NTM2CmNvbnN0IGNhY2hlID0ge30KCi8vIGluIG4= ",
+    "evt.buffer": "const { Buffer } = require('buffer')\nconst max = 65536\nconst cache = {}\n\n// in n",
+    "evt.time": 1678091627350500400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.351478101: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnOwoKaWYgKHR5cGVvZiBwcm9jZXNzID09PSAndW5kZWZpbmVkJyB8fAogICAgIXByb2Nlc3MudmVyc2lvbiB8fAogICA= arf=res=1083 data=J3VzZSBzdHJpY3QnOwoKaWYgKHR5cGVvZiBwcm9jZXNzID09PSAndW5kZWZpbmVkJyB8fAogICAgIXByb2Nlc3MudmVyc2lvbiB8fAogICA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.351478101Z",
+  "output_fields": {
+    "evt.args": "res=1083 data=J3VzZSBzdHJpY3QnOwoKaWYgKHR5cGVvZiBwcm9jZXNzID09PSAndW5kZWZpbmVkJyB8fAogICAgIXByb2Nlc3MudmVyc2lvbiB8fAogICA= ",
+    "evt.buffer": "'use strict';\n\nif (typeof process === 'undefined' ||\n    !process.version ||\n   ",
+    "evt.time": 1678091627351478000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.352460109: Warning READ - (command=node aedes.js user=f4de evt=read buffer=dmFyIG9uY2UgPSByZXF1aXJlKCdvbmNlJyk7Cgp2YXIgbm9vcCA9IGZ1bmN0aW9uKCkge307Cgp2YXIgaXNSZXF1ZXN0ID0gZnVuY3Rpb24= arf=res=2678 data=dmFyIG9uY2UgPSByZXF1aXJlKCdvbmNlJyk7Cgp2YXIgbm9vcCA9IGZ1bmN0aW9uKCkge307Cgp2YXIgaXNSZXF1ZXN0ID0gZnVuY3Rpb24= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.352460109Z",
+  "output_fields": {
+    "evt.args": "res=2678 data=dmFyIG9uY2UgPSByZXF1aXJlKCdvbmNlJyk7Cgp2YXIgbm9vcCA9IGZ1bmN0aW9uKCkge307Cgp2YXIgaXNSZXF1ZXN0ID0gZnVuY3Rpb24= ",
+    "evt.buffer": "var once = require('once');\n\nvar noop = function() {};\n\nvar isRequest = function",
+    "evt.time": 1678091627352460000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.353084234: Warning READ - (command=node aedes.js user=f4de evt=read buffer=dmFyIHdyYXBweSA9IHJlcXVpcmUoJ3dyYXBweScpCm1vZHVsZS5leHBvcnRzID0gd3JhcHB5KG9uY2UpCm1vZHVsZS5leHBvcnRzLnN0cmk= arf=res=935 data=dmFyIHdyYXBweSA9IHJlcXVpcmUoJ3dyYXBweScpCm1vZHVsZS5leHBvcnRzID0gd3JhcHB5KG9uY2UpCm1vZHVsZS5leHBvcnRzLnN0cmk= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.353084234Z",
+  "output_fields": {
+    "evt.args": "res=935 data=dmFyIHdyYXBweSA9IHJlcXVpcmUoJ3dyYXBweScpCm1vZHVsZS5leHBvcnRzID0gd3JhcHB5KG9uY2UpCm1vZHVsZS5leHBvcnRzLnN0cmk= ",
+    "evt.buffer": "var wrappy = require('wrappy')\nmodule.exports = wrappy(once)\nmodule.exports.stri",
+    "evt.time": 1678091627353084200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.353602931: Warning READ - (command=node aedes.js user=f4de evt=read buffer=Ly8gUmV0dXJucyBhIHdyYXBwZXIgZnVuY3Rpb24gdGhhdCByZXR1cm5zIGEgd3JhcHBlZCBjYWxsYmFjawovLyBUaGUgd3JhcHBlciBmdW4= arf=res=905 data=Ly8gUmV0dXJucyBhIHdyYXBwZXIgZnVuY3Rpb24gdGhhdCByZXR1cm5zIGEgd3JhcHBlZCBjYWxsYmFjawovLyBUaGUgd3JhcHBlciBmdW4= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.353602931Z",
+  "output_fields": {
+    "evt.args": "res=905 data=Ly8gUmV0dXJucyBhIHdyYXBwZXIgZnVuY3Rpb24gdGhhdCByZXR1cm5zIGEgd3JhcHBlZCBjYWxsYmFjawovLyBUaGUgd3JhcHBlciBmdW4= ",
+    "evt.buffer": "// Returns a wrapper function that returns a wrapped callback\n// The wrapper fun",
+    "evt.time": 1678091627353602800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.354147878: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBtcXR0ID0gcmVxdWlyZSgnbXF0dC1wYWNrZXQnKQoKZnVuY3Rpb24gd3JpdGUgKGNsaWVudCwgcGFja2U= arf=res=529 data=J3VzZSBzdHJpY3QnCgpjb25zdCBtcXR0ID0gcmVxdWlyZSgnbXF0dC1wYWNrZXQnKQoKZnVuY3Rpb24gd3JpdGUgKGNsaWVudCwgcGFja2U= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.354147878Z",
+  "output_fields": {
+    "evt.args": "res=529 data=J3VzZSBzdHJpY3QnCgpjb25zdCBtcXR0ID0gcmVxdWlyZSgnbXF0dC1wYWNrZXQnKQoKZnVuY3Rpb24gd3JpdGUgKGNsaWVudCwgcGFja2U= ",
+    "evt.buffer": "'use strict'\n\nconst mqtt = require('mqtt-packet')\n\nfunction write (client, packe",
+    "evt.time": 1678091627354147800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.354481669: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBQYWNrZXQgPSByZXF1aXJlKCdhZWRlcy1wYWNrZXQnKQpjb25zdCB1dGlsID0gcmVxdWlyZSgndXRpbCc= arf=res=508 data=J3VzZSBzdHJpY3QnCgpjb25zdCBQYWNrZXQgPSByZXF1aXJlKCdhZWRlcy1wYWNrZXQnKQpjb25zdCB1dGlsID0gcmVxdWlyZSgndXRpbCc= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.354481669Z",
+  "output_fields": {
+    "evt.args": "res=508 data=J3VzZSBzdHJpY3QnCgpjb25zdCBQYWNrZXQgPSByZXF1aXJlKCdhZWRlcy1wYWNrZXQnKQpjb25zdCB1dGlsID0gcmVxdWlyZSgndXRpbCc= ",
+    "evt.buffer": "'use strict'\n\nconst Packet = require('aedes-packet')\nconst util = require('util'",
+    "evt.time": 1678091627354481700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.354961756: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBmYXN0ZmFsbCA9IHJlcXVpcmUoJ2Zhc3RmYWxsJykKY29uc3QgUGFja2V0ID0gcmVxdWlyZSgnYWVkZXM= arf=res=6475 data=J3VzZSBzdHJpY3QnCgpjb25zdCBmYXN0ZmFsbCA9IHJlcXVpcmUoJ2Zhc3RmYWxsJykKY29uc3QgUGFja2V0ID0gcmVxdWlyZSgnYWVkZXM= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.354961756Z",
+  "output_fields": {
+    "evt.args": "res=6475 data=J3VzZSBzdHJpY3QnCgpjb25zdCBmYXN0ZmFsbCA9IHJlcXVpcmUoJ2Zhc3RmYWxsJykKY29uc3QgUGFja2V0ID0gcmVxdWlyZSgnYWVkZXM= ",
+    "evt.buffer": "'use strict'\n\nconst fastfall = require('fastfall')\nconst Packet = require('aedes",
+    "evt.time": 1678091627354961700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.355759580: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgp2YXIgcmV1c2lmeSA9IHJlcXVpcmUoJ3JldXNpZnknKQp2YXIgZW1wdHkgPSBbXQoKZnVuY3Rpb24gZmFzdGZhbGw= arf=res=3533 data=J3VzZSBzdHJpY3QnCgp2YXIgcmV1c2lmeSA9IHJlcXVpcmUoJ3JldXNpZnknKQp2YXIgZW1wdHkgPSBbXQoKZnVuY3Rpb24gZmFzdGZhbGw= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.355759580Z",
+  "output_fields": {
+    "evt.args": "res=3533 data=J3VzZSBzdHJpY3QnCgp2YXIgcmV1c2lmeSA9IHJlcXVpcmUoJ3JldXNpZnknKQp2YXIgZW1wdHkgPSBbXQoKZnVuY3Rpb24gZmFzdGZhbGw= ",
+    "evt.buffer": "'use strict'\n\nvar reusify = require('reusify')\nvar empty = []\n\nfunction fastfall",
+    "evt.time": 1678091627355759600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.356371143: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB7IFRyYW5zZm9ybSwgV3JpdGFibGUgfSA9IHJlcXVpcmUoJ3N0cmVhbScpCgpmdW5jdGlvbiB2YWxpZGE= arf=res=1333 data=J3VzZSBzdHJpY3QnCgpjb25zdCB7IFRyYW5zZm9ybSwgV3JpdGFibGUgfSA9IHJlcXVpcmUoJ3N0cmVhbScpCgpmdW5jdGlvbiB2YWxpZGE= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.356371143Z",
+  "output_fields": {
+    "evt.args": "res=1333 data=J3VzZSBzdHJpY3QnCgpjb25zdCB7IFRyYW5zZm9ybSwgV3JpdGFibGUgfSA9IHJlcXVpcmUoJ3N0cmVhbScpCgpmdW5jdGlvbiB2YWxpZGE= ",
+    "evt.buffer": "'use strict'\n\nconst { Transform, Writable } = require('stream')\n\nfunction valida",
+    "evt.time": 1678091627356371200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.357105722: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKY29uc3QgeyB2YWxpZGF0ZVRvcGljLCAkU1lTX1BSRUY= arf=res=2305 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKY29uc3QgeyB2YWxpZGF0ZVRvcGljLCAkU1lTX1BSRUY= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.357105722Z",
+  "output_fields": {
+    "evt.args": "res=2305 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKY29uc3QgeyB2YWxpZGF0ZVRvcGljLCAkU1lTX1BSRUY= ",
+    "evt.buffer": "'use strict'\n\nconst write = require('../write')\nconst { validateTopic, $SYS_PREF",
+    "evt.time": 1678091627357105700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.357610994: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBoYW5kbGVDb25uZWN0ID0gcmVxdWlyZSgnLi9jb25uZWN0JykKY29uc3QgaGFuZGxlU3Vic2NyaWJlID0= arf=res=1844 data=J3VzZSBzdHJpY3QnCgpjb25zdCBoYW5kbGVDb25uZWN0ID0gcmVxdWlyZSgnLi9jb25uZWN0JykKY29uc3QgaGFuZGxlU3Vic2NyaWJlID0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.357610994Z",
+  "output_fields": {
+    "evt.args": "res=1844 data=J3VzZSBzdHJpY3QnCgpjb25zdCBoYW5kbGVDb25uZWN0ID0gcmVxdWlyZSgnLi9jb25uZWN0JykKY29uc3QgaGFuZGxlU3Vic2NyaWJlID0= ",
+    "evt.buffer": "'use strict'\n\nconst handleConnect = require('./connect')\nconst handleSubscribe =",
+    "evt.time": 1678091627357611000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.358029382: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCByZXRpbWVyID0gcmVxdWlyZSgncmV0aW1lcicpCmNvbnN0IHsgcGlwZWxpbmUgfSA9IHJlcXVpcmUoJ3M= arf=res=6726 data=J3VzZSBzdHJpY3QnCgpjb25zdCByZXRpbWVyID0gcmVxdWlyZSgncmV0aW1lcicpCmNvbnN0IHsgcGlwZWxpbmUgfSA9IHJlcXVpcmUoJ3M= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.358029382Z",
+  "output_fields": {
+    "evt.args": "res=6726 data=J3VzZSBzdHJpY3QnCgpjb25zdCByZXRpbWVyID0gcmVxdWlyZSgncmV0aW1lcicpCmNvbnN0IHsgcGlwZWxpbmUgfSA9IHJlcXVpcmUoJ3M= ",
+    "evt.buffer": "'use strict'\n\nconst retimer = require('retimer')\nconst { pipeline } = require('s",
+    "evt.time": 1678091627358029300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.358889005: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCBnZXRUaW1lID0gcmVxdWlyZSgnLi90aW1lJykKCmNsYXNzIFJldGltZXIgewogIGNvbnN0cnVjdG9yICg= arf=res=1736 data=J3VzZSBzdHJpY3QnCgpjb25zdCBnZXRUaW1lID0gcmVxdWlyZSgnLi90aW1lJykKCmNsYXNzIFJldGltZXIgewogIGNvbnN0cnVjdG9yICg= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.358889005Z",
+  "output_fields": {
+    "evt.args": "res=1736 data=J3VzZSBzdHJpY3QnCgpjb25zdCBnZXRUaW1lID0gcmVxdWlyZSgnLi90aW1lJykKCmNsYXNzIFJldGltZXIgewogIGNvbnN0cnVjdG9yICg= ",
+    "evt.buffer": "'use strict'\n\nconst getTime = require('./time')\n\nclass Retimer {\n  constructor (",
+    "evt.time": 1678091627358889000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.359345001: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgptb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uIGdldFRpbWUgKCkgewogIGNvbnN0IHQgPSBwcm9jZXNzLmhydGltZSg= arf=res=134 data=J3VzZSBzdHJpY3QnCgptb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uIGdldFRpbWUgKCkgewogIGNvbnN0IHQgPSBwcm9jZXNzLmhydGltZSg= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.359345001Z",
+  "output_fields": {
+    "evt.args": "res=134 data=J3VzZSBzdHJpY3QnCgptb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uIGdldFRpbWUgKCkgewogIGNvbnN0IHQgPSBwcm9jZXNzLmhydGltZSg= ",
+    "evt.buffer": "'use strict'\n\nmodule.exports = function getTime () {\n  const t = process.hrtime(",
+    "evt.time": 1678091627359345000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.360198122: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB1dWlkdjQgPSByZXF1aXJlKCcuL3V1aWQtbm9kZScpCmNvbnN0IHBhcnNlciA9IHJlcXVpcmUoJ3V1aWQ= arf=res=2188 data=J3VzZSBzdHJpY3QnCgpjb25zdCB1dWlkdjQgPSByZXF1aXJlKCcuL3V1aWQtbm9kZScpCmNvbnN0IHBhcnNlciA9IHJlcXVpcmUoJ3V1aWQ= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.360198122Z",
+  "output_fields": {
+    "evt.args": "res=2188 data=J3VzZSBzdHJpY3QnCgpjb25zdCB1dWlkdjQgPSByZXF1aXJlKCcuL3V1aWQtbm9kZScpCmNvbnN0IHBhcnNlciA9IHJlcXVpcmUoJ3V1aWQ= ",
+    "evt.buffer": "'use strict'\n\nconst uuidv4 = require('./uuid-node')\nconst parser = require('uuid",
+    "evt.time": 1678091627360198100,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.360686858: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB1dWlkID0gcmVxdWlyZSgndXVpZCcpCmNvbnN0IGNyeXB0byA9IHJlcXVpcmUoJ2NyeXB0bycpCm1vZHU= arf=res=167 data=J3VzZSBzdHJpY3QnCgpjb25zdCB1dWlkID0gcmVxdWlyZSgndXVpZCcpCmNvbnN0IGNyeXB0byA9IHJlcXVpcmUoJ2NyeXB0bycpCm1vZHU= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.360686858Z",
+  "output_fields": {
+    "evt.args": "res=167 data=J3VzZSBzdHJpY3QnCgpjb25zdCB1dWlkID0gcmVxdWlyZSgndXVpZCcpCmNvbnN0IGNyeXB0byA9IHJlcXVpcmUoJ2NyeXB0bycpCm1vZHU= ",
+    "evt.buffer": "'use strict'\n\nconst uuid = require('uuid')\nconst crypto = require('crypto')\nmodu",
+    "evt.time": 1678091627360686800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.362278903: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=1765 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.362278903Z",
+  "output_fields": {
+    "evt.args": "res=1765 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627362279000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.362974541: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=3618 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.362974541Z",
+  "output_fields": {
+    "evt.args": "res=3618 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627362974500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.363513557: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=549 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.363513557Z",
+  "output_fields": {
+    "evt.args": "res=549 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627363513600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.364129565: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=1667 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.364129565Z",
+  "output_fields": {
+    "evt.args": "res=1667 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627364129500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.364616214: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=410 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.364616214Z",
+  "output_fields": {
+    "evt.args": "res=410 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627364616200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.365147113: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=267 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.365147113Z",
+  "output_fields": {
+    "evt.args": "res=267 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627365147100,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.366447119: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=414 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.366447119Z",
+  "output_fields": {
+    "evt.args": "res=414 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627366447000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.367556809: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=2008 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.367556809Z",
+  "output_fields": {
+    "evt.args": "res=2008 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627367556900,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.368559808: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=1380 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.368559808Z",
+  "output_fields": {
+    "evt.args": "res=1380 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627368559900,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.369688704: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=550 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.369688704Z",
+  "output_fields": {
+    "evt.args": "res=550 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627369688600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.371030692: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=860 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.371030692Z",
+  "output_fields": {
+    "evt.args": "res=860 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627371030800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.371933622: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=417 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.371933622Z",
+  "output_fields": {
+    "evt.args": "res=417 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627371933700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.372742784: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=553 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.372742784Z",
+  "output_fields": {
+    "evt.args": "res=553 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627372742700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.374091756: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=188 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.374091756Z",
+  "output_fields": {
+    "evt.args": "res=188 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627374091800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.376587754: Warning READ - (command=node aedes.js user=f4de evt=read buffer=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= arf=res=474 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.376587754Z",
+  "output_fields": {
+    "evt.args": "res=474 data=InVzZSBzdHJpY3QiOwoKT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICJfX2VzTW9kdWxlIiwgewogIHZhbHVlOiB0cnVlCn0pOwo= ",
+    "evt.buffer": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n",
+    "evt.time": 1678091627376587800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.377952961: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnOwoKLy8gTWFwcyBmb3IgbnVtYmVyIDwtPiBoZXggc3RyaW5nIGNvbnZlcnNpb24KdmFyIF9ieXRlVG9IZXggPSBbXTs= arf=res=1215 data=J3VzZSBzdHJpY3QnOwoKLy8gTWFwcyBmb3IgbnVtYmVyIDwtPiBoZXggc3RyaW5nIGNvbnZlcnNpb24KdmFyIF9ieXRlVG9IZXggPSBbXTs= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.377952961Z",
+  "output_fields": {
+    "evt.args": "res=1215 data=J3VzZSBzdHJpY3QnOwoKLy8gTWFwcyBmb3IgbnVtYmVyIDwtPiBoZXggc3RyaW5nIGNvbnZlcnNpb24KdmFyIF9ieXRlVG9IZXggPSBbXTs= ",
+    "evt.buffer": "'use strict';\n\n// Maps for number <-> hex string conversion\nvar _byteToHex = [];",
+    "evt.time": 1678091627377953000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.381628537: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIFB1YkFjayAocGFja2V0KSB7CiAgdGg= arf=res=1487 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIFB1YkFjayAocGFja2V0KSB7CiAgdGg= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.381628537Z",
+  "output_fields": {
+    "evt.args": "res=1487 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIFB1YkFjayAocGFja2V0KSB7CiAgdGg= ",
+    "evt.buffer": "'use strict'\n\nconst write = require('../write')\n\nfunction PubAck (packet) {\n  th",
+    "evt.time": 1678091627381628400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.382190501: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiBoYW5kbGVQdWJhY2sgKGNsaWVudCwgcGFja2V0LCBkb25lKSB7CiAgY29uc3QgcGVyc2lzdGVuY2U= arf=res=293 data=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiBoYW5kbGVQdWJhY2sgKGNsaWVudCwgcGFja2V0LCBkb25lKSB7CiAgY29uc3QgcGVyc2lzdGVuY2U= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.382190501Z",
+  "output_fields": {
+    "evt.args": "res=293 data=J3VzZSBzdHJpY3QnCgpmdW5jdGlvbiBoYW5kbGVQdWJhY2sgKGNsaWVudCwgcGFja2V0LCBkb25lKSB7CiAgY29uc3QgcGVyc2lzdGVuY2U= ",
+    "evt.buffer": "'use strict'\n\nfunction handlePuback (client, packet, done) {\n  const persistence",
+    "evt.time": 1678091627382190600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.382513004: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIENsaWVudFBhY2tldFN0YXR1cyAoY2w= arf=res=1068 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIENsaWVudFBhY2tldFN0YXR1cyAoY2w= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.382513004Z",
+  "output_fields": {
+    "evt.args": "res=1068 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIENsaWVudFBhY2tldFN0YXR1cyAoY2w= ",
+    "evt.buffer": "'use strict'\n\nconst write = require('../write')\n\nfunction ClientPacketStatus (cl",
+    "evt.time": 1678091627382513000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.382904059: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIFB1YlJlbCAocGFja2V0KSB7CiAgdGg= arf=res=509 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIFB1YlJlbCAocGFja2V0KSB7CiAgdGg= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.382904059Z",
+  "output_fields": {
+    "evt.args": "res=509 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKCmZ1bmN0aW9uIFB1YlJlbCAocGFja2V0KSB7CiAgdGg= ",
+    "evt.buffer": "'use strict'\n\nconst write = require('../write')\n\nfunction PubRel (packet) {\n  th",
+    "evt.time": 1678091627382904000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.383246992: Warning READ - (command=node aedes.js user=f4de evt=read buffer=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKY29uc3QgcGluZ1Jlc3AgPSB7CiAgY21kOiAncGluZ3I= arf=res=241 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKY29uc3QgcGluZ1Jlc3AgPSB7CiAgY21kOiAncGluZ3I= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.383246992Z",
+  "output_fields": {
+    "evt.args": "res=241 data=J3VzZSBzdHJpY3QnCgpjb25zdCB3cml0ZSA9IHJlcXVpcmUoJy4uL3dyaXRlJykKY29uc3QgcGluZ1Jlc3AgPSB7CiAgY21kOiAncGluZ3I= ",
+    "evt.buffer": "'use strict'\n\nconst write = require('../write')\nconst pingResp = {\n  cmd: 'pingr",
+    "evt.time": 1678091627383247000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.383898228: Warning READ - (command=node aedes.js user=f4de evt=read buffer=ewogICJfYXJncyI6IFsKICAgIFsKICAgICAgImFlZGVzQDAuNDguMSIsCiAgICAgICIvaG9tZS9mNGRlL3VuaS9ib3JzYS9keW5hbW9SSU8= arf=res=4380 data=ewogICJfYXJncyI6IFsKICAgIFsKICAgICAgImFlZGVzQDAuNDguMSIsCiAgICAgICIvaG9tZS9mNGRlL3VuaS9ib3JzYS9keW5hbW9SSU8= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.383898228Z",
+  "output_fields": {
+    "evt.args": "res=4380 data=ewogICJfYXJncyI6IFsKICAgIFsKICAgICAgImFlZGVzQDAuNDguMSIsCiAgICAgICIvaG9tZS9mNGRlL3VuaS9ib3JzYS9keW5hbW9SSU8= ",
+    "evt.buffer": "{\n  \"_args\": [\n    [\n      \"aedes@0.48.1\",\n      \"/home/f4de/uni/borsa/dynamoRIO",
+    "evt.time": 1678091627383898000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:47.394816790: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:47.394816790Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091627394816800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:48.957648069: Warning READ - (command=node aedes.js user=f4de evt=read buffer=EBsABE1RVFQEAgA8AA9tcXR0anNfZTZlM2VjNGY= arf=res=29 data=EBsABE1RVFQEAgA8AA9tcXR0anNfZTZlM2VjNGY= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:48.957648069Z",
+  "output_fields": {
+    "evt.args": "res=29 data=EBsABE1RVFQEAgA8AA9tcXR0anNfZTZlM2VjNGY= ",
+    "evt.buffer": "\u0010\u001b\u0000\u0004MQTT\u0004\u0002\u0000<\u0000\u000fmqttjs_e6e3ec4f",
+    "evt.time": 1678091628957648100,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:49.015516172: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:49.015516172Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091629015516200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:49.024230184: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:49.024230184Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091629024230100,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:49.024516558: Warning READ - (command=node aedes.js user=f4de evt=read buffer=ghPXLAAObWFpbi9jbGllbnQxLysA arf=res=21 data=ghPXLAAObWFpbi9jbGllbnQxLysA )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:49.024516558Z",
+  "output_fields": {
+    "evt.args": "res=21 data=ghPXLAAObWFpbi9jbGllbnQxLysA ",
+    "evt.buffer": "�\u0013�,\u0000\u000emain/client1/+\u0000",
+    "evt.time": 1678091629024516600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:49.030175568: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:49.030175568Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091629030175500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:49.033987751: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:49.033987751Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091629033987800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:49.034075597: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:49.034075597Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091629034075600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:49.955278213: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:49.955278213Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091629955278300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:50.593003004: Warning READ - (command=node aedes.js user=f4de evt=read buffer=EBsABE1RVFQEAgA8AA9tcXR0anNfY2FjMGEzODY= arf=res=29 data=EBsABE1RVFQEAgA8AA9tcXR0anNfY2FjMGEzODY= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:50.593003004Z",
+  "output_fields": {
+    "evt.args": "res=29 data=EBsABE1RVFQEAgA8AA9tcXR0anNfY2FjMGEzODY= ",
+    "evt.buffer": "\u0010\u001b\u0000\u0004MQTT\u0004\u0002\u0000<\u0000\u000fmqttjs_cac0a386",
+    "evt.time": 1678091630593003000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:50.601696174: Warning READ - (command=node aedes.js user=f4de evt=read buffer=ggZ8SQABKwA= arf=res=8 data=ggZ8SQABKwA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:50.601696174Z",
+  "output_fields": {
+    "evt.args": "res=8 data=ggZ8SQABKwA= ",
+    "evt.buffer": "�\u0006|I\u0000\u0001+\u0000",
+    "evt.time": 1678091630601696300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:50.955744476: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:50.955744476Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091630955744500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:51.593241425: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= arf=res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:51.593241425Z",
+  "output_fields": {
+    "evt.args": "res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u0014\u0000\u0007client2{\"value\":1}0\u0014\u0000\u0007client2{\"value\":2}",
+    "evt.time": 1678091631593241300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:51.957162157: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:51.957162157Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091631957162200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:52.594373939: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= arf=res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:52.594373939Z",
+  "output_fields": {
+    "evt.args": "res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u0014\u0000\u0007client2{\"value\":1}0\u0014\u0000\u0007client2{\"value\":2}",
+    "evt.time": 1678091632594374000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:52.958164713: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:52.958164713Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091632958164700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:53.596325598: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= arf=res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:53.596325598Z",
+  "output_fields": {
+    "evt.args": "res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u0014\u0000\u0007client2{\"value\":1}0\u0014\u0000\u0007client2{\"value\":2}",
+    "evt.time": 1678091633596325600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:53.611915492: Warning READ - (command=node aedes.js user=f4de evt=read buffer=EBsABE1RVFQEAgA8AA9tcXR0anNfZmYxNDE4NzU= arf=res=29 data=EBsABE1RVFQEAgA8AA9tcXR0anNfZmYxNDE4NzU= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:53.611915492Z",
+  "output_fields": {
+    "evt.args": "res=29 data=EBsABE1RVFQEAgA8AA9tcXR0anNfZmYxNDE4NzU= ",
+    "evt.buffer": "\u0010\u001b\u0000\u0004MQTT\u0004\u0002\u0000<\u0000\u000fmqttjs_ff141875",
+    "evt.time": 1678091633611915500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:53.620415650: Warning READ - (command=node aedes.js user=f4de evt=read buffer=ggYV1AABIwA= arf=res=8 data=ggYV1AABIwA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:53.620415650Z",
+  "output_fields": {
+    "evt.args": "res=8 data=ggYV1AABIwA= ",
+    "evt.buffer": "�\u0006\u0015�\u0000\u0001#\u0000",
+    "evt.time": 1678091633620415700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:53.958508913: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:53.958508913Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091633958508800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:54.598192133: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= arf=res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:54.598192133Z",
+  "output_fields": {
+    "evt.args": "res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u0014\u0000\u0007client2{\"value\":1}0\u0014\u0000\u0007client2{\"value\":2}",
+    "evt.time": 1678091634598192000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:54.610888635: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:54.610888635Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client3/one{\"value\":1}0\u001d\u0000\u0010main/client3/two{\"value\":2}",
+    "evt.time": 1678091634610888700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:54.960001607: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:54.960001607Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091634960001500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:55.495217752: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:55.495217752Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091635495217700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:55.599169533: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= arf=res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:55.599169533Z",
+  "output_fields": {
+    "evt.args": "res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u0014\u0000\u0007client2{\"value\":1}0\u0014\u0000\u0007client2{\"value\":2}",
+    "evt.time": 1678091635599169500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:55.610710294: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:55.610710294Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client3/one{\"value\":1}0\u001d\u0000\u0010main/client3/two{\"value\":2}",
+    "evt.time": 1678091635610710300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:55.961494653: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:55.961494653Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091635961494500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:56.601181106: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= arf=res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:56.601181106Z",
+  "output_fields": {
+    "evt.args": "res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u0014\u0000\u0007client2{\"value\":1}0\u0014\u0000\u0007client2{\"value\":2}",
+    "evt.time": 1678091636601181200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:56.611142974: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:56.611142974Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client3/one{\"value\":1}0\u001d\u0000\u0010main/client3/two{\"value\":2}",
+    "evt.time": 1678091636611143000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:56.963040540: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:56.963040540Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50MS9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDEvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client1/one{\"value\":1}0\u001d\u0000\u0010main/client1/two{\"value\":2}",
+    "evt.time": 1678091636963040500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.134087983: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.134087983Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637134088000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.134416697: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.134416697Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637134416600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.134861874: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.134861874Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637134861800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.135277512: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.135277512Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637135277600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.135614428: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.135614428Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637135614500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.135787102: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.135787102Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637135787000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.135965843: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.135965843Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637135966000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.136168999: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.136168999Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637136169000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.136372246: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.136372246Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637136372200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.136574249: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.136574249Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637136574200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.136757612: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.136757612Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637136757500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.136924992: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.136924992Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637136925000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.137079227: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.137079227Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637137079300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.137259261: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.137259261Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637137259300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.137429860: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.137429860Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637137429800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.137597801: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.137597801Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637137597700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.137791312: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.137791312Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637137791200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.137950650: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.137950650Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637137950700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.138112465: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.138112465Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637138112500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.138284368: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.138284368Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637138284300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.138517835: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.138517835Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637138517800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.138683020: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.138683020Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637138683100,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.138821753: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.138821753Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637138821600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.139136018: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.139136018Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637139136000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.139492516: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.139492516Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637139492600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.139988721: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.139988721Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637139988700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.140334651: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.140334651Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637140334600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.140475660: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.140475660Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637140475600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.140831216: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.140831216Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637140831200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.147276769: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.147276769Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637147276800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.148102880: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.148102880Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637148103000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.601985353: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= arf=res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.601985353Z",
+  "output_fields": {
+    "evt.args": "res=44 data=MBQAB2NsaWVudDJ7InZhbHVlIjoxfTAUAAdjbGllbnQyeyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u0014\u0000\u0007client2{\"value\":1}0\u0014\u0000\u0007client2{\"value\":2}",
+    "evt.time": 1678091637601985300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.611072476: Warning READ - (command=node aedes.js user=f4de evt=read buffer=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= arf=res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.611072476Z",
+  "output_fields": {
+    "evt.args": "res=62 data=MB0AEG1haW4vY2xpZW50My9vbmV7InZhbHVlIjoxfTAdABBtYWluL2NsaWVudDMvdHdveyJ2YWx1ZSI6Mn0= ",
+    "evt.buffer": "0\u001d\u0000\u0010main/client3/one{\"value\":1}0\u001d\u0000\u0010main/client3/two{\"value\":2}",
+    "evt.time": 1678091637611072500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.748164563: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.748164563Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637748164600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.748361224: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.748361224Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637748361200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.748715143: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.748715143Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637748715300,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.748961827: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.748961827Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637748961800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.749184006: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.749184006Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637749184000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.749358619: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.749358619Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637749358600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.749475880: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.749475880Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637749475800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.749581700: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.749581700Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637749581800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.749691521: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.749691521Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637749691600,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.749792730: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.749792730Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637749792800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.749907434: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.749907434Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637749907500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750006416: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750006416Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750006500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750131398: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750131398Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750131500,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750247526: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750247526Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750247400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750353396: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750353396Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750353400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750471259: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750471259Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750471200,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750567323: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750567323Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750567400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750681135: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750681135Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750681000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750772808: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750772808Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750772700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.750887833: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.750887833Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637750888000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751004833: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751004833Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751005000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751111506: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751111506Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751111400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751208674: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751208674Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751208700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751324351: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751324351Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751324400,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751424877: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751424877Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751424800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751527840: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751527840Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751528000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751646064: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751646064Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751646000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751757920: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751757920Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751757800,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751864182: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751864182Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751864000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.751995961: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.751995961Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637751996000,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.752210801: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.752210801Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637752210700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.752392753: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.752392753Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637752392700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "user.name": "f4de"
+  }
+}
+{
+  "hostname": "f4de-laptop",
+  "output": "09:33:57.752519710: Warning READ - (command=node aedes.js user=f4de evt=read buffer=AQAAAAAAAAA= arf=res=8 data=AQAAAAAAAAA= )",
+  "priority": "Warning",
+  "rule": "read",
+  "source": "syscall",
+  "tags": [],
+  "time": "2023-03-06T08:33:57.752519710Z",
+  "output_fields": {
+    "evt.args": "res=8 data=AQAAAAAAAAA= ",
+    "evt.buffer": "\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "evt.time": 1678091637752519700,
+    "evt.type": "read",
+    "proc.cmdline": "node aedes.js",
+    "u
