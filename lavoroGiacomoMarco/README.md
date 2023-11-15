@@ -50,3 +50,6 @@ Per provare ad ottenere degli output si può procedere in questo modo:
 - bisognerebbe migliorare `run.sh` e `decode_buffer.js`, ad esempio aggiungere dei parametri per mettere le varie regole di falco, specificare il server websocket, ecc...
 - nel caso di file memory mappati non è possibile intercettare con falco quello che viene scritto
 o letto ma solo il fatto che il file è stato aperto e memory mappato. Ad esempio è possibile memory mappare il device relativo al sense hat.
+
+## Reference
+- Specifiche dei vari campi utilizzabili nelle regole di falco [https://falco.org/docs/reference/rules/supported-fields/]
