@@ -43,8 +43,10 @@ Per provare ad ottenere degli output si può procedere in questo modo:
     node src/node/client<X>.js
     ```
     dove `<X>` va sostituito con il numero del client
-- lanciare lo script `script.sh`, il quale lancerà Falco con le regole specificate, scriverà l'output dei log raccolti su stdout, i quali saranno mandati in pipe a `decode_buffer.js`, che procederà ad inviare i dati raccolti al server WebSocket
+- lanciare lo script `run.sh`, il quale lancerà Falco con le regole specificate, scriverà l'output dei log raccolti su stdout, i quali saranno mandati in pipe a `decode_buffer.js`, che procederà ad inviare i dati raccolti al server WebSocket
     
 ## Problemi/todo
 - è possibile che node dia errori sulla verisone utilizzata, noi abbiamo usato `nvm` per cambiare versione di node 
-- bisognerebbe migliorare `script.sh` e `decode_buffer.js`, ad esempio aggiungere dei parametri per mettere le varie regole di falco, specificare il server websocket, ecc...
+- bisognerebbe migliorare `run.sh` e `decode_buffer.js`, ad esempio aggiungere dei parametri per mettere le varie regole di falco, specificare il server websocket, ecc...
+- nel caso di file memory mappati non è possibile intercettare con falco quello che viene scritto
+o letto ma solo il fatto che il file è stato aperto e memory mappato. Ad esempio è possibile memory mappare il device relativo al sense hat.
