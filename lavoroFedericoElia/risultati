@@ -1,0 +1,47 @@
+-------------------------------------------20ms-------------------------------------------
+senza falco:
+ Performance counter stats for 'node clientSubSenseHat.js' (10 runs):
+
+        6027756649      cycles                                                        ( +-  0.28% )
+
+          60.72559 +- 0.00388 seconds time elapsed  ( +-  0.01% )
+
+con falco:
+Performance counter stats for 'node clientSubSenseHat.js' (10 runs):
+
+        8219848161      cycles                                                        ( +-  0.37% )
+
+           60.7648 +- 0.0104 seconds time elapsed  ( +-  0.02% )
+
+con falco ma senza ws_server.js e decode_buffer.js:
+Performance counter stats for 'node clientSubSenseHat.js' (10 runs):
+
+        7868143375      cycles                                                        ( +-  0.17% )
+
+          60.75813 +- 0.00543 seconds time elapsed  ( +-  0.01% )
+
+
+
+---------------------------------------------200ms-------------------------------------------
+
+senza falco:
+Performance counter stats for 'node clientSubSenseHat.js' (10 runs):
+
+        2199846624      cycles                                                        ( +-  0.22% )
+
+          60.72666 +- 0.00778 seconds time elapsed  ( +-  0.01% )
+
+con falco:
+	Performance counter stats for 'node clientSubSenseHat.js' (10 runs):
+
+        2350177671      cycles                                                        ( +-  1.24% )
+
+          60.75167 +- 0.00519 seconds time elapsed  ( +-  0.01% )
+
+con falco ma senza ws_server.js e decode_buffer.js:
+ Performance counter stats for 'node clientSubSenseHat.js' (10 runs):
+
+        2364555719      cycles                                                        ( +-  1.40% )
+
+           60.7549 +- 0.0120 seconds time elapsed  ( +-  0.02% )
+	

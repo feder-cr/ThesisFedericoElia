@@ -1,0 +1,8 @@
+- rule: sense-hat
+  desc: syscall on fb file
+  condition: >
+    evt.dir = < and
+    fd.name = "/dev/fb0"
+  output: >
+    (command=%proc.cmdline user=%user.name evt=%evt.type buffer=%evt.buffer arf=%evt.args fd=%fd.num)
+  priority: WARNING

@@ -1,0 +1,19 @@
+- macro: inbound
+  condition: >
+    (((evt.type in (accept,listen) and evt.dir=<)) or
+     (fd.typechar = 4 or fd.typechar = 6) and
+     (fd.ip != "0.0.0.0" and fd.net != "127.0.0.0/8") and (evt.rawres >= 0 or evt.res = EINPROGRESS))    
+
+- rule: tcp_syscalls
+  desc: TCP syscalls
+  condition: >
+    evt.dir = < and
+    (evt.type = read or evt.type = close) and
+    fd.l4proto = tcp and
+    (fd.sport=1883 or fd.cport=1883) and
+    proc.name = "node" and
+    proc.args = "clientSubSenseHat.js"
+
+  output: >
+    TCP syscall - (pid=%proc.pid fd=%fd.num evt=%evt.type buffer=%evt.buffer args=%evt.args %fd.lip:%fd.cport <-> %fd.rip:%fd.sport inbnd=inbound)
+  priority: WARNING

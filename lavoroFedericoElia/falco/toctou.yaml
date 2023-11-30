@@ -1,0 +1,10 @@
+- rule: open
+  desc: open
+  condition: >
+    evt.type = openat and
+    evt.dir = < and
+    (proc.name = "userfaultfd" or proc.name = "main")
+  output: >
+    OPENAT -
+    (command=%proc.cmdline user=%user.name evt=%evt.type args=[%evt.args])
+  priority: WARNING
