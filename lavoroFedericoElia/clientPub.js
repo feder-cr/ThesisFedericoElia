@@ -2,6 +2,7 @@
 
 const { connect } = require('mqtt');
 
+
 const topic = 'main/client1';
 const settings = {
     port: 1883
