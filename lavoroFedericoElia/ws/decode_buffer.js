@@ -14,43 +14,57 @@ const ws = new WebSocket("ws://localhost:8080/")
 // (pid,fd) -> mqtt-parser
 const parserMap = new Map()
 
+
+
+
+
 // decode base64 encoded buffer and parse mqtt packet
 function decode_base64(json) {
-	if ("evt.buffer" in json.output_fields && json.output_fields['evt.buffer'] != null) {
-		const mapKey = json.output_fields["proc.pid"] << 32 + json.output_fields["fd.num"]
-
-		let parser = parserMap.get(mapKey)
-		if (parser === undefined) {
-			console.error("creating new parser for ",
-				json.output_fields["proc.pid"], json.output_fields["fd.num"])
-			parser = mqtt.parser(opts)
-			// TODO: closing of the file descriptor should be handled in order 
-			// to avoid memory leaking and concatenating data from different connection
-			parser.on('error', err => {
-				console.error("failing to parse: ", err.message, json.output_fields["proc.pid"], json.output_fields["fd.num"])
+	if (json.rule === "tcp_syscalls") { // rule for mqtt
+		if ("evt.buffer" in json.output_fields && json.output_fields['evt.buffer'] != null) {
+			const mapKey = json.output_fields["proc.pid"] << 32 + json.output_fields["fd.num"]
+	
+			let parser = parserMap.get(mapKey)
+			if (parser === undefined) {
+				console.error("creating new parser for ",
+					json.output_fields["proc.pid"], json.output_fields["fd.num"])
+				parser = mqtt.parser(opts)
+				// TODO: closing of the file descriptor should be handled in order 
+				// to avoid memory leaking and concatenating data from different connection
+				parser.on('error', err => {
+					console.error("failing to parse: ", err.message, json.output_fields["proc.pid"], json.output_fields["fd.num"])
+				})
+	
+				parserMap.set(mapKey, parser)
+			}
+	
+			let packets = []
+			parser.on('packet', packet => {
+				packets.push(packet)
 			})
-
-			parserMap.set(mapKey, parser)
+	
+	
+			parser.parse(Buffer.from(json.output_fields['evt.buffer'], 'base64'))
+	
+			parser.removeAllListeners('packet')
+	
+			// instead of sending an mqtt packet we send an array of packets
+			// because multiple packets could be read in a single syscall.
+			// a possible better approach would be to send data each time a complete mqtt
+			// packet is parsed, possibly with some additional information got from the syscall
+			// (for example timestamp of the last syscall)
+			json.output_fields['evt.buffer'] = packets
 		}
+	} else if(json.rule === "sense-hat") {
+		const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
 
-		let packets = []
-		parser.on('packet', packet => {
-			packets.push(packet)
-		})
-
-
-		parser.parse(Buffer.from(json.output_fields['evt.buffer'], 'base64'))
-
-		parser.removeAllListeners('packet')
-
-		// instead of sending an mqtt packet we send an array of packets
-		// because multiple packets could be read in a single syscall.
-		// a possible better approach would be to send data each time a complete mqtt
-		// packet is parsed, possibly with some additional information got from the syscall
-		// (for example timestamp of the last syscall)
-		json.output_fields['evt.buffer'] = packets
-	}
+        // Aggiornamento dell'output con il buffer convertito
+        json.output_fields['evt.buffer'] = hexBuffer;
+    }
 }
+
+
+
 
 function removeParser(json) {
 	if ("fd.num" in json.output_fields && json.output_fields['fd.num'] != null) {
@@ -71,8 +85,15 @@ function send_falco_event(ws, json) {
 			json.output_fields["evt.args"] = undefined
 			ws.send(JSON.stringify(json))
 		}
-	} else { // all the other rules (including sense-hat)
-		ws.send(JSON.stringify(json))
+	} else if(json.rule === "sense-hat") {
+		if (json.output_fields['evt.type'] === "pwrite") 
+		{
+			decode_base64(json)
+			// TODO: we may want to avoid sending the data if there are no packets...
+			json.output = undefined // we don't need this
+			json.output_fields["evt.args"] = undefined
+			ws.send(JSON.stringify(json))
+		}
 	}
 }
 
