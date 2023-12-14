@@ -7,17 +7,18 @@ const topic = 'main/client1';
 const settings = {
     port: 1883
 };
-var old=0
 
 const client = connect('mqtt://192.168.1.51', settings);
 client.subscribe(`${topic}/+`);
 
 client.on('message', (receivedTopic, message) => {
     console.log(`${receivedTopic} ${message}`);
-    const parsedMessage = JSON.parse(message.toString());
-    sense.clear(0, old, parseInt(parsedMessage.value));
-    old=parseInt(parsedMessage.value); 
+    const parsedMessage = JSON.parse(message);
+    const stringValue = parsedMessage.value;
+    const [value1, value2, value3] = stringValue.split('-').map(Number);
+    sense.clear(value1, value2, value3);
 });
+
 
 function done() {
     console.log("finished message");
@@ -28,5 +29,4 @@ setTimeout(() => {
     done();
     client.end();
     process.exit();
-}, 60000); 
-
+}, 600000);
