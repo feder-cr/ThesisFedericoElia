@@ -15,9 +15,9 @@ client.subscribe(`${topic}/+`);
 client.on('message', (receivedTopic, message) => {
     console.log(`${receivedTopic} ${message}`);
     const parsedMessage = JSON.parse(message.toString());
-    const stringValue = parsedMessage.value;
-    const [value1, value2, value3] = stringValue.split('-').map(Number);
-    sense.clear(value1, value2, value3);});
+    sense.clear(0, old, parseInt(parsedMessage.value));
+    old=parseInt(parsedMessage.value); 
+});
 
 function done() {
     console.log("finished message");
@@ -28,5 +28,5 @@ setTimeout(() => {
     done();
     client.end();
     process.exit();
-}, 600000); 
+}, 60000); 
 
