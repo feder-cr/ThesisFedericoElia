@@ -2,7 +2,6 @@
 
 const { connect } = require('mqtt');
 
-
 const topic = 'main/client1';
 const settings = {
     port: 1883
@@ -17,9 +16,11 @@ function getRandomNumber(min, max) {
 }
 
 function pub() {
-    const randomValue = getRandomNumber(0, 255);
-    client.publish(`${topic}/two`, `{"value": ${randomValue}}`);
+    var randomValue = getRandomNumber(0, 255);
+    var randomValue2 = getRandomNumber(0, 255);
+    var randomValue3 = getRandomNumber(0, 255);
+    client.publish(`${topic}/two`, `{"value": "${randomValue}-${randomValue2}-${randomValue3}"}`);
 }
 
-setInterval(pub, 200);
+setInterval(pub,5000);
 
