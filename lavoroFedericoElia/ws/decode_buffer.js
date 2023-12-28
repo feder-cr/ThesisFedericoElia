@@ -7,31 +7,22 @@ const { error } = require("console");
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 let TCPMessage
-
 const byLine = readline.createInterface(stdin)
 const ws = new WebSocket("ws://localhost:8080/")
 // const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
 
-
-
-function RGBInRGB565(inputJSON) {
+function RGBInRGB565(inputJSON) 
+{
     // Estrai il valore dalla chiave "value" nell'oggetto JSON
 	
-	try{
-		//console.log(JSON.parse(inputJSON).value)
-	//	console.log(inputJSON)
+	try
+	{
 		const stringa = JSON.parse(inputJSON).value;
-		//console.log("-----------------"+ JSON.parse(inputJSON).value + "-----------------")
-		// Estrai i valori R, G e B dalla stringa
 		const match = stringa.match(/(\d+)-(\d+)-(\d+)/);
-
 		const r = parseInt(match[1]);
 		const g = parseInt(match[2]);
 		const b = parseInt(match[3]);
-
-		// Converti i valori RGB nel formato RGB565
 		const rgb565 = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
-
 		return hexToRGB565(rgb565.toString(16));
 	}catch (error) {
 		console.error("Error in RGBInRGB565 function:", error);
@@ -41,36 +32,26 @@ function RGBInRGB565(inputJSON) {
 	}
 }
 
-
-function hexToRGB565(hexValue) {
+function hexToRGB565(hexValue) 
+{
     const intValue = parseInt(hexValue, 16);
-
     let binaryString = intValue.toString(2);
-
-	while (binaryString.length < 16) {
+	while (binaryString.length < 16) 
+	{
 		binaryString = '0' + binaryString;
 	}
-
     const binaryRed = binaryString.substring(0, 5);
     const intRed = parseInt(binaryRed, 2);
-
 	const binaryGreen = binaryString.substring(5, 11);
     const intGreen = parseInt(binaryGreen, 2);
-
 	const binaryBlue = binaryString.substring(11, 16);
     const intBlue = parseInt(binaryBlue, 2);
-
     return {r: intRed,g: intGreen,b: intBlue};
 }
-
-
 
 // decode base64 encoded buffer and parse mqtt packet
 function decode_base64(json) {
 	if (json.rule === "tcp_syscalls") { // rule for mqtt
-		//json.output_fields['evt.buffer'] = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString();
-
-
 		if ("evt.buffer" in json.output_fields && json.output_fields['evt.buffer'] != null)		  
 		{
 			parser.parse(atob(json.output_fields['evt.buffer']))
@@ -81,17 +62,6 @@ function decode_base64(json) {
 		const decimalValue = hexBuffer.substring(2, 6);
         json.output_fields['evt.buffer'] = hexToRGB565(decimalValue);
     }
-}
-
-
-
-
-function removeParser(json) {
-	if ("fd.num" in json.output_fields && json.output_fields['fd.num'] != null) {
-		const mapKey = json.output_fields["proc.pid"] << 32 + json.output_fields["fd.num"]
-		console.error("deleting parser for", json.output_fields["proc.pid"], json.output_fields["fd.num"])
-		parserMap.delete(mapKey)
-	}
 }
 
 function send_falco_event(ws, json) {
@@ -121,11 +91,16 @@ ws.on("open", () => {
 	console.log("ws connection open")
 	byLine.on("line", line => {
 		//console.log(line)
-		const json = JSON.parse(line)
-		send_falco_event(ws, json)
+		try{
+			const json = JSON.parse(line)
+			send_falco_event(ws, json)
+		}catch(error)
+		{
+
+		}
+
 	})
 })
-
 
 ws.on("message", msg => {
 	//const json = JSON.parse(msg)
