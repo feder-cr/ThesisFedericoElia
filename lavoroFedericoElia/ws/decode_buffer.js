@@ -4,6 +4,10 @@ const readline = require("readline")
 const { WebSocket } = require("ws")
 const mqtt = require('mqtt-packet');
 const { error } = require("console");
+const {mqttFormatJSONtoRBG24Exception,mqttFormatRGB24toRBG16Exception} = require('./mqttFormatException');
+
+
+
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 let TCPMessage
@@ -11,28 +15,26 @@ const byLine = readline.createInterface(stdin)
 const ws = new WebSocket("ws://localhost:8080/")
 // const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
 
-function RGBInRGB565(inputJSON) 
+function RGBInRGB565(value) 
 {
-    // Estrai il valore dalla chiave "value" nell'oggetto JSON
-	
-	try
-	{
-		const stringa = JSON.parse(inputJSON).value;
-		const match = stringa.match(/(\d+)-(\d+)-(\d+)/);
+		const match = value.match(/^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/);
+		if (!match) 
+		{
+			throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format.");
+		}
 		const r = parseInt(match[1]);
 		const g = parseInt(match[2]);
 		const b = parseInt(match[3]);
 		const rgb565 = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
-		return hexToRGB565(rgb565.toString(16));
+	try
+	{
+		return hexToRGB16(rgb565.toString(16));
 	}catch (error) {
-		console.error("Error in RGBInRGB565 function:", error);
-		// Handle the error as needed
-		// You might want to return a default value or throw the error again
-		return "null";
+		throw new mqttFormatRGB24toRBG16Exception("Unable to convert from RGB24 to RGB16.");
 	}
 }
 
-function hexToRGB565(hexValue) 
+function hexToRGB16(hexValue) 
 {
     const intValue = parseInt(hexValue, 16);
     let binaryString = intValue.toString(2);
@@ -60,7 +62,7 @@ function decode_base64(json) {
 	} else if(json.rule === "sense-hat") {
 		const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
 		const decimalValue = hexBuffer.substring(2, 6);
-        json.output_fields['evt.buffer'] = hexToRGB565(decimalValue);
+        json.output_fields['evt.buffer'] = hexToRGB16(decimalValue);
     }
 }
 
@@ -91,6 +93,7 @@ ws.on("open", () => {
 	console.log("ws connection open")
 	byLine.on("line", line => {
 		//console.log(line)
+		//qui converto in JSON tutto il messaggio falco ma non il buffer(perk è ancora in base64)
 		try{
 			const json = JSON.parse(line)
 			send_falco_event(ws, json)
@@ -98,7 +101,6 @@ ws.on("open", () => {
 		{
 
 		}
-
 	})
 })
 
@@ -116,8 +118,24 @@ ws.on("close", () => {
 })
 
 parser.on('packet', packet => {
-	packet.payload=RGBInRGB565(packet.payload)
-	TCPMessage = packet
+	try {
+		//qui converto in JSON solo il buffer
+		value = (JSON.parse(packet.payload).value);
+		packet.payload = RGBInRGB565(value);
+		TCPMessage = packet
+
+	} catch (error) {
+		if (error instanceof mqttFormatJSONtoRBG24Exception) {
+			console.log("Errore nella conversione JSON to RGB24:")
+		}
+		else if (error instanceof mqttFormatRGB24toRBG16Exception) {
+			console.log("Errore nella conversione RGB24 to RGB16:")
+		}else{
+			console.log(error)
+		}
+		TCPMessage = null
+	}
+	
   })
 
 
