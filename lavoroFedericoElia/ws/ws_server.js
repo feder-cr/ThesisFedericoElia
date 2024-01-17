@@ -26,21 +26,25 @@ const logger_sense_hat = winston.createLogger({
 
 server.on('connection', function(socket) {
   socket.on('message', function(msg) {
-const parsedMsg = JSON.parse(msg.toString());
-    if (
-      parsedMsg.rule === "tcp_syscalls" &&
-      parsedMsg.output_fields &&
-      parsedMsg.output_fields["evt.buffer"]
-    )
+    //controllo se msg è un errore oppure np
+    if(msg.toString()=="mqtt_format_error")
     {
-        logger_tcp_syscalls.info(parsedMsg);                            
+      const msgString = msg.toString();
+      logger_tcp_syscalls.info(msgString); 
+      logger_sense_hat.info(msgString);
+      return
     }
-  else if(parsedMsg.rule === "sense-hat" && parsedMsg.output_fields["evt.buffer"] != null)
-  {
-    logger_sense_hat.info(parsedMsg);
-  }else{
-    //console.log("Errore: Il payload non rispetta il formato."); 
-  }
 
+    const parsedMsg = JSON.parse(msg.toString());
+    if(parsedMsg.rule === "tcp_syscalls" && parsedMsg.output_fields && parsedMsg.output_fields["evt.buffer"])
+    {
+      logger_tcp_syscalls.info(parsedMsg);                            
+    }
+    else if(parsedMsg.rule === "sense-hat" && parsedMsg.output_fields["evt.buffer"] != null)
+    {
+      logger_sense_hat.info(parsedMsg);
+    }else{
+      //console.log("Errore: Il payload non rispetta il formato."); 
+    }
   });
 });

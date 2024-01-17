@@ -16,6 +16,7 @@ client.on('message', (receivedTopic, message) => {
     const parsedMessage = JSON.parse(message);
     const stringValue = parsedMessage.value;
     const [value1, value2, value3] = stringValue.split('-').map(Number);
+    //La lib js usata per scrivere sul sense-hat nel caso in cui rgb16 non rispetta il formato ritorna 0-0-0
     sense.clear(value1, value2, value3);
 });
 

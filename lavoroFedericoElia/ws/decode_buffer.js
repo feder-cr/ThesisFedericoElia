@@ -17,15 +17,15 @@ const ws = new WebSocket("ws://localhost:8080/")
 
 function RGBInRGB565(value) 
 {
-		const match = value.match(/^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/);
-		if (!match) 
-		{
-			throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format.");
-		}
-		const r = parseInt(match[1]);
-		const g = parseInt(match[2]);
-		const b = parseInt(match[3]);
-		const rgb565 = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+	const match = value.match(/^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/);
+	if (!match) 
+	{
+		throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format.");
+	}
+	const r = parseInt(match[1]);
+	const g = parseInt(match[2]);
+	const b = parseInt(match[3]);
+	const rgb565 = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
 	try
 	{
 		return hexToRGB16(rgb565.toString(16));
@@ -98,7 +98,7 @@ ws.on("open", () => {
 			const json = JSON.parse(line)
 			send_falco_event(ws, json)
 		}catch(error)
-		{
+		{//questo sifnica che non sta funzionando in modo corretto falco
 
 		}
 	})
@@ -127,11 +127,14 @@ parser.on('packet', packet => {
 	} catch (error) {
 		if (error instanceof mqttFormatJSONtoRBG24Exception) {
 			console.log("Errore nella conversione JSON to RGB24:")
+			ws.send("mqtt_format_error")
 		}
 		else if (error instanceof mqttFormatRGB24toRBG16Exception) {
 			console.log("Errore nella conversione RGB24 to RGB16:")
+			ws.send("mqtt_format_error")
 		}else{
 			console.log(error)
+			ws.send("mqtt_format_error")
 		}
 		TCPMessage = null
 	}
