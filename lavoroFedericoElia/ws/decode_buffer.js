@@ -67,24 +67,35 @@ function decode_base64(json) {
 }
 
 function send_falco_event(ws, json) {
+	messageJSON = {
+		event: ''
+	};
 	if (json.rule === "tcp_syscalls") { // rule for mqtt
+		messageJSON.event  = 'mqtt' 
 		if (json.output_fields['evt.type'] === "close")
 			removeParser(json)
 		else if (json.output_fields['evt.type'] === "read") {
 			decode_base64(json)
+
 			// TODO: we may want to avoid sending the data if there are no packets...
 			json.output = undefined // we don't need this
 			json.output_fields["evt.args"] = undefined
-			ws.send(JSON.stringify(json))
+			//ws.send(JSON.stringify(json))
+			messageJSON.msg = json
+			ws.send(JSON.stringify(messageJSON))
 		}
 	} else if(json.rule === "sense-hat") {
+		messageJSON.event  = 'display'
 		if (json.output_fields['evt.type'] === "pwrite") 
 		{
 			decode_base64(json)
 			// TODO: we may want to avoid sending the data if there are no packets...
 			json.output = undefined // we don't need this
 			json.output_fields["evt.args"] = undefined
-			ws.send(JSON.stringify(json))
+			//ws.send(JSON.stringify(json))
+			messageJSON.msg = json
+			console.log(messageJSON);
+			ws.send(JSON.stringify(messageJSON))
 		}
 	}
 }
@@ -99,7 +110,8 @@ ws.on("open", () => {
 			send_falco_event(ws, json)
 		}catch(error)
 		{//questo sifnica che non sta funzionando in modo corretto falco
-
+			console.log(error);
+			console.log("test")
 		}
 	})
 })
@@ -120,25 +132,25 @@ ws.on("close", () => {
 parser.on('packet', packet => {
 
 	try {
+		ErrorMessageJSON = {
+			event: 'error',
+		};
 		//qui converto in JSON solo il buffer
 		value = (JSON.parse(packet.payload).value);
 		packet.payload = RGBInRGB565(value);
 		TCPMessage = packet
-		errorMessage = {
-			event: 'error',
-			msg: '',
-		};
 	} catch (error) {
-		if (error instanceof mqttFormatJSONtoRGB24Exception) {
-			console.log("Error in converting JSON to RGB24:");
-			errorMessage.msg = 'Error in converting JSON to RGB24';
-		} else if (error instanceof mqttFormatRGB24toRGB16Exception) {
-			console.log("Error in converting RGB24 to RGB16:");
-			errorMessage.msg = 'Error in converting RGB24 to RGB16';
+		if (error instanceof mqttFormatJSONtoRBG24Exception) {
+			//console.log("Error in converting JSON to RGB24:");
+			ErrorMessageJSON.msg = 'Error in converting JSON to RGB24';
+		} else if (error instanceof mqttFormatRGB24toRBG16Exception) {
+			//console.log("Error in converting RGB24 to RGB16:");
+			ErrorMessageJSON.msg = 'Error in converting RGB24 to RGB16';
 		} else {
-			console.log(error.message);
-			errorMessage.msg = error.message;
+			//console.log(error.message);
+			ErrorMessageJSON.msg = error.message;
 		}
+		ws.send(JSON.stringify(ErrorMessageJSON))
 		TCPMessage = null
 	}
 	

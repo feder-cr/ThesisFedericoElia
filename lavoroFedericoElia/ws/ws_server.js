@@ -2,8 +2,7 @@ const WebSocket = require('ws');
 const server = new WebSocket.Server({
   port: 8080
 });
-
-
+console.log("start")
 const winston = require('winston');
 
 
@@ -25,23 +24,25 @@ const logger_sense_hat = winston.createLogger({
 
 
 server.on('connection', function(socket) {
-  socket.on('message', function(msg) {
-    //controllo se msg è un errore oppure no
-    if(msg.toString()=="mqtt_format_error")
+  socket.on('message', function(messageReceived) {
+    console.log("il messaggio pre "+messageReceived.toString());
+    messageJSON = JSON.parse(messageReceived);
+    console.log("il messaggio post "+messageJSON.toString());
+    //controllo se messageReceived è un errore oppure no
+    if(messageJSON.event == 'error')
     {
-      const msgString = msg.toString();
-      logger_tcp_syscalls.info(msgString); 
+      logger_tcp_syscalls.info(messageJSON.msg.toString()); 
       return
     }
 
-    const parsedMsg = JSON.parse(msg.toString());
-    if(parsedMsg.rule === "tcp_syscalls" && parsedMsg.output_fields && parsedMsg.output_fields["evt.buffer"])
+    const parsedmessageReceived = JSON.parse(JSON.stringify(messageJSON.msg));
+    if(parsedmessageReceived.rule === "tcp_syscalls" && parsedmessageReceived.output_fields && parsedmessageReceived.output_fields["evt.buffer"])
     {
-      logger_tcp_syscalls.info(parsedMsg);                            
+      logger_tcp_syscalls.info(parsedmessageReceived);                            
     }
-    else if(parsedMsg.rule === "sense-hat" && parsedMsg.output_fields["evt.buffer"] != null)
+    else if(parsedmessageReceived.rule === "sense-hat" && parsedmessageReceived.output_fields["evt.buffer"] != null)
     {
-      logger_sense_hat.info(parsedMsg);
+      logger_sense_hat.info(parsedmessageReceived);
     }else{
       //console.log("Errore: Il payload non rispetta il formato."); 
     }
