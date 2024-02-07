@@ -118,31 +118,28 @@ ws.on("close", () => {
 })
 
 parser.on('packet', packet => {
+
 	try {
 		//qui converto in JSON solo il buffer
 		value = (JSON.parse(packet.payload).value);
 		packet.payload = RGBInRGB565(value);
 		TCPMessage = packet
-
+		errorMessage = {
+			event: 'error',
+			msg: '',
+		};
 	} catch (error) {
-		if (error instanceof mqttFormatJSONtoRBG24Exception) {
-			console.log("Errore nella conversione JSON to RGB24:")
-			ws.send("mqtt_format_error")
-		}
-		else if (error instanceof mqttFormatRGB24toRBG16Exception) {
-			console.log("Errore nella conversione RGB24 to RGB16:")
-			ws.send("mqtt_format_error")
-		}else{
-			console.log(error)
-			ws.send("mqtt_format_error")
+		if (error instanceof mqttFormatJSONtoRGB24Exception) {
+			console.log("Error in converting JSON to RGB24:");
+			errorMessage.msg = 'Error in converting JSON to RGB24';
+		} else if (error instanceof mqttFormatRGB24toRGB16Exception) {
+			console.log("Error in converting RGB24 to RGB16:");
+			errorMessage.msg = 'Error in converting RGB24 to RGB16';
+		} else {
+			console.log(error.message);
+			errorMessage.msg = error.message;
 		}
 		TCPMessage = null
 	}
 	
   })
-
-
-
-
-
-

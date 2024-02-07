@@ -26,12 +26,11 @@ const logger_sense_hat = winston.createLogger({
 
 server.on('connection', function(socket) {
   socket.on('message', function(msg) {
-    //controllo se msg è un errore oppure np
+    //controllo se msg è un errore oppure no
     if(msg.toString()=="mqtt_format_error")
     {
       const msgString = msg.toString();
       logger_tcp_syscalls.info(msgString); 
-      logger_sense_hat.info(msgString);
       return
     }
 
