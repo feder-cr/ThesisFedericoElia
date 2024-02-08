@@ -15,17 +15,11 @@ const byLine = readline.createInterface(stdin)
 const ws = new WebSocket("ws://localhost:8080/")
 // const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
 
-function RGBInRGB565(value) 
-{
-	const match = value.match(/^([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])-([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/);
-	if (!match) 
-	{
-		throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format.");
-	}
-	const r = parseInt(match[1]);
-	const g = parseInt(match[2]);
-	const b = parseInt(match[3]);
-	const rgb565 = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+function RGBInRGB565(red, green, blue) {
+    if (!Number.isInteger(red) ||!Number.isInteger(green) ||!Number.isInteger(blue)) {
+        throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format (red, green, or blue isn't an integer).");
+    }
+	const rgb565 = ((red & 0xF8) << 8) | ((green & 0xFC) << 3) | (blue >> 3);
 	try
 	{
 		return hexToRGB16(rgb565.toString(16));
@@ -52,19 +46,20 @@ function hexToRGB16(hexValue)
 }
 
 // decode base64 encoded buffer and parse mqtt packet
-function decode_base64(json) {
-	if (json.rule === "tcp_syscalls") { // rule for mqtt
-		if ("evt.buffer" in json.output_fields && json.output_fields['evt.buffer'] != null)		  
+function decode_base64_tcp_syscalls(json) {
+	if ("evt.buffer" in json.output_fields && json.output_fields['evt.buffer'] != null)		  
 		{
+			console.log(atob(json.output_fields['evt.buffer']))
 			parser.parse(atob(json.output_fields['evt.buffer']))
 		}
         json.output_fields['evt.buffer'] = TCPMessage;			
-	} else if(json.rule === "sense-hat") {
-		const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
-		const decimalValue = hexBuffer.substring(2, 6);
-        json.output_fields['evt.buffer'] = hexToRGB16(decimalValue);
-    }
-}
+	}
+
+	function decode_base64_sense_hat(json) {
+			const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
+			const decimalValue = hexBuffer.substring(2, 6);
+			json.output_fields['evt.buffer'] = hexToRGB16(decimalValue);
+	}
 
 function send_falco_event(ws, json) {
 	messageJSON = {
@@ -75,7 +70,7 @@ function send_falco_event(ws, json) {
 		if (json.output_fields['evt.type'] === "close")
 			removeParser(json)
 		else if (json.output_fields['evt.type'] === "read") {
-			decode_base64(json)
+			decode_base64_tcp_syscalls(json)
 
 			// TODO: we may want to avoid sending the data if there are no packets...
 			json.output = undefined // we don't need this
@@ -88,13 +83,12 @@ function send_falco_event(ws, json) {
 		messageJSON.event  = 'display'
 		if (json.output_fields['evt.type'] === "pwrite") 
 		{
-			decode_base64(json)
+			decode_base64_sense_hat(json)
 			// TODO: we may want to avoid sending the data if there are no packets...
 			json.output = undefined // we don't need this
 			json.output_fields["evt.args"] = undefined
 			//ws.send(JSON.stringify(json))
 			messageJSON.msg = json
-			console.log(messageJSON);
 			ws.send(JSON.stringify(messageJSON))
 		}
 	}
@@ -111,7 +105,6 @@ ws.on("open", () => {
 		}catch(error)
 		{//questo sifnica che non sta funzionando in modo corretto falco
 			console.log(error);
-			console.log("test")
 		}
 	})
 })
@@ -136,19 +129,18 @@ parser.on('packet', packet => {
 			event: 'error',
 		};
 		//qui converto in JSON solo il buffer
-		value = (JSON.parse(packet.payload).value);
-		packet.payload = RGBInRGB565(value);
+		colors = JSON.parse(packet.payload);
+		packet.payload = RGBInRGB565(colors.red, colors.green, colors.green);
 		TCPMessage = packet
 	} catch (error) {
 		if (error instanceof mqttFormatJSONtoRBG24Exception) {
-			//console.log("Error in converting JSON to RGB24:");
 			ErrorMessageJSON.msg = 'Error in converting JSON to RGB24';
+			console.log(error)
 		} else if (error instanceof mqttFormatRGB24toRBG16Exception) {
-			//console.log("Error in converting RGB24 to RGB16:");
 			ErrorMessageJSON.msg = 'Error in converting RGB24 to RGB16';
 		} else {
-			//console.log(error.message);
 			ErrorMessageJSON.msg = error.message;
+			console.log(error)
 		}
 		ws.send(JSON.stringify(ErrorMessageJSON))
 		TCPMessage = null

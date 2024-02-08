@@ -25,9 +25,7 @@ const logger_sense_hat = winston.createLogger({
 
 server.on('connection', function(socket) {
   socket.on('message', function(messageReceived) {
-    console.log("il messaggio pre "+messageReceived.toString());
     messageJSON = JSON.parse(messageReceived);
-    console.log("il messaggio post "+messageJSON.toString());
     //controllo se messageReceived è un errore oppure no
     if(messageJSON.event == 'error')
     {
@@ -45,6 +43,7 @@ server.on('connection', function(socket) {
       logger_sense_hat.info(parsedmessageReceived);
     }else{
       //console.log("Errore: Il payload non rispetta il formato."); 
+      console.log(parsedmessageReceived.output_fields["evt.buffer"])
     }
   });
 });
