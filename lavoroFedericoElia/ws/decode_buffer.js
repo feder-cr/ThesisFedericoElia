@@ -16,9 +16,11 @@ const ws = new WebSocket("ws://localhost:8080/")
 // const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
 
 function RGBInRGB565(red, green, blue) {
-    if (!Number.isInteger(red) ||!Number.isInteger(green) ||!Number.isInteger(blue)) {
-        throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format (red, green, or blue isn't an integer).");
-    }
+    const isValidIntegerInRange = /^(0|[1-9]\d?|1\d\d|2[0-4]\d|25[0-5])$/;
+
+	if (!isValidIntegerInRange.test(red) || !isValidIntegerInRange.test(green) || !isValidIntegerInRange.test(blue)) {
+		throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format (red, green, or blue isn't an integer).");
+	}
 	const rgb565 = ((red & 0xF8) << 8) | ((green & 0xFC) << 3) | (blue >> 3);
 	try
 	{
@@ -61,9 +63,7 @@ function decode_base64_tcp_syscalls(json) {
 	}
 
 function send_falco_event(ws, json) {
-	messageJSON = {
-		event: ''
-	};
+	messageJSON = {};
 	if (json.rule === "tcp_syscalls") { // rule for mqtt
 		messageJSON.event  = 'mqtt' 
 		if (json.output_fields['evt.type'] === "close")
