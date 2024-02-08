@@ -49,7 +49,6 @@ function hexToRGB16(hexValue)
 function decode_base64_tcp_syscalls(json) {
 	if ("evt.buffer" in json.output_fields && json.output_fields['evt.buffer'] != null)		  
 		{
-			console.log(atob(json.output_fields['evt.buffer']))
 			parser.parse(atob(json.output_fields['evt.buffer']))
 		}
         json.output_fields['evt.buffer'] = TCPMessage;			
@@ -135,12 +134,10 @@ parser.on('packet', packet => {
 	} catch (error) {
 		if (error instanceof mqttFormatJSONtoRBG24Exception) {
 			ErrorMessageJSON.msg = 'Error in converting JSON to RGB24';
-			console.log(error)
 		} else if (error instanceof mqttFormatRGB24toRBG16Exception) {
 			ErrorMessageJSON.msg = 'Error in converting RGB24 to RGB16';
 		} else {
 			ErrorMessageJSON.msg = error.message;
-			console.log(error)
 		}
 		ws.send(JSON.stringify(ErrorMessageJSON))
 		TCPMessage = null
