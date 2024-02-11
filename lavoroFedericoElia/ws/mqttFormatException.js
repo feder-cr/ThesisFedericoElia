@@ -27,4 +27,4 @@ class mqttFormatException extends Error {
   }
 
 
-  module.exports = { mqttFormatJSONtoRBG24Exception,mqttFormatRGB24toRBG16Exception };
+  module.exports = { mqttFormatJSONConversionException,mqttFormatJSONtoRBG24Exception,mqttFormatRGB24toRBG16Exception };

@@ -15,10 +15,14 @@ client.subscribe(`displayColor`);
 
 client.on('message', (receivedTopic, message) => {
     console.log(`${receivedTopic} ${message}`);
-    const parsedMessage = JSON.parse(message);
-    const {red, green, blue} = parsedMessage;   
-    // La libreria js usata per scrivere sul sense-hat nel caso in cui rgb16 non rispetta il formato ritorna 0-0-0
-    sense.sync.clear(red, green, blue);
+    try {
+        const parsedMessage = JSON.parse(message);
+        const {red, green, blue} = parsedMessage;   
+        // La libreria js usata per scrivere sul sense-hat nel caso in cui rgb16 non rispetta il formato ritorna 0-0-0
+        sense.sync.clear(red, green, blue);    
+    } catch (error) {
+        
+    }
 });
 
 

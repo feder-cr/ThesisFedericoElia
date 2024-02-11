@@ -4,10 +4,10 @@ const readline = require("readline")
 const { WebSocket } = require("ws")
 const mqtt = require('mqtt-packet');
 const { error } = require("console");
-const {mqttFormatJSONtoRBG24Exception,mqttFormatRGB24toRBG16Exception} = require('./mqttFormatException');
+const {mqttFormatJSONConversionException,mqttFormatJSONtoRBG24Exception,mqttFormatRGB24toRBG16Exception} = require('./mqttFormatException');
 
 
-
+ErrorMessageJSON = {event: 'error',};
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 let TCPMessage
@@ -70,11 +70,9 @@ function send_falco_event(ws, json) {
 			removeParser(json)
 		else if (json.output_fields['evt.type'] === "read") {
 			decode_base64_tcp_syscalls(json)
-
 			// TODO: we may want to avoid sending the data if there are no packets...
 			json.output = undefined // we don't need this
 			json.output_fields["evt.args"] = undefined
-			//ws.send(JSON.stringify(json))
 			messageJSON.msg = json
 			ws.send(JSON.stringify(messageJSON))
 		}
@@ -96,15 +94,15 @@ function send_falco_event(ws, json) {
 ws.on("open", () => {
 	console.log("ws connection open")
 	byLine.on("line", line => {
-		//console.log(line)
-		//qui converto in JSON tutto il messaggio falco ma non il buffer(perk è ancora in base64)
 		try{
-			const json = JSON.parse(line)
-			send_falco_event(ws, json)
+			json = JSON.parse(line)
+			send_falco_event(ws, json)		
 		}catch(error)
-		{//questo sifnica che non sta funzionando in modo corretto falco
-			console.log(error);
-		}
+		{//questo significa che output di Falco non è JSON o altro...
+			ErrorMessageJSON.msg = error.message;
+			ws.send(JSON.stringify(ErrorMessageJSON))
+			//console.log(error)
+		}	
 	})
 })
 
@@ -122,13 +120,15 @@ ws.on("close", () => {
 })
 
 parser.on('packet', packet => {
-
 	try {
-		ErrorMessageJSON = {
-			event: 'error',
-		};
-		//qui converto in JSON solo il buffer
-		colors = JSON.parse(packet.payload);
+
+		try {
+			//qui converto in JSON solo il payload
+			colors = JSON.parse(packet.payload);
+		}catch (error){
+			throw new mqttFormatJSONConversionException("Unable to convert from MQTT.payload to JSON.");
+		}
+
 		packet.payload = RGBInRGB565(colors.red, colors.green, colors.green);
 		TCPMessage = packet
 	} catch (error) {
@@ -136,11 +136,13 @@ parser.on('packet', packet => {
 			ErrorMessageJSON.msg = 'Error in converting JSON to RGB24';
 		} else if (error instanceof mqttFormatRGB24toRBG16Exception) {
 			ErrorMessageJSON.msg = 'Error in converting RGB24 to RGB16';
+		} else if (error instanceof mqttFormatJSONConversionException) {
+			ErrorMessageJSON.msg = 'Error in converting MQTT.payload to JSON';
 		} else {
 			ErrorMessageJSON.msg = error.message;
+			//console.log(error)
 		}
 		ws.send(JSON.stringify(ErrorMessageJSON))
 		TCPMessage = null
 	}
-	
   })
