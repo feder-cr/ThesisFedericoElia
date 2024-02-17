@@ -1,61 +1,16 @@
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:52:59.245930171Z","output_fields":{"evt.buffer":{"cmd":"connack","retain":false,"qos":0,"dup":false,"length":2,"topic":null,"payload":null,"sessionPresent":false,"returnCode":0},"evt.time":1708041179245930200,"evt.type":"read","fd.cport":60124,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4924}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:53:00.534937448Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":23,"topic":"displayColor","payload":[1,2,3,4]},"evt.time":1708041180534937300,"evt.type":"read","fd.cport":60124,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4924}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:53:02.536496253Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":16,"topic":"displayColor","payload":10},"evt.time":1708041182536496000,"evt.type":"read","fd.cport":60124,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4924}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:53:04.539943033Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":17,"topic":"displayColor","payload":100},"evt.time":1708041184539943000,"evt.type":"read","fd.cport":60124,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4924}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:53:06.565076745Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":22,"topic":"displayColor","payload":"tringa"},"evt.time":1708041186565076700,"evt.type":"read","fd.cport":60124,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4924}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:53:08.552197379Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":32,"topic":"displayColor","payload":{"color":"colore"}},"evt.time":1708041188552197400,"evt.type":"read","fd.cport":60124,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4924}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:53:10.565283053Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":54,"topic":"displayColor","payload":{"red":100.1,"blue":100.1,"green":100.1}},"evt.time":1708041190565283000,"evt.type":"read","fd.cport":60124,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4924}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:24.069678780Z","output_fields":{"evt.buffer":{"cmd":"connack","retain":false,"qos":0,"dup":false,"length":2,"topic":null,"payload":null,"sessionPresent":false,"returnCode":0},"evt.time":1708041264069678800,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:24.393667025Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":18,"topic":"displayColor","payload":null},"evt.time":1708041264393667000,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:26.400979318Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":23,"topic":"displayColor","payload":[1,2,3,4]},"evt.time":1708041266400979200,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:28.399309384Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":16,"topic":"displayColor","payload":10},"evt.time":1708041268399309300,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:30.410127216Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":17,"topic":"displayColor","payload":100},"evt.time":1708041270410127000,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:32.421210608Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":22,"topic":"displayColor","payload":"tringa"},"evt.time":1708041272421210600,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}
 info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-11T23:12:26.226439235Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":46,"topic":"displayColor","payload":{"r":4,"g":59,"b":29}},"evt.time":1707693146226439200,"evt.type":"read","fd.cport":48968,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":15191}}}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-11T23:12:31.736508560Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":46,"topic":"displayColor","payload":{"r":17,"g":22,"b":11}},"evt.time":1707693151736508700,"evt.type":"read","fd.cport":48968,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":15191}}}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-11T23:12:40.755186524Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":47,"topic":"displayColor","payload":{"r":23,"g":44,"b":22}},"evt.time":1707693160755186400,"evt.type":"read","fd.cport":48968,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":15191}}}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-11T23:12:41.754920269Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":44,"topic":"displayColor","payload":{"r":0,"g":1,"b":0}},"evt.time":1707693161754920200,"evt.type":"read","fd.cport":48968,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":15191}}}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-11T23:12:43.757767749Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":47,"topic":"displayColor","payload":{"r":10,"g":39,"b":19}},"evt.time":1707693163757767700,"evt.type":"read","fd.cport":48968,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":15191}}}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-11T23:12:46.261153324Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":46,"topic":"displayColor","payload":{"r":12,"g":9,"b":4}},"evt.time":1707693166261153300,"evt.type":"read","fd.cport":48968,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":15191}}}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting MQTT.payload to JSON"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"error","msg":"Error in converting JSON to RGB24"}
-info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-11T23:12:48.262064346Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":45,"topic":"displayColor","payload":{"r":10,"g":33,"b":16}},"evt.time":1707693168262064400,"evt.type":"read","fd.cport":48968,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":15191}}}
+info: {"event":"error","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:34.426651373Z","output_fields":{"evt.buffer":null,"evt.time":1708041274426651400,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}
+info: {"event":"mqtt","msg":{"hostname":"ubuntu","priority":"Warning","rule":"tcp_syscalls","source":"syscall","tags":[],"time":"2024-02-15T23:54:36.428676195Z","output_fields":{"evt.buffer":{"cmd":"publish","retain":false,"qos":0,"dup":false,"length":32,"topic":"displayColor","payload":{"color":"colore"}},"evt.time":1708041276428676000,"evt.type":"read","fd.cport":41684,"fd.lip":"192.168.1.178","fd.num":20,"fd.rip":"192.168.1.51","fd.sport":1883,"proc.pid":4982}}}

@@ -15,7 +15,7 @@ const byLine = readline.createInterface(stdin)
 const ws = new WebSocket("ws://localhost:8080/")
 // const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
 
-function RGBInRGB565(red, green, blue) {
+function RGBInRGB16(red, green, blue) {
     const isValidIntegerInRange = /^(0|[1-9]\d?|1\d\d|2[0-4]\d|25[0-5])$/;
 
 	if (!isValidIntegerInRange.test(red) || !isValidIntegerInRange.test(green) || !isValidIntegerInRange.test(blue)) {
@@ -129,7 +129,7 @@ parser.on('packet', packet => {
 			throw new mqttFormatJSONConversionException("Unable to convert from MQTT.payload to JSON.");
 		}
 
-		packet.payload = RGBInRGB565(colors.red, colors.green, colors.green);
+		packet.payload = RGBInRGB16(colors.red, colors.green, colors.green);
 		TCPMessage = packet
 	} catch (error) {
 		if (error instanceof mqttFormatJSONtoRBG24Exception) {
