@@ -45,14 +45,13 @@ function decode_base64_sense_hat(json)
 		const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
 		const decimalValue = hexBuffer.substring(2, 6);
 		var decimalNumber = parseInt(decimalValue, 16)
-		console.log(decimalValue)
-		//binaryString = decimalValue.toString(2);
-		//console.log(binaryString)
 		json.output_fields['evt.buffer'] = hexToRGB24(decimalNumber);
 }
 
-function send_falco_event(ws, json) {
-	if (json.rule === "tcp_syscalls") { // rule for mqtt
+function send_falco_event(ws, json) 
+{
+	if (json.rule === "tcp_syscalls") 
+	{ 
 		MQTTMessageJSON.event  = 'mqtt' 
 		if (json.output_fields['evt.type'] === "close")
 			removeParser(json)
@@ -112,15 +111,14 @@ parser.on('packet', packet => {
 		try {
 			//qui converto in JSON solo il payload(che viene trasformato da parse da array di ASCII a string)
 			packet.payload = JSON.parse(packet.payload);
-			console.log(packet.payload)
-
 			//TODO deve rifiutare anche string e numerui	
 			TCPMessage = packet
 		}catch (error){
 			throw new mqttFormatJSONConversionException("Unable to convert from MQTT.payload to JSON.");
 		}
 	} catch (error) {
-		if (error instanceof mqttFormatJSONConversionException) {
+		if (error instanceof mqttFormatJSONConversionException) 
+		{
 			MQTTMessageJSON.event = 'error'
 			MQTTMessageJSON.msg = 'Error in converting MQTT.payload to JSON';
 		} else {
