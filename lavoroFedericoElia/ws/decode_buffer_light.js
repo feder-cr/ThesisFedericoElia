@@ -6,32 +6,27 @@ const mqtt = require('mqtt-packet');
 const { error } = require("console");
 const {mqttFormatJSONConversionException} = require('./mqttFormatException');
 
-
-MQTTMessageJSON = {event: 'mqtt',};
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
-let TCPMessage
 const byLine = readline.createInterface(stdin)
-const ws = new WebSocket("ws://localhost:8080/")
-// const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
+const ws = new WebSocket("ws://localhost:8080/") // const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
+MQTTMessageJSON = {event: 'mqtt',};
+let TCPMessage
 
-
-function hexToRGB24(rgb565) {
-
+function hexToRGB24(rgb565) 
+{
     // Shift the red value to the right by 11 bits.
     var red5 = rgb565 >>> 11;
     // Shift the green value to the right by 5 bits and extract the lower 6 bits.
     var green6 = (rgb565 >>> 5) & 0b111111;
     // Extract the lower 5 bits.
     var blue5 = rgb565 & 0b11111;
-
     // Convert 5-bit red to 8-bit red.
     var red8 = Math.round((red5 / 31) * 255);
     // Convert 6-bit green to 8-bit green.
     var green8 = Math.round((green6 / 63) * 255);
     // Convert 5-bit blue to 8-bit blue.
     var blue8 = Math.round((blue5 / 31) * 255);
-
     return {red: red8, green: green8, blue: blue8};
 }
 
@@ -114,7 +109,6 @@ ws.on("close", () => {
 
 parser.on('packet', packet => {
 	try {
-
 		try {
 			//qui converto in JSON solo il payload(che viene trasformato da parse da array di ASCII a string)
 			packet.payload = JSON.parse(packet.payload);
@@ -125,8 +119,6 @@ parser.on('packet', packet => {
 		}catch (error){
 			throw new mqttFormatJSONConversionException("Unable to convert from MQTT.payload to JSON.");
 		}
-
-
 	} catch (error) {
 		if (error instanceof mqttFormatJSONConversionException) {
 			MQTTMessageJSON.event = 'error'
@@ -134,9 +126,8 @@ parser.on('packet', packet => {
 		} else {
 			MQTTMessageJSON.event = 'error'
 			MQTTMessageJSON.msg = error.message;
-			//console.log(error)
 		}
 		ws.send(JSON.stringify(MQTTMessageJSON))
 		TCPMessage = null
 	}
-  })
+})
