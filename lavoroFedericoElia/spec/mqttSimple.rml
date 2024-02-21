@@ -1,0 +1,3 @@
+displayColor(r,g,b) matches {event:'mqtt',msg:{output_fields:{'evt.buffer':{cmd:'publish',topic:'displayColor',payload:{red:r,blue:b,green:g}},'evt.type':'read'}}};
+
+Main = {let r,g,b; displayColor(r,g,b)};
