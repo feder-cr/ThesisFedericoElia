@@ -13,7 +13,7 @@ const ws = new WebSocket("ws://localhost:8080/") // const ws = new WebSocket("ws
 MQTTMessageJSON = {event: 'mqtt',};
 let TCPMessage
 
-function hexToRGB24(rgb565) 
+/*function hexToRGB24(rgb565)
 {
     // Shift the red value to the right by 11 bits.
     var red5 = rgb565 >>> 11;
@@ -28,7 +28,19 @@ function hexToRGB24(rgb565)
     // Convert 5-bit blue to 8-bit blue.
     var blue8 = Math.round((blue5 / 31) * 255);
     return {red: red8, green: green8, blue: blue8};
+}*/
+
+function hexToRGB16(rgb565)
+{
+    // Shift the red value to the right by 11 bits.
+    var red5 = rgb565 >>> 11;
+    // Shift the green value to the right by 5 bits and extract the lower 6 bits.
+    var green6 = (rgb565 >>> 5) & 0b111111;
+    // Extract the lower 5 bits.
+    var blue5 = rgb565 & 0b11111;
+    return {red: red5, green: green6, blue: blue5};
 }
+
 
 // decode base64 encoded buffer and parse mqtt packet
 function decode_base64_tcp_syscalls(json) 
@@ -45,7 +57,7 @@ function decode_base64_sense_hat(json)
 		const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
 		const decimalValue = hexBuffer.substring(2, 6);
 		var decimalNumber = parseInt(decimalValue, 16)
-		json.output_fields['evt.buffer'] = hexToRGB24(decimalNumber);
+		json.output_fields['evt.buffer'] = hexToRGB16(decimalNumber);
 }
 
 function send_falco_event(ws, json) 

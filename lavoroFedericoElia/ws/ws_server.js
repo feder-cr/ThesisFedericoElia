@@ -36,7 +36,6 @@ server.on('connection', function(socket) {
       logger_tcp_syscalls.info(JSON.stringify(messageJSON)); 
       return
     }
-
     const parsedmessageReceived = JSON.parse(JSON.stringify(messageJSON));
     if(parsedmessageReceived.msg.rule === "tcp_syscalls" && parsedmessageReceived.msg.output_fields && parsedmessageReceived.msg.output_fields["evt.buffer"])
     {
