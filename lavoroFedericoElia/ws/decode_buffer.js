@@ -52,7 +52,7 @@ function decode_base64_tcp_syscalls(json) {
 	function decode_base64_sense_hat(json) {
 			const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
 			const decimalValue = hexBuffer.substring(2, 6);
-			json.output_fields['evt.buffer'] = hexToRGB16(decimalValue);
+			json.output_fields['evt.buffer'] = hexToRGB16(parseInt(decimalValue));
 	}
 
 function send_falco_event(ws, json) {
