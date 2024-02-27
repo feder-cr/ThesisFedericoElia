@@ -17,34 +17,27 @@ const ws = new WebSocket("ws://localhost:8080/")
 
 function RGBInRGB16(red, green, blue) {
     const isValidIntegerInRange = /^(0|[1-9]\d?|1\d\d|2[0-4]\d|25[0-5])$/;
-
 	if (!isValidIntegerInRange.test(red) || !isValidIntegerInRange.test(green) || !isValidIntegerInRange.test(blue)) {
 		throw new mqttFormatJSONtoRBG24Exception("Input does not conform to the RGB24 format (red, green, or blue isn't an integer).");
 	}
 	const rgb565 = ((red & 0xF8) << 8) | ((green & 0xFC) << 3) | (blue >> 3);
 	try
 	{
-		return hexToRGB16(rgb565.toString(16));
+		return hexToRGB16(rgb565);
 	}catch (error) {
 		throw new mqttFormatRGB24toRBG16Exception("Unable to convert from RGB24 to RGB16.");
 	}
 }
 
-function hexToRGB16(hexValue) 
+function hexToRGB16(rgb565)
 {
-    const intValue = parseInt(hexValue, 16);
-    let binaryString = intValue.toString(2);
-	while (binaryString.length < 16) 
-	{
-		binaryString = '0' + binaryString;
-	}
-    const binaryRed = binaryString.substring(0, 5);
-    const intRed = parseInt(binaryRed, 2);
-	const binaryGreen = binaryString.substring(5, 11);
-    const intGreen = parseInt(binaryGreen, 2);
-	const binaryBlue = binaryString.substring(11, 16);
-    const intBlue = parseInt(binaryBlue, 2);
-    return {r: intRed,g: intGreen,b: intBlue};
+    // Shift the red value to the right by 11 bits.
+    var red5 = rgb565 >>> 11;
+    // Shift the green value to the right by 5 bits and extract the lower 6 bits.
+    var green6 = (rgb565 >>> 5) & 0b111111;
+    // Extract the lower 5 bits.
+    var blue5 = rgb565 & 0b11111;
+    return {r: red5, g: green6, b: blue5};
 }
 
 // decode base64 encoded buffer and parse mqtt packet
