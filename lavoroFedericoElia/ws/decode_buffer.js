@@ -13,7 +13,6 @@ const parser = mqtt.parser(opts);
 let TCPMessage
 const byLine = readline.createInterface(stdin)
 const ws = new WebSocket("ws://localhost:8080/")
-// const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
 
 function RGBInRGB16(red, green, blue) {
     const isValidIntegerInRange = /^(0|[1-9]\d?|1\d\d|2[0-4]\d|25[0-5])$/;

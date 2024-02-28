@@ -9,7 +9,7 @@ const settings = {
 };
 
 
-const client = connect('mqtt://192.168.1.51', settings);
+const client = connect('mqtt://test.mosquitto.org', settings);
 client.subscribe(`displayColor`);
 
 

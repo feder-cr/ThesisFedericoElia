@@ -13,23 +13,6 @@ const ws = new WebSocket("ws://localhost:8080/") // const ws = new WebSocket("ws
 MQTTMessageJSON = {event: 'mqtt',};
 let TCPMessage
 
-/*function hexToRGB24(rgb565)
-{
-    // Shift the red value to the right by 11 bits.
-    var red5 = rgb565 >>> 11;
-    // Shift the green value to the right by 5 bits and extract the lower 6 bits.
-    var green6 = (rgb565 >>> 5) & 0b111111;
-    // Extract the lower 5 bits.
-    var blue5 = rgb565 & 0b11111;
-    // Convert 5-bit red to 8-bit red.
-    var red8 = Math.round((red5 / 31) * 255);
-    // Convert 6-bit green to 8-bit green.
-    var green8 = Math.round((green6 / 63) * 255);
-    // Convert 5-bit blue to 8-bit blue.
-    var blue8 = Math.round((blue5 / 31) * 255);
-    return {red: red8, green: green8, blue: blue8};
-}*/
-
 function hexToRGB16(rgb565)
 {
     // Shift the red value to the right by 11 bits.
