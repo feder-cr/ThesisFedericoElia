@@ -60,7 +60,7 @@ function removeParser(json) {
 	}
 }
 
-function send_falco_event(ws, json) {
+function sendFalcoEvent(ws, json) {
 	if (json.rule === "tcp_syscalls") { // rule for mqtt
 		if (json.output_fields['evt.type'] === "close")
 			removeParser(json)
@@ -80,7 +80,7 @@ ws.on("open", () => {
 	console.log("ws connection open")
 	byLine.on("line", line => {
 		const json = JSON.parse(line)
-		send_falco_event(ws, json)
+		sendFalcoEvent(ws, json)
 	})
 })
 

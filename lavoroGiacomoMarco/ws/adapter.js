@@ -33,7 +33,7 @@ function send_tetragon_event(ws, json) {
 		ws.send(JSON.stringify(adapt_tetragon(json)))
 }
 
-function send_falco_event(ws, json) {
+function sendFalcoEvent(ws, json) {
 	if ("evt.buffer" in json.output_fields)
 		json.output_fields["evt.buffer"] = Buffer.from(json.output_fields["evt.buffer"], "base64").toString("utf-8")
 	ws.send(JSON.stringify(json))
@@ -46,7 +46,7 @@ ws.on("open", () => {
 		if (tool == "tetragon") {
 			send_tetragon_event(ws, json)
 		} else if (tool == "falco") {
-			send_falco_event(ws, json)
+			sendFalcoEvent(ws, json)
 		}
 
 	})

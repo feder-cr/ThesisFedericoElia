@@ -1,30 +1,29 @@
 class mqttFormatException extends Error {
-    constructor(mess) {
-      super(mess);
-      this.name = 'mqttFormatException';
-    }
+  constructor (mess) {
+    super(mess)
+    this.name = 'mqttFormatException'
   }
+}
 
-  class mqttFormatJSONConversionException extends mqttFormatException {
-    constructor(mess) {
-      super(mess);
-      this.name = 'mqttFormatJSONConversionException';
-    }
+class MqttFormatJSONConversionException extends mqttFormatException {
+  constructor (mess) {
+    super(mess)
+    this.name = 'MqttFormatJSONConversionException'
   }
+}
 
-  class mqttFormatJSONtoRBG24Exception extends mqttFormatException {
-    constructor(mess) {
-      super(mess);
-      this.name = 'mqttFormatJSONtoRBG24Exception';
-    }
+class MqttFormatJSONtoRBG24Exception extends mqttFormatException {
+  constructor (mess) {
+    super(mess)
+    this.name = 'MqttFormatJSONtoRBG24Exception'
   }
+}
 
-  class mqttFormatRGB24toRBG16Exception extends mqttFormatException {
-    constructor(mess) {
-      super(mess);
-      this.name = 'mqttFormatRGB24toRBG16Exception';
-    }
+class MqttFormatRGB24toRBG16Exception extends mqttFormatException {
+  constructor (mess) {
+    super(mess)
+    this.name = 'MqttFormatRGB24toRBG16Exception'
   }
+}
 
-
-  module.exports = { mqttFormatJSONConversionException,mqttFormatJSONtoRBG24Exception,mqttFormatRGB24toRBG16Exception };
+module.exports = { MqttFormatJSONConversionException, MqttFormatJSONtoRBG24Exception, MqttFormatRGB24toRBG16Exception }
