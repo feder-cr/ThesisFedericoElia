@@ -28,7 +28,9 @@ const possibleValues = [
     'null', // Stringa rappresentante il valore null
     JSON.stringify([1, 2, 3, 4]), // Stringa JSON rappresentante un array
 ];
+
 let value = 0;
+
 function pub()
 {
     const randomValue1 = getRandomNumber(0, 255);
@@ -39,10 +41,8 @@ function pub()
         green: randomValue2,
         blue: randomValue3,
     };
-    // client.publish(`displayColor`, JSON.stringify(jsonObject));
 
     const randomNumber = Math.random();
-    // Utilizza un'istruzione if per decidere se è vero o falso
     const isTrue = randomNumber > 0.5;
 
     // Stampa il risultato
@@ -54,11 +54,6 @@ function pub()
     {
         client.publish('displayColor', possibleValues[value]);
     }
-
-    // pubblica possibleValues ogni 4 messaggi
-    // const value = possibleValues[Math.floor(Math.random() * possibleValues.length)];
-    // client.publish('displayColor', value);
-    // client.publish('displayColor', 'ciao');
 
     value += 1;
     if (value === possibleValues.length)
