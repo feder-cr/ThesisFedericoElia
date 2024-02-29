@@ -1,29 +1,38 @@
-class mqttFormatException extends Error {
-  constructor (mess) {
-    super(mess)
-    this.name = 'mqttFormatException'
-  }
+/* eslint-disable max-classes-per-file */
+class mqttFormatException extends Error
+{
+    constructor(mess)
+    {
+        super(mess);
+        this.name = 'mqttFormatException';
+    }
 }
 
-class MqttFormatJSONConversionException extends mqttFormatException {
-  constructor (mess) {
-    super(mess)
-    this.name = 'MqttFormatJSONConversionException'
-  }
+class MqttFormatJSONConversionEx extends mqttFormatException
+{
+    constructor(mess)
+    {
+        super(mess);
+        this.name = 'MqttFormatJSONConversionEx';
+    }
 }
 
-class MqttFormatJSONtoRBG24Exception extends mqttFormatException {
-  constructor (mess) {
-    super(mess)
-    this.name = 'MqttFormatJSONtoRBG24Exception'
-  }
+class MqttFormatJSONtoRBG24Ex extends mqttFormatException
+{
+    constructor(mess)
+    {
+        super(mess);
+        this.name = 'MqttFormatJSONtoRBG24Ex';
+    }
 }
 
-class MqttFormatRGB24toRBG16Exception extends mqttFormatException {
-  constructor (mess) {
-    super(mess)
-    this.name = 'MqttFormatRGB24toRBG16Exception'
-  }
+class MqttFormatRGB24toRBG16Ex extends mqttFormatException
+{
+    constructor(mess)
+    {
+        super(mess);
+        this.name = 'MqttFormatRGB24toRBG16Ex';
+    }
 }
 
-module.exports = { MqttFormatJSONConversionException, MqttFormatJSONtoRBG24Exception, MqttFormatRGB24toRBG16Exception }
+module.exports = { MqttFormatJSONConversionEx, MqttFormatJSONtoRBG24Ex, MqttFormatRGB24toRBG16Ex };
