@@ -54,7 +54,7 @@ function sendFalcoEvent (ws, json) {
   let messageJSON = {}
   if (json.rule === 'tcp_syscalls') { // rule for mqtt
     messageJSON.event = 'mqtt'
-    if (json.output_fields['evt.type'] === 'close') { removeParser(json) } else if (json.output_fields['evt.type'] === 'read') {
+    if (json.output_fields['evt.type'] === 'read') {
       decodeBase64TcpSyscalls(json)
       // TODO: we may want to avoid sending the data if there are no packets...
       json.output = undefined // we don't need this

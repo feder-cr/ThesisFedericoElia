@@ -41,7 +41,7 @@ function decodeBase64SenseHat (json) {
 function sendFalcoEvent (ws, json) {
   if (json.rule === 'tcp_syscalls') {
     MQTTMessageJSON.event = 'mqtt'
-    if (json.output_fields['evt.type'] === 'close') { removeParser(json) } else if (json.output_fields['evt.type'] === 'read') {
+    if (json.output_fields['evt.type'] === 'read') {
       decodeBase64TcpSyscalls(json)
       // TODO: we may want to avoid sending the data if there are no packets...
       json.output = undefined // we don't need this
