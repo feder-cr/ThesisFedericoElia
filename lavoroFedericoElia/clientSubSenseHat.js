@@ -6,7 +6,7 @@ const settings = {
     port: 1883,
 };
 
-const client = connect('mqtt://test.mosquitto.org', settings);
+const client = connect('mqtt://192.168.1.51', settings);
 client.subscribe('displayColor');
 
 client.on('message', (receivedTopic, message) =>
@@ -27,7 +27,7 @@ client.on('message', (receivedTopic, message) =>
 
 function done()
 {
-    console.log('finished message');
+    // console.log('finished message');
 }
 
 setTimeout(() =>

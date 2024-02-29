@@ -10,7 +10,7 @@ const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect
 const parser = mqtt.parser(opts);
 const byLine = readline.createInterface(stdin);
 const ws = new WebSocket('ws://localhost:8080/');
-let MQTTMessageJSON;
+const MQTTMessageJSON = {};
 let TCPMessage;
 
 function hexToRGB16(rgb565)
