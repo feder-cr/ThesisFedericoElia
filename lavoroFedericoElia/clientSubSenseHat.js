@@ -6,7 +6,7 @@ const settings = {
     port: 1883,
 };
 
-const client = connect('mqtt://192.168.1.51', settings);
+const client = connect('mqtt://broker.hivemq.com', settings);
 client.subscribe('displayColor');
 
 client.on('message', (receivedTopic, message) =>
