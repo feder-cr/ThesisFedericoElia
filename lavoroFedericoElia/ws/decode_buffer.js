@@ -1,5 +1,5 @@
 #!/bin/env node
-/* eslint-disable no-param-reassign */
+/* eslint-disable no-param-reassign,no-bitwise */
 const { stdin } = require('process');
 const readline = require('readline');
 const { WebSocket } = require('ws');
@@ -95,7 +95,6 @@ function sendFalcoEvent(json)
 
 ws.on('open', () =>
 {
-    console.log('ws connection open');
     byLine.on('line', (line) =>
     {
         try

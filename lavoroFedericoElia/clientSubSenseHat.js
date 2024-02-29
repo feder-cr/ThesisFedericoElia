@@ -11,7 +11,6 @@ client.subscribe('displayColor');
 
 client.on('message', (receivedTopic, message) =>
 {
-    console.log(`${receivedTopic} ${message}`);
     try
     {
         if (receivedTopic === topic)

@@ -1,5 +1,5 @@
 #!/bin/env node
-/* eslint-disable no-param-reassign */
+/* eslint-disable no-param-reassign,no-bitwise */
 const { stdin } = require('process');
 const readline = require('readline');
 const { WebSocket } = require('ws');
@@ -9,7 +9,7 @@ const { MqttFormatJSONConversionEx } = require('./mqttFormatException');
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 const byLine = readline.createInterface(stdin);
-const ws = new WebSocket('ws://localhost:8080/'); // const ws = new WebSocket("ws://druidlab.dibris.unige.it:8080")
+const ws = new WebSocket('ws://localhost:8080/');
 let MQTTMessageJSON;
 let TCPMessage;
 
@@ -74,7 +74,6 @@ function sendFalcoEvent(json)
 
 ws.on('open', () =>
 {
-    console.log('ws connection open');
     byLine.on('line', (line) =>
     {
         try
@@ -85,8 +84,6 @@ ws.on('open', () =>
         { // questo significa che output di Falco non è JSON o altro...
             MQTTMessageJSON.msg = errorEx.message;
             ws.send(JSON.stringify(MQTTMessageJSON));
-            // console.log(error)
-            console.log(errorEx);
         }
     });
 });
