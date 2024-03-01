@@ -50,7 +50,6 @@ function sendFalcoEvent(json)
         decodeBase64TcpSyscalls(json);
         // TODO: we may want to avoid sending the data if there are no packets...
         json.output = undefined; // we don't need this
-        json.output_fields['evt.args'] = undefined;
         MQTTMessageJSON.msg = json;
         ws.send(JSON.stringify(MQTTMessageJSON));
     }

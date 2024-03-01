@@ -8,5 +8,5 @@
     proc.name = "node" and
     proc.args = "clientSubSenseHat.js"
   output: >
-    TCP syscall - (pid=%proc.pid fd=%fd.num buffer=%evt.buffer args=%evt.args %fd.lip:%fd.cport <-> %fd.rip:%fd.sport)
+    TCP syscall - (pid=%proc.pid fd=%fd.num buffer=%evt.buffer %fd.name %fd.lip:%fd.cport <-> %fd.rip:%fd.sport)
   priority: WARNING

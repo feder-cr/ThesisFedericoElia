@@ -71,7 +71,6 @@ function sendFalcoEvent(json)
         decodeBase64TcpSyscalls(json);
         // non ci servono questi campi
         json.output = undefined;
-        json.output_fields['evt.args'] = undefined;
         messageJSON.msg = json;
         ws.send(JSON.stringify(messageJSON));
     }
