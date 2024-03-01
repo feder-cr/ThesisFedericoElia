@@ -47,15 +47,12 @@ function sendFalcoEvent(json)
     if (json.rule === 'tcp_syscalls')
     {
         MQTTMessageJSON.event = 'mqtt';
-        if (json.output_fields['evt.type'] === 'read')
-        {
-            decodeBase64TcpSyscalls(json);
-            // TODO: we may want to avoid sending the data if there are no packets...
-            json.output = undefined; // we don't need this
-            json.output_fields['evt.args'] = undefined;
-            MQTTMessageJSON.msg = json;
-            ws.send(JSON.stringify(MQTTMessageJSON));
-        }
+        decodeBase64TcpSyscalls(json);
+        // TODO: we may want to avoid sending the data if there are no packets...
+        json.output = undefined; // we don't need this
+        json.output_fields['evt.args'] = undefined;
+        MQTTMessageJSON.msg = json;
+        ws.send(JSON.stringify(MQTTMessageJSON));
     }
     else if (json.rule === 'sense-hat')
     {
