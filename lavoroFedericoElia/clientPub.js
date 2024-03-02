@@ -19,11 +19,11 @@ const possibleValues = [
     '"tringa"',
     'stringa', // Stringa senza apici extra
     JSON.stringify({ color: 'colore' }), // Stringa JSON rappresentante un oggetto
-    JSON.stringify({
-        red: 100.1,
-        blue: 100.1,
-        green: 100.1,
-    }), // Stringa JSON rappresentante un oggetto
+    // JSON.stringify({
+    //    red: 100.1,
+    //    blue: 100.1,
+    //    green: 100.1,
+    // }), // Stringa JSON rappresentante un oggetto
     'true', // Stringa booleana
     'null', // Stringa rappresentante il valore null
     JSON.stringify([1, 2, 3, 4]), // Stringa JSON rappresentante un array
