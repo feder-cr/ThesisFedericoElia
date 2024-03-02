@@ -21,7 +21,10 @@ client.on('message', (receivedTopic, message) =>
             sense.sync.clear(red, green, blue);
         }
     }
-    catch (error) { /* empty */ }
+    catch (error)
+    {
+        sense.sync.clear(0, 0, 0);
+    }
 });
 
 function done()
