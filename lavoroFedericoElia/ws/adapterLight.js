@@ -9,7 +9,7 @@ const { MqttFormatJSONConversionEx } = require('./MqttFormatException');
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 const byLine = readline.createInterface(stdin);
-const ws = new WebSocket('ws://localhost:8080/');
+const ws = new WebSocket('ws://192.168.1.51:8810/');
 const MQTTMessageJSON = {};
 let TCPMessage;
 
