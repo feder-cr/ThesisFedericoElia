@@ -7,7 +7,7 @@ const mqtt = require('mqtt-packet');
 const { MqttFormatJSONConversionEx, MqttFormatJSONtoRBG24Ex, MqttFormatRGB24toRBG16Ex } = require('./MqttFormatException');
 
 const ErrorMessageJSON = { event: 'error' };
-const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
+const opts = { protocolVersion: 4 };
 const parser = mqtt.parser(opts);
 let TCPMessage;
 const byLine = readline.createInterface(stdin);
@@ -16,12 +16,9 @@ const ws = new WebSocket('ws://localhost:8080/');
 
 function hexToRGB16(rgb565)
 {
-    const redMask = 0b1111100000000000;
-    const greenMask = 0b0000011111100000;
-    const blueMask = 0b0000000000011111;
-    const red5 = (rgb565 & redMask) >> 11;
-    const green6 = (rgb565 & greenMask) >> 5;
-    const blue5 = rgb565 & blueMask;
+    const red5 = rgb565 >>> 11;
+    const green6 = (rgb565 >>> 5) & 0b111111;
+    const blue5 = rgb565 & 0b11111;
     return { r: red5, g: green6, b: blue5 };
 }
 

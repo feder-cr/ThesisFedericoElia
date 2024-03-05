@@ -15,11 +15,8 @@ let TCPMessage;
 
 function hexToRGB16(rgb565)
 {
-    // Shift the red value to the right by 11 bits.
     const red5 = rgb565 >>> 11;
-    // Shift the green value to the right by 5 bits and extract the lower 6 bits.
     const green6 = (rgb565 >>> 5) & 0b111111;
-    // Extract the lower 5 bits.
     const blue5 = rgb565 & 0b11111;
     return { red: red5, green: green6, blue: blue5 };
 }
@@ -47,7 +44,6 @@ function sendFalcoEvent(json)
     if (json.rule === 'tcp_syscalls')
     {
         decodeBase64TcpSyscalls(json);
-        // TODO: we may want to avoid sending the data if there are no packets...
         json.output = undefined; // we don't need this
         if (MQTTMessageJSON.event !== 'error')
         {
@@ -62,7 +58,6 @@ function sendFalcoEvent(json)
         if (json.output_fields['evt.type'] === 'pwrite')
         {
             decodeBase64SenseHat(json);
-            // TODO: we may want to avoid sending the data if there are no packets...
             json.output = undefined; // we don't need this
             json.output_fields['evt.args'] = undefined;
             MQTTMessageJSON.msg = json;
