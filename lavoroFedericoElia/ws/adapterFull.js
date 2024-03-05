@@ -6,34 +6,38 @@ const { WebSocket } = require('ws');
 const mqtt = require('mqtt-packet');
 const { MqttFormatJSONConversionEx, MqttFormatJSONtoRBG24Ex, MqttFormatRGB24toRBG16Ex } = require('./MqttFormatException');
 
-const MQTTMessageJSON = {};
+const ErrorMessageJSON = { event: 'error' };
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 let TCPMessage;
 const byLine = readline.createInterface(stdin);
-const ws = new WebSocket('ws://192.168.1.51:8810/');
+// const ws = new WebSocket('ws://192.168.1.51:8810/');
+const ws = new WebSocket('ws://localhost:8080/');
 
 function hexToRGB16(rgb565)
 {
-    // Shift the red value to the right by 11 bits.
-    const red5 = rgb565 >>> 11;
-    // Shift the green value to the right by 5 bits and extract the lower 6 bits.
-    const green6 = (rgb565 >>> 5) & 0b111111;
-    // Extract the lower 5 bits.
-    const blue5 = rgb565 & 0b11111;
+    const redMask = 0b1111100000000000;
+    const greenMask = 0b0000011111100000;
+    const blueMask = 0b0000000000011111;
+    const red5 = (rgb565 & redMask) >> 11;
+    const green6 = (rgb565 & greenMask) >> 5;
+    const blue5 = rgb565 & blueMask;
     return { r: red5, g: green6, b: blue5 };
 }
 
-function RGBInRGB16(red, green, blue)
+function RGBInRGB16(red8, green8, blue8)
 {
     const isValidIntegerInRange = /^(0|[1-9]\d?|1\d\d|2[0-4]\d|25[0-5])$/;
-    if (!isValidIntegerInRange.test(red)
-        || !isValidIntegerInRange.test(green)
-        || !isValidIntegerInRange.test(blue))
+    if (!isValidIntegerInRange.test(red8)
+        || !isValidIntegerInRange.test(green8)
+        || !isValidIntegerInRange.test(blue8))
     {
         throw new MqttFormatJSONtoRBG24Ex("Input does not conform to the RGB24 format (red, green, or blue isn't an integer).");
     }
-    const rgb565 = ((red & 0xF8) << 8) | ((green & 0xFC) << 3) | (blue >> 3);
+    const red5 = red8 >> 3;
+    const green6 = green8 >> 2;
+    const blue5 = blue8 >> 3;
+    const rgb565 = (red5 << (6 + 5)) | (green6 << 5) | blue5;
     try
     {
         return hexToRGB16(rgb565);
@@ -59,34 +63,32 @@ function decodeBase64SenseHat(json)
     const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
     const decimalValue = hexBuffer.substring(2, 6);
     // eslint-disable-next-line radix
-    json.output_fields['evt.buffer'] = hexToRGB16(parseInt(decimalValue));
+    json.output_fields['evt.buffer'] = hexToRGB16(parseInt(decimalValue, 16));
 }
 
 function sendFalcoEvent(json)
 {
+    const messageJSON = {};
     if (json.rule === 'tcp_syscalls')
     { // rule for mqtt
+        messageJSON.event = 'mqtt';
         decodeBase64TcpSyscalls(json);
         // non ci servono questi campi
         json.output = undefined;
-        if (MQTTMessageJSON.event !== 'error')
-        {
-            MQTTMessageJSON.event = 'mqtt';
-            MQTTMessageJSON.msg = json;
-            ws.send(JSON.stringify(MQTTMessageJSON));
-        }
+        messageJSON.msg = json;
+        ws.send(JSON.stringify(messageJSON));
     }
     else if (json.rule === 'sense-hat')
     {
-        MQTTMessageJSON.event = 'display';
+        messageJSON.event = 'display';
         if (json.output_fields['evt.type'] === 'pwrite')
         {
             decodeBase64SenseHat(json);
             // non ci servono questi campi
             json.output = undefined;
             json.output_fields['evt.args'] = undefined;
-            MQTTMessageJSON.msg = json;
-            ws.send(JSON.stringify(MQTTMessageJSON));
+            messageJSON.msg = json;
+            ws.send(JSON.stringify(messageJSON));
         }
     }
 }
@@ -101,8 +103,8 @@ ws.on('open', () =>
         }
         catch (error)
         { // questo significa che output di Falco non è JSON o altro...
-            MQTTMessageJSON.msg = error.message;
-            ws.send(JSON.stringify(MQTTMessageJSON));
+            ErrorMessageJSON.msg = error.message;
+            ws.send(JSON.stringify(ErrorMessageJSON));
             // console.log(error)
         }
     });
@@ -132,7 +134,7 @@ parser.on('packet', (packet) =>
         {
             // qui converto in JSON solo il payload
             const colors = JSON.parse(packet.payload);
-            packet.payload = RGBInRGB16(colors.red, colors.green, colors.green);
+            packet.payload = RGBInRGB16(colors.red, colors.green, colors.blue);
             TCPMessage = packet;
         }
         catch (error)
@@ -144,26 +146,21 @@ parser.on('packet', (packet) =>
     {
         if (error instanceof MqttFormatJSONtoRBG24Ex)
         {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = 'Error in converting JSON to RGB24';
+            ErrorMessageJSON.msg = 'Error in converting JSON to RGB24';
         }
         else if (error instanceof MqttFormatRGB24toRBG16Ex)
         {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = 'Error in converting RGB24 to RGB16';
+            ErrorMessageJSON.msg = 'Error in converting RGB24 to RGB16';
         }
         else if (error instanceof MqttFormatJSONConversionEx)
         {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = 'Error in converting MQTT.payload to JSON';
+            ErrorMessageJSON.msg = 'Error in converting MQTT.payload to JSON';
         }
         else
         {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = error.message;
-            // console.log(error)
+            ErrorMessageJSON.msg = error.message;
         }
-        ws.send(JSON.stringify(MQTTMessageJSON));
+        ws.send(JSON.stringify(ErrorMessageJSON));
         TCPMessage = null;
     }
 });
