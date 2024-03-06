@@ -17,7 +17,6 @@ displayColorMqtt(r1,g1,b1) matches {
 
 notDisplayColorMqtt not matches displayColorMqtt(_,_,_);
 
-
 displayColorDisplay(r2,g2,b2) matches {
     event: 'display',
     msg: {
@@ -37,7 +36,7 @@ errorEvent matches {
 };
 
 check_rgb(r1, g1, b1, r2, g2, b2) matches displayColorDisplay(r2, g2, b2)
-    with abs(r1 * 31 / 255 - r2) <= 1 && abs(g1 * 63 / 255 - g2) <= 1 && abs(b1 * 31 / 255 - b2) <= 1;
+    with abs(r1 / 8 - r2) <= 1 && abs(g1 / 4 - g2) <= 1 && abs(b1 / 8 - b2) <= 1;
 
 Main = {let r1, g1, b1; displayColorMqtt(r1, g1, b1) CheckRgbNext<r1, g1, b1> \/ errorEvent CheckRgbNext<0, 0, 0> \/ notDisplayColorMqtt CheckRgbNext<0, 0, 0>}*;
 CheckRgbNext<r1, g1, b1> = {let r2, g2, b2; check_rgb(r1, g1, b1, r2, g2, b2)};

@@ -38,7 +38,7 @@ server.on('connection', (socket) =>
             return;
         }
         const parsedmessageReceived = JSON.parse(JSON.stringify(messageJSON));
-        if (parsedmessageReceived.msg.rule === 'tcp_syscalls' && parsedmessageReceived.msg.output_fields && parsedmessageReceived.msg.output_fields['evt.buffer'])
+        if (parsedmessageReceived.msg.rule === 'tcp_syscalls' && parsedmessageReceived.msg.output_fields)
         {
             loggerTcpSyscalls.info(JSON.stringify(parsedmessageReceived));
         }
@@ -48,7 +48,7 @@ server.on('connection', (socket) =>
         }
         else
         {
-            console.log('Errore: Il payload non rispetta il formato.');
+            // console.log('Errore: Il payload non rispetta il formato.');
         }
     });
 });
