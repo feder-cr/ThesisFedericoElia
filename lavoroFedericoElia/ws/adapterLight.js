@@ -82,11 +82,37 @@ ws.on('open', () =>
     });
 });
 
-ws.on('message', () =>
+function readErrorFromResponse(jsonResponse)
 {
-    // const json = JSON.parse(msg)
-    // console.log(JSON.stringify(json))
-});
+    try
+    {
+        const responseObj = JSON.parse(jsonResponse);
+        if ('error' in responseObj)
+        {
+            return responseObj.error;
+        }
+        return 'La chiave "error" non è presente nella risposta JSON.';
+    }
+    catch (e)
+    {
+        return `Errore durante il parsing JSON: ${e.message}`;
+    }
+}
+
+ws.onmessage = function (event)
+{
+    const error = readErrorFromResponse(event.data);
+    if (error !== false)
+    {
+        console.log('Errore dal server:', error);
+        console.log('Messaggio ricevuto:', event.data);
+    }
+    else
+    {
+        // console.log("Messaggio ricevuto senza errori:");
+        // Continua l'elaborazione del messaggio qui
+    }
+};
 
 ws.on('error', () =>
 {
