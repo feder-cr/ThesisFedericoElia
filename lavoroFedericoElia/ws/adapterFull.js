@@ -69,9 +69,8 @@ function sendFalcoEvent(json)
     { // rule for mqtt
         decodeBase64TcpSyscalls(json);
         json.output = undefined; // we don't need this
-        if (MQTTMessageJSON.event !== 'error')
+        if (MQTTMessageJSON.event === 'mqtt')
         {
-            MQTTMessageJSON.event = 'mqtt';
             MQTTMessageJSON.msg = json;
             ws.send(JSON.stringify(MQTTMessageJSON));
         }
@@ -101,9 +100,8 @@ ws.on('open', () =>
         }
         catch (error)
         { // questo significa che output di Falco non è JSON o altro...
-            MQTTMessageJSON.msg = error.message;
-            ws.send(JSON.stringify(MQTTMessageJSON));
-            // console.log(error)
+            // MQTTMessageJSON.msg = error.message;
+            //  ws.send(JSON.stringify(MQTTMessageJSON));
         }
     });
 });
@@ -152,43 +150,51 @@ ws.on('close', () =>
 
 parser.on('packet', (packet) =>
 {
-    try
+    if (packet.cmd === 'publish')
     {
         try
         {
-            // qui converto in JSON solo il payload
-            const colors = JSON.parse(packet.payload);
-            packet.payload = RGBInRGB16(colors.red, colors.green, colors.blue);
-            TCPMessage = packet;
+            try
+            {
+                // qui converto in JSON solo il (evt.buffer).payload
+                const colors = JSON.parse(packet.payload);
+                packet.payload = RGBInRGB16(colors.red, colors.green, colors.blue);
+                TCPMessage = packet;
+                MQTTMessageJSON.event = 'mqtt';
+            }
+            catch (error)
+            {
+                throw new MqttFormatJSONConversionEx('Unable to convert from MQTT.payload to JSON.');
+            }
         }
         catch (error)
         {
-            throw new MqttFormatJSONConversionEx('Unable to convert from MQTT.payload to JSON.');
+            if (error instanceof MqttFormatJSONtoRBG24Ex)
+            {
+                MQTTMessageJSON.event = 'error';
+                MQTTMessageJSON.msg = 'Error in converting JSON to RGB24';
+            }
+            else if (error instanceof MqttFormatRGB24toRBG16Ex)
+            {
+                MQTTMessageJSON.event = 'error';
+                MQTTMessageJSON.msg = 'Error in converting RGB24 to RGB16';
+            }
+            else if (error instanceof MqttFormatJSONConversionEx)
+            {
+                MQTTMessageJSON.event = 'error';
+                MQTTMessageJSON.msg = 'Error in converting MQTT.payload to JSON';
+            }
+            else
+            {
+                MQTTMessageJSON.event = 'error';
+                MQTTMessageJSON.msg = error.message;
+            }
+            ws.send(JSON.stringify(MQTTMessageJSON));
+            TCPMessage = null;
         }
     }
-    catch (error)
+    else
     {
-        if (error instanceof MqttFormatJSONtoRBG24Ex)
-        {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = 'Error in converting JSON to RGB24';
-        }
-        else if (error instanceof MqttFormatRGB24toRBG16Ex)
-        {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = 'Error in converting RGB24 to RGB16';
-        }
-        else if (error instanceof MqttFormatJSONConversionEx)
-        {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = 'Error in converting MQTT.payload to JSON';
-        }
-        else
-        {
-            MQTTMessageJSON.event = 'error';
-            MQTTMessageJSON.msg = error.message;
-        }
-        ws.send(JSON.stringify(MQTTMessageJSON));
-        TCPMessage = null;
+        MQTTMessageJSON.event = 'notPublish';
     }
 });

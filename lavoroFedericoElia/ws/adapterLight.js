@@ -9,7 +9,8 @@ const { MqttFormatJSONConversionEx } = require('./MqttFormatException');
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 const byLine = readline.createInterface(stdin);
-const ws = new WebSocket('ws://192.168.1.51:8810/');
+// const ws = new WebSocket('ws://192.168.1.51:8810/');
+const ws = new WebSocket('ws://localhost:8080/');
 const MQTTMessageJSON = {};
 let TCPMessage;
 
@@ -41,7 +42,7 @@ function decodeBase64SenseHat(json)
 
 function sendFalcoEvent(json)
 {
-    if (json.rule === 'tcp_syscalls')
+    if (json.rule === 'tcp_syscalls' && json.msg.output_fields['evt.buffer'].cmd === 'publish')
     {
         decodeBase64TcpSyscalls(json);
         json.output = undefined; // we don't need this

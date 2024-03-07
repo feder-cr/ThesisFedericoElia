@@ -37,4 +37,4 @@ setTimeout(() =>
     done();
     client.end();
     process.exit();
-}, 60000);
+}, 360000);
