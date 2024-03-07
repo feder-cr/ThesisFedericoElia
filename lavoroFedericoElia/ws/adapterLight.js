@@ -4,13 +4,22 @@ const { stdin } = require('process');
 const readline = require('readline');
 const { WebSocket } = require('ws');
 const mqtt = require('mqtt-packet');
+const winston = require('winston');
 const { MqttFormatJSONConversionEx } = require('./MqttFormatException');
+// Configure Winston logger to write to lightLog.json
+const logger = winston.createLogger({
+    level: 'error',
+    format: winston.format.json(),
+    transports: [
+        new winston.transports.File({ filename: 'log/lightErrorLog.json' }),
+    ],
+});
 
 const opts = { protocolVersion: 4 }; // default is 4. Usually, opts is a connect packet
 const parser = mqtt.parser(opts);
 const byLine = readline.createInterface(stdin);
-// const ws = new WebSocket('ws://192.168.1.51:8810/');
-const ws = new WebSocket('ws://localhost:8080/');
+const ws = new WebSocket('ws://192.168.1.51:8810/');
+// const ws = new WebSocket('ws://localhost:8080/');
 const MQTTMessageJSON = {};
 let TCPMessage;
 
@@ -105,13 +114,7 @@ ws.onmessage = function (event)
     const error = readErrorFromResponse(event.data);
     if (error !== false)
     {
-        console.log('Errore dal server:', error);
-        console.log('Messaggio ricevuto:', event.data);
-    }
-    else
-    {
-        // console.log("Messaggio ricevuto senza errori:");
-        // Continua l'elaborazione del messaggio qui
+        logger.error(`Errore: ${error} - Messaggio ricevuto: ${event.data}`);
     }
 };
 

@@ -4,6 +4,7 @@ const { stdin } = require('process');
 const readline = require('readline');
 const { WebSocket } = require('ws');
 const mqtt = require('mqtt-packet');
+const winston = require('winston');
 const { MqttFormatJSONConversionEx, MqttFormatJSONtoRBG24Ex, MqttFormatRGB24toRBG16Ex } = require('./MqttFormatException');
 
 const MQTTMessageJSON = {};
@@ -13,6 +14,14 @@ let TCPMessage;
 const byLine = readline.createInterface(stdin);
 const ws = new WebSocket('ws://192.168.1.51:8810/');
 // const ws = new WebSocket('ws://localhost:8080/');
+
+const logger = winston.createLogger({
+    level: 'error',
+    format: winston.format.json(),
+    transports: [
+        new winston.transports.File({ filename: 'log/lightErrorLog.json' }),
+    ],
+});
 
 function hexToRGB16(rgb565)
 {
@@ -128,13 +137,7 @@ ws.onmessage = function (event)
     const error = readErrorFromResponse(event.data);
     if (error !== false)
     {
-        console.log('Errore dal server:', error);
-        console.log('Messaggio ricevuto:', event.data);
-    }
-    else
-    {
-        // console.log("Messaggio ricevuto senza errori:");
-        // Continua l'elaborazione del messaggio qui
+        logger.error(`Errore: ${error} - Messaggio ricevuto: ${event.data}`);
     }
 };
 
