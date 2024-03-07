@@ -42,7 +42,7 @@ function decodeBase64SenseHat(json)
 
 function sendFalcoEvent(json)
 {
-    if (json.rule === 'tcp_syscalls' && json.msg.output_fields['evt.buffer'].cmd === 'publish')
+    if (json.rule === 'tcp_syscalls')
     {
         decodeBase64TcpSyscalls(json);
         json.output = undefined; // we don't need this
@@ -77,8 +77,8 @@ ws.on('open', () =>
         }
         catch (errorEx)
         { // questo significa che output di Falco non è JSON o altro...
-            MQTTMessageJSON.msg = errorEx.message;
-            ws.send(JSON.stringify(MQTTMessageJSON));
+            // MQTTMessageJSON.msg = errorEx.message;
+            // ws.send(JSON.stringify(MQTTMessageJSON));
         }
     });
 });
