@@ -30,25 +30,32 @@ server.on('connection', (socket) =>
 {
     socket.on('message', (messageReceived) =>
     {
-        const messageJSON = JSON.parse(messageReceived);
-        // controllo se messageReceived è un errore oppure no
-        if (messageJSON.event === 'error')
+        try
         {
-            loggerTcpSyscalls.info(JSON.stringify(messageJSON));
-            return;
+            const messageJSON = JSON.parse(messageReceived);
+            // controllo se messageReceived è un errore oppure no
+            if (messageJSON.event === 'error')
+            {
+                loggerTcpSyscalls.info(JSON.stringify(messageJSON));
+                return;
+            }
+            const parsedmessageReceived = JSON.parse(JSON.stringify(messageJSON));
+            if (parsedmessageReceived.msg.rule === 'tcp_syscalls' && parsedmessageReceived.msg.output_fields)
+            {
+                loggerTcpSyscalls.info(JSON.stringify(parsedmessageReceived));
+            }
+            else if (parsedmessageReceived.msg.rule === 'sense-hat' && parsedmessageReceived.msg.output_fields['evt.buffer'] != null)
+            {
+                loggerSenseHat.info(JSON.stringify(parsedmessageReceived));
+            }
+            else
+            {
+                // console.log('Errore: Il payload non rispetta il formato.');
+            }
         }
-        const parsedmessageReceived = JSON.parse(JSON.stringify(messageJSON));
-        if (parsedmessageReceived.msg.rule === 'tcp_syscalls' && parsedmessageReceived.msg.output_fields)
+        catch (error)
         {
-            loggerTcpSyscalls.info(JSON.stringify(parsedmessageReceived));
-        }
-        else if (parsedmessageReceived.msg.rule === 'sense-hat' && parsedmessageReceived.msg.output_fields['evt.buffer'] != null)
-        {
-            loggerSenseHat.info(JSON.stringify(parsedmessageReceived));
-        }
-        else
-        {
-            // console.log('Errore: Il payload non rispetta il formato.');
+            // nothing
         }
     });
 });

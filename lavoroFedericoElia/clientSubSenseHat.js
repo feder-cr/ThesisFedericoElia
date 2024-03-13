@@ -7,7 +7,7 @@ const settings = {
 };
 
 const client = connect('mqtt://broker.hivemq.com', settings);
-client.subscribe('displayColor');
+client.subscribe('displayColor', { qos: 2 });
 
 client.on('message', (receivedTopic, message) =>
 {

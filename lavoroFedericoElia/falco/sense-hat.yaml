@@ -2,7 +2,8 @@
   desc: syscall on fb file
   condition: >
     evt.dir = < and
+    evt.type = "pwrite" and
     fd.name = "/dev/fb0"
   output: >
-    (command=%proc.cmdline user=%user.name evt=%evt.type buffer=%evt.buffer arf=%evt.args fd=%fd.num)
+    (command=%proc.cmdline user=%user.name buffer=%evt.buffer)
   priority: WARNING
