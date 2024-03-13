@@ -1,17 +1,15 @@
 Object.defineProperty(exports, '__esModule', { value: true });
-const {
-    extractPacketType, extractFlags, extractRemainLength,
-} = require('./util');
+const { extractPacketType, extractFlags, extractRemainLength } = require('./util');
 const Parse = require('./parse');
 
 // Definizione della funzione buildPacket che costruisce il pacchetto MQTT
-function buildPacket(packetType, flags, remainLength, slicedBuffer)
+function buildPacket(remainLengthSingleMessage, slicedBuffer)
 {
     // Creazione dell'oggetto pacchetto con le informazioni di base
     const packet = {
-        packetType,
-        flags,
-        remainLength,
+        packetType: extractPacketType(slicedBuffer[0]),
+        flags: extractFlags(slicedBuffer[0]),
+        remainLength: remainLengthSingleMessage,
         buffer: slicedBuffer,
     };
     // Switch per determinare il tipo di pacchetto e chiamare la funzione di parsing corrispondente
@@ -49,26 +47,21 @@ function buildPacket(packetType, flags, remainLength, slicedBuffer)
 // Definizione della funzione parse che analizza un buffer che potrebbe contenere più pacchetti MQTT
 function parse(buffer)
 {
-    let index = 0; // Indice utilizzato per scorrere il buffer
+    let i = 0; // Indice utilizzato per scorrere il buffer
     const packets = []; // Array per conservare i pacchetti estratti
-
     // Ciclo che continua fino a quando non viene analizzato l'intero buffer
-    while (index < buffer.length)
+    while (i < buffer.length)
     {
         // Estrazione della lunghezza rimanente e dell'indice del prossimo byte da leggere
-        const { remainLength, nextIndex } = extractRemainLength(buffer.slice(index));
-        // Estrazione del tipo di pacchetto e delle flag
-        const packetType = extractPacketType(buffer[index]);
-        const flags = extractFlags(buffer[index]);
+        const { remainLengthSingleMessage, nextIndex } = extractRemainLength(buffer.slice(i));
         // Creazione di un buffer "tagliato" che contiene solo i dati del pacchetto corrente
-        const slicedBuffer = buffer.slice(index + nextIndex, index + nextIndex + remainLength);
+        const slicedBuffer = buffer.slice(i + nextIndex, i + nextIndex + remainLengthSingleMessage);
         // Costruzione del pacchetto e aggiunta all'array dei pacchetti
-        const packet = buildPacket(packetType, flags, remainLength, slicedBuffer);
+        const packet = buildPacket(remainLengthSingleMessage, slicedBuffer);
         packets.push(packet);
-        // Aggiornamento dell'indice per passare al successivo pacchetto nel buffer
-        index += nextIndex + remainLength;
+        // Aggiornamento dell'indice per passare al successivo messaggio nel buffer
+        i += nextIndex + remainLengthSingleMessage;
     }
-
     return packets; // Ritorno dell'array contenente tutti i pacchetti estratti
 }
 
