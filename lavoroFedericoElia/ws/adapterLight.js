@@ -8,7 +8,7 @@ const { WebSocket } = require('ws');
 const winston = require('winston');
 const fifoMqttMessageJSON = require('fifo')();
 const { MqttFormatJSONConversionEx } = require('./MqttFormatException');
-const mqttParser = require('../mqtt-parser');
+const mqttParser = require('../parse-mqttv5-packet');
 // Configure Winston logger to write to lightLog.json
 const logger = winston.createLogger({
     format: winston.format.json(),
@@ -137,7 +137,11 @@ function sendFalcoEvent(json)
         }
         else
         {
-            ws.send(JSON.stringify(mqttMessage));
+            while (mqttMessage.msg.output_fields['evt.buffer'].packetType !== 3)
+            {
+                ws.send(JSON.stringify(mqttMessage));
+                mqttMessage = fifoMqttMessageJSON.shift();
+            }
         }
     }
 }

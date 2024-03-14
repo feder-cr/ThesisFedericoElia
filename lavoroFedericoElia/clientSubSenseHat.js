@@ -4,6 +4,7 @@ const sense = require('sense-hat-led');
 const topic = 'displayColor';
 const settings = {
     port: 1883,
+    protocolVersion: 5,
 };
 
 const client = connect('mqtt://broker.hivemq.com', settings);

@@ -1,5 +1,3 @@
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function extractPacketType(byte)
 {
     return byte >> 4;

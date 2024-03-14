@@ -1,0 +1,27 @@
+{
+    "name": "parse-mqttv5-packet",
+    "version": "1.0.0",
+    "description": "A library for parsing MQTT v5 packets.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mqtt",
+        "parser"
+    ],
+    "author": "Federico Elia",
+    "license": "MIT",
+    "dependencies": {
+        "mqtt-packet": "^6.0.2"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tuonome/ParseMqttV5Packet.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tuonome/ParseMqttV5Packet/issues"
+    },
+    "homepage": "https://github.com/tuonome/ParseMqttV5Packet"
+}
