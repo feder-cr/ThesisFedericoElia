@@ -1,6 +1,4 @@
-const {
-    extractPacketType, extractFlags, extractRemainLength,
-} = require('./util');
+const { extractPacketType, extractFlags, extractRemainLength } = require('./util');
 const Parse = require('./parse');
 
 // Definizione della funzione buildPacket che costruisce il pacchetto MQTT
