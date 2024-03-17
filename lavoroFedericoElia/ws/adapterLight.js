@@ -7,8 +7,10 @@ const readline = require('readline');
 const { WebSocket } = require('ws');
 const winston = require('winston');
 const fifoMqttMessageJSON = require('fifo')();
+const { exec } = require('child_process');
 const { MqttFormatJSONConversionEx } = require('./MqttFormatException');
 const mqttParser = require('../parse-mqttv5-packet');
+
 // Configure Winston logger to write to lightLog.json
 const logger = winston.createLogger({
     format: winston.format.json(),
@@ -18,8 +20,8 @@ const logger = winston.createLogger({
 });
 
 const byLine = readline.createInterface(stdin);
-// const ws = new WebSocket('ws://192.168.1.51:8810/');
-const ws = new WebSocket('ws://localhost:8080/');
+const ws = new WebSocket('ws://192.168.1.51:8810/');
+// const ws = new WebSocket('ws://localhost:8080/');
 
 function hexToRGB16(rgb565)
 {
@@ -184,11 +186,37 @@ ws.onmessage = function (event)
     if (error !== false)
     {
         logger.error(`Il messaggio non rispetta le specifiche, spegnimento automatico per ragioni di sicurezza: ${error} - Messaggio ricevuto: ${event.data}`);
-        // process.exit();
-    }
-    else
-    {
-        logger.info(`Il messaggio rispetta le specifiche, messaggio ricevuto: ${event.data}`);
+        const scriptName = 'clientSubSenseHat.js';
+        exec(`pgrep -f ${scriptName}`, (err, stdout) =>
+        {
+            if (err)
+            {
+                logger.error(`Errore nella ricerca del processo: ${err}`);
+                return;
+            }
+            const pids = stdout.split('\n').filter((pid) => pid);
+            if (pids.length === 0)
+            {
+                logger.error('Nessun processo trovato con il nome specificato.');
+                return;
+            }
+            logger.error(`Trovati ${pids.length} processi: ${pids.join(', ')}.`);
+            pids.forEach((pid) =>
+            {
+                exec(`kill -9 ${pid}`, (killError) =>
+                {
+                    if (killError)
+                    {
+                        logger.error(`Errore nell'uccidere il processo ${pid}: ${killError}`);
+                    }
+                    else
+                    {
+                        logger.error(`Processo ${pid} terminato.`);
+                    }
+                });
+            });
+        });
+        process.exit();
     }
 };
 

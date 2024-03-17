@@ -27,15 +27,3 @@ client.on('message', (receivedTopic, message) =>
         sense.sync.clear(0, 0, 0);
     }
 });
-
-function done()
-{
-    // console.log('finished message');
-}
-
-setTimeout(() =>
-{
-    done();
-    client.end();
-    process.exit();
-}, 360000);

@@ -16,7 +16,7 @@ function getRandomNumber(min, max)
 const possibleValues = [
     '10', // Stringa numerica
     '100', // Stringa numerica
-    '"tringa"',
+//    '"tringa"',
     'stringa', // Stringa senza apici extra
     JSON.stringify({ color: 'colore' }), // Stringa JSON rappresentante un oggetto
     // JSON.stringify({
