@@ -1,6 +1,5 @@
 #!/bin/env node
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable no-undef */
 /* eslint-disable no-param-reassign,no-bitwise */
 const { stdin } = require('process');
 const readline = require('readline');
@@ -32,33 +31,23 @@ function hexToRGB16(rgb565)
 }
 
 // decode base64 encoded buffer and parse mqtt packet
-function decodeBase64TcpSyscalls(json)
+function decodeTcpSyscallBase64(json)
 {
     if ('evt.buffer' in json.output_fields)
     {
         const packets = mqttParser.parse(Buffer.from(json.output_fields['evt.buffer'], 'base64'));
         packets.forEach((packet) =>
         {
+            const mqttMessageJSONtemp = {};
             try
             {
                 try
                 {
-                    const mqttMessageJSONtemp = {};
                     // Crea una copia profonda di json per ogni iterazione
                     const jsonCopy = JSON.parse(JSON.stringify(json));
 
                     switch (packet.packetType)
                     {
-                    case 2:
-                        jsonCopy.output_fields['evt.buffer'] = packet;
-                        jsonCopy.output = undefined; // Non necessario per questo esempio
-                        jsonCopy.output_fields['evt.buffer'].connackAcknowledgeFlags = undefined; // Non necessario per questo esempio
-                        jsonCopy.output_fields['evt.buffer'].remainLength = undefined; // Non necessario per questo esempio
-                        jsonCopy.output_fields['evt.buffer'].flags = undefined; // Non necessario per questo esempio
-                        jsonCopy.output_fields['evt.buffer'].connectReturnCode = undefined; // Non necessario per questo esempio
-                        mqttMessageJSONtemp.event = 'mqtt';
-                        mqttMessageJSONtemp.msg = jsonCopy;
-                        break;
                     case 3:
                         packet.payload = JSON.parse(packet.payload);
                         jsonCopy.output_fields['evt.buffer'] = packet;
@@ -79,7 +68,6 @@ function decodeBase64TcpSyscalls(json)
                         mqttMessageJSONtemp.event = 'mqtt';
                         mqttMessageJSONtemp.msg = jsonCopy;
                     }
-                    fifoMqttMessageJSON.push(mqttMessageJSONtemp);
                 }
                 catch (error)
                 {
@@ -88,7 +76,6 @@ function decodeBase64TcpSyscalls(json)
             }
             catch (error)
             {
-                const mqttMessageJSONtemp = {};
                 if (error instanceof MqttFormatJSONConversionEx)
                 {
                     mqttMessageJSONtemp.event = 'error';
@@ -99,13 +86,13 @@ function decodeBase64TcpSyscalls(json)
                     mqttMessageJSONtemp.event = 'error';
                     mqttMessageJSONtemp.msg = error.message;
                 }
-                ws.send(JSON.stringify(mqttMessageJSONtemp));
             }
+            fifoMqttMessageJSON.push(mqttMessageJSONtemp);
         });
     }
 }
 
-function decodeBase64SenseHat(json)
+function decodeSenseHatBase64(json)
 {
     const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
     const decimalValue = hexBuffer.substring(2, 6);
@@ -113,36 +100,40 @@ function decodeBase64SenseHat(json)
     json.output_fields['evt.buffer'] = hexToRGB16(decimalNumber);
 }
 
-function sendFalcoEvent(json)
+function parseFalcoMessage(json)
 {
     if (json.rule === 'tcp_syscalls')
     {
-        decodeBase64TcpSyscalls(json);
+        decodeTcpSyscallBase64(json);
     }
     else if (json.rule === 'sense-hat')
     {
-        const newDisplayMessage = {
-            event: 'display',
-            msg: null,
-        };
-
-        decodeBase64SenseHat(json);
+        const newDisplayMessage = { event: 'display', msg: null };
+        decodeSenseHatBase64(json);
         json.output = undefined; // inutile per il nostro esempio
         json.output_fields['evt.args'] = undefined; // inutile per il nostro esempio
         newDisplayMessage.msg = json;
+        let mqttMessage = fifoMqttMessageJSON.shift();
 
-        mqttMessage = fifoMqttMessageJSON.shift();
-        if (mqttMessage.msg.output_fields['evt.buffer'].packetType === 3)
+        if (mqttMessage.event === 'error' || (mqttMessage.msg && mqttMessage.msg.output_fields['evt.buffer'].packetType === 3))
         {
+            // Gestisce il messaggio di errore o il messaggio MQTT di tipo 3
             ws.send(JSON.stringify(mqttMessage));
             ws.send(JSON.stringify(newDisplayMessage));
         }
         else
         {
-            while (mqttMessage.msg.output_fields['evt.buffer'].packetType !== 3)
+            // Cerca il prossimo messaggio di tipo 3 o di error nella coda
+            while (mqttMessage && mqttMessage.event !== 'error' && (!mqttMessage.msg || mqttMessage.msg.output_fields['evt.buffer'].packetType !== 3))
             {
                 ws.send(JSON.stringify(mqttMessage));
                 mqttMessage = fifoMqttMessageJSON.shift();
+            }
+            // Verifica e invia il messaggio di tipo 3 o di error trovato
+            if (mqttMessage)
+            {
+                ws.send(JSON.stringify(mqttMessage));
+                ws.send(JSON.stringify(newDisplayMessage));
             }
         }
     }
@@ -154,7 +145,7 @@ ws.on('open', () =>
     {
         try
         {
-            sendFalcoEvent(JSON.parse(line));
+            parseFalcoMessage(JSON.parse(line));
         }
         catch (errorEx)
         {
@@ -227,5 +218,5 @@ ws.on('error', () =>
 
 ws.on('close', () =>
 {
-    process.exit();
+    //process.exit();
 });

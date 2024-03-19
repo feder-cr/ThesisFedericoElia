@@ -24,6 +24,10 @@ function buildPacket(packetType, flags, remainLength, slicedBuffer)
         return Parse.PubAck.parse(packet);
     case 5: // PacketType.PUBREC
         return Parse.PubRec.parse(packet);
+    case 6: // PacketType.PUBCOMP
+        return Parse.PubRel.parse(packet);
+    case 7: // PacketType.PUBREL
+        return Parse.PubComp.parse(packet);
     case 8: // PacketType.SUBSCRIBE
         return Parse.Subscribe.parse(packet);
     case 9: // PacketType.SUBACK

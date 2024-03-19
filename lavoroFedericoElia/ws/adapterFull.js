@@ -3,25 +3,23 @@
 const { stdin } = require('process');
 const readline = require('readline');
 const { WebSocket } = require('ws');
-const mqtt = require('mqtt-packet');
 const winston = require('winston');
+const fifoMqttMessageJSON = require('fifo')();
 const { MqttFormatJSONConversionEx, MqttFormatJSONtoRBG24Ex, MqttFormatRGB24toRBG16Ex } = require('./MqttFormatException');
+const mqttParser = require('../parse-mqttv5-packet');
 
-const MQTTMessageJSON = {};
-const opts = { protocolVersion: 4 };
-const parser = mqtt.parser(opts);
-let TCPMessage;
-const byLine = readline.createInterface(stdin);
-const ws = new WebSocket('ws://192.168.1.51:8810/');
-// const ws = new WebSocket('ws://localhost:8080/');
-
+// Configure Winston logger to write to lightLog.json
 const logger = winston.createLogger({
     level: 'error',
     format: winston.format.json(),
     transports: [
-        new winston.transports.File({ filename: 'log/lightErrorLog.json' }),
+        new winston.transports.File({ filename: 'log/fullErrorLog.json' }),
     ],
 });
+
+const byLine = readline.createInterface(stdin);
+const ws = new WebSocket('ws://192.168.1.51:8810/');
+// const ws = new WebSocket('ws://localhost:8080/');
 
 function hexToRGB16(rgb565)
 {
@@ -55,46 +53,122 @@ function RGBInRGB16(red8, green8, blue8)
 }
 
 // decode base64 encoded buffer and parse mqtt packet
-function decodeBase64TcpSyscalls(json)
+function decodeTcpSyscallBase64(json)
 {
-    if ('evt.buffer' in json.output_fields && json.output_fields['evt.buffer'] != null)
+    if ('evt.buffer' in json.output_fields)
     {
-        parser.parse(atob(json.output_fields['evt.buffer']));
+        const packets = mqttParser.parse(Buffer.from(json.output_fields['evt.buffer'], 'base64'));
+        packets.forEach((packet) =>
+        {
+            const mqttMessageJSONtemp = {};
+            // Crea una copia profonda di json per ogni iterazione
+            const jsonCopy = JSON.parse(JSON.stringify(json));
+            switch (packet.packetType)
+            {
+            case 3:
+                try
+                {
+                    let colors;
+                    try
+                    {
+                        // qui converto in JSON solo il (evt.buffer).payload
+                        colors = JSON.parse(packet.payload);
+                    }
+                    catch (error)
+                    {
+                        throw new MqttFormatJSONConversionEx('Unable to convert from MQTT.payload to JSON.');
+                    }
+                    packet.payload = RGBInRGB16(colors.red, colors.green, colors.blue);
+                    jsonCopy.output_fields['evt.buffer'] = packet;
+                    jsonCopy.output = undefined; // Non necessario per questo esempio
+                    jsonCopy.output_fields['evt.buffer'].flagOpt = undefined; // Non necessario per questo esempio
+                    jsonCopy.output_fields['evt.buffer'].remainLength = undefined; // Non necessario per questo esempio
+                    jsonCopy.output_fields['evt.buffer'].flags = undefined; // Non necessario per questo esempio
+                    jsonCopy.output_fields['evt.buffer'].packetId = undefined; // Non necessario per questo esempio
+                    mqttMessageJSONtemp.event = 'mqtt';
+                    mqttMessageJSONtemp.msg = jsonCopy;
+                }
+                catch (error)
+                {
+                    if (error instanceof MqttFormatJSONtoRBG24Ex)
+                    {
+                        mqttMessageJSONtemp.event = 'error';
+                        mqttMessageJSONtemp.msg = 'Error in converting JSON to RGB24';
+                    }
+                    else if (error instanceof MqttFormatRGB24toRBG16Ex)
+                    {
+                        mqttMessageJSONtemp.event = 'error';
+                        mqttMessageJSONtemp.msg = 'Error in converting RGB24 to RGB16';
+                    }
+                    else if (error instanceof MqttFormatJSONConversionEx)
+                    {
+                        mqttMessageJSONtemp.event = 'error';
+                        mqttMessageJSONtemp.msg = 'Error in converting MQTT.payload to JSON';
+                    }
+                    else
+                    {
+                        mqttMessageJSONtemp.event = 'error';
+                        mqttMessageJSONtemp.msg = error.message;
+                    }
+                }
+                break;
+            default:
+                jsonCopy.output_fields['evt.buffer'] = packet;
+                jsonCopy.output = undefined; // Non necessario per questo esempio
+                jsonCopy.output_fields['evt.buffer'].remainLength = undefined; // Non necessario per questo esempio
+                jsonCopy.output_fields['evt.buffer'].flags = undefined; // Non necessario per questo esempio
+                jsonCopy.output_fields['evt.buffer'].packetId = undefined; // Non necessario per questo esempio
+                mqttMessageJSONtemp.event = 'mqtt';
+                mqttMessageJSONtemp.msg = jsonCopy;
+            }
+            fifoMqttMessageJSON.push(mqttMessageJSONtemp);
+        });
     }
-    json.output_fields['evt.buffer'] = TCPMessage;
 }
 
-function decodeBase64SenseHat(json)
+function decodeSenseHatBase64(json)
 {
     const hexBuffer = Buffer.from(json.output_fields['evt.buffer'], 'base64').toString('hex');
     const decimalValue = hexBuffer.substring(2, 6);
-    // eslint-disable-next-line radix
-    json.output_fields['evt.buffer'] = hexToRGB16(parseInt(decimalValue, 16));
+    const decimalNumber = parseInt(decimalValue, 16);
+    json.output_fields['evt.buffer'] = hexToRGB16(decimalNumber);
 }
 
-function sendFalcoEvent(json)
+function parseFalcoMessage(json)
 {
     if (json.rule === 'tcp_syscalls')
     { // rule for mqtt
-        decodeBase64TcpSyscalls(json);
-        json.output = undefined; // we don't need this
-        if (MQTTMessageJSON.event === 'mqtt')
-        {
-            MQTTMessageJSON.msg = json;
-            ws.send(JSON.stringify(MQTTMessageJSON));
-        }
+        decodeTcpSyscallBase64(json);
     }
     else if (json.rule === 'sense-hat')
     {
-        MQTTMessageJSON.event = 'display';
-        if (json.output_fields['evt.type'] === 'pwrite')
+        const newDisplayMessage = { event: 'display', msg: null };
+        decodeSenseHatBase64(json);
+        json.output = undefined; // inutile per il nostro esempio
+        json.output_fields['evt.args'] = undefined; // inutile per il nostro esempio
+        newDisplayMessage.msg = json;
+        let mqttMessage = fifoMqttMessageJSON.shift();
+
+        if (mqttMessage.event === 'error' || (mqttMessage.msg && mqttMessage.msg.output_fields['evt.buffer'].packetType === 3))
         {
-            decodeBase64SenseHat(json);
-            // non ci servono questi campi
-            json.output = undefined;
-            json.output_fields['evt.args'] = undefined;
-            MQTTMessageJSON.msg = json;
-            ws.send(JSON.stringify(MQTTMessageJSON));
+            // Gestisce il messaggio di errore o il messaggio MQTT di tipo 3
+            ws.send(JSON.stringify(mqttMessage));
+            ws.send(JSON.stringify(newDisplayMessage));
+        }
+        else
+        {
+            // Cerca il prossimo messaggio di tipo 3 o di error nella coda
+            while (mqttMessage && mqttMessage.event !== 'error' && (!mqttMessage.msg || mqttMessage.msg.output_fields['evt.buffer'].packetType !== 3))
+            {
+                ws.send(JSON.stringify(mqttMessage));
+                mqttMessage = fifoMqttMessageJSON.shift();
+            }
+            // Verifica e invia il messaggio di tipo 3 o di error trovato
+            if (mqttMessage)
+            {
+                ws.send(JSON.stringify(mqttMessage));
+                ws.send(JSON.stringify(newDisplayMessage));
+            }
         }
     }
 }
@@ -105,7 +179,7 @@ ws.on('open', () =>
     {
         try
         {
-            sendFalcoEvent(JSON.parse(line));
+            parseFalcoMessage(JSON.parse(line));
         }
         catch (error)
         { // questo significa che output di Falco non è JSON o altro...
@@ -149,55 +223,4 @@ ws.on('error', () =>
 ws.on('close', () =>
 {
     process.exit();
-});
-
-parser.on('packet', (packet) =>
-{
-    if (packet.cmd === 'publish')
-    {
-        try
-        {
-            try
-            {
-                // qui converto in JSON solo il (evt.buffer).payload
-                const colors = JSON.parse(packet.payload);
-                packet.payload = RGBInRGB16(colors.red, colors.green, colors.blue);
-                TCPMessage = packet;
-                MQTTMessageJSON.event = 'mqtt';
-            }
-            catch (error)
-            {
-                throw new MqttFormatJSONConversionEx('Unable to convert from MQTT.payload to JSON.');
-            }
-        }
-        catch (error)
-        {
-            if (error instanceof MqttFormatJSONtoRBG24Ex)
-            {
-                MQTTMessageJSON.event = 'error';
-                MQTTMessageJSON.msg = 'Error in converting JSON to RGB24';
-            }
-            else if (error instanceof MqttFormatRGB24toRBG16Ex)
-            {
-                MQTTMessageJSON.event = 'error';
-                MQTTMessageJSON.msg = 'Error in converting RGB24 to RGB16';
-            }
-            else if (error instanceof MqttFormatJSONConversionEx)
-            {
-                MQTTMessageJSON.event = 'error';
-                MQTTMessageJSON.msg = 'Error in converting MQTT.payload to JSON';
-            }
-            else
-            {
-                MQTTMessageJSON.event = 'error';
-                MQTTMessageJSON.msg = error.message;
-            }
-            ws.send(JSON.stringify(MQTTMessageJSON));
-            TCPMessage = null;
-        }
-    }
-    else
-    {
-        MQTTMessageJSON.event = 'notPublish';
-    }
 });
