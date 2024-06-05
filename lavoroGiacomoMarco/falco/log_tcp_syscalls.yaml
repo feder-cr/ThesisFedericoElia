@@ -1,8 +1,0 @@
-- rule: tcp_syscalls
-  desc: TCP syscalls
-  condition: >
-    evt.dir = < and
-    fd.l4proto = tcp
-  output: >
-    TCP syscall - (evt=%evt.type buffer=%evt.buffer isserver=%fd.is_server %fd.lip:%fd.lport <-> %fd.rip:%fd.rport; %fd.cip:%fd.cport <-> %fd.sip:%fd.sport %proc.pid)
-  priority: WARNING
